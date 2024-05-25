@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center text-white mb-4">Delete Post</h1>
+    <div class="card">
+        <div class="card-body">
+            <p class="text-white">Are you sure you want to delete the post titled "{{ post.title }}"?</p>
+            <form action="{{ url_for('post.delete_post', post_id=post.id) }}" method="post">
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a href="{{ url_for('post.view_post', post_id=post.id) }}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

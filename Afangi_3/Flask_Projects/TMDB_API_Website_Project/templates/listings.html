@@ -1,0 +1,36 @@
+<!--
+//////////////////////////////////// - \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////        Author: Hreiðar Pétursson        \\\\\\\\\\\\\\\\
+///////////////         Course: Vefhönnun Áfangi 3         \\\\\\\\\\\\\\\
+/////////////               - Skilaverkefni 3 -             \\\\\\\\\\\\\\
+///// Description: Lists items based on the selected category or \\\\\\\\\
+////   genre, with infinite scrolling for dynamic content loading.   \\\\\
+///       Manages dynamic listings with user interactions.           \\\\\
+////////////////// for enhanced browsing experience. \\\\\\\\\\\\\\\\\\\\\
+-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-4">
+    <!-- Title row with a centered heading indicating the current listing category -->
+    <div class="row text-center mb-4">
+        <h1>{{ title }}</h1>
+    </div>
+    <!-- Main row for dynamically loaded content, each item type is differentiated by data attributes -->
+    <div id="listingRow" class="row" data-item-type="{{ item_type }}" data-api-endpoint="{{ category_details['api_endpoint'] }}" data-app-route="{{ category_details['app_route'] }}">
+        <hr>
+        <!-- Individual card container, responsive for different screen sizes -->
+        <!-- Loop through each item and inject it into _card.html template -->
+        {% for item in items %}
+            {% include 'card.html' %}
+        {% endfor %}
+    </div> <!-- <div id="listingRow" class="row"> -->
+    <!-- Button for loading more content, appears dynamically based on scrolling -->
+    <div class="row">
+        <div class="col text-center d-flex justify-content-center">
+            <button type="button" id="loadMore" class="btn btn-lg btn-secondary mt-4 w-75 border-radius-15 d-none">Load More</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

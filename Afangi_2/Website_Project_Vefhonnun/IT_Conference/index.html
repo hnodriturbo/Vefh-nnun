@@ -1,0 +1,295 @@
+<!--    /* ------------------------------------------------- *\    -->
+<!--   /* -----------      Hreiðar Pétursson      ----------- *\   -->
+<!--  /* ------------- -- ------------------- -- ------------- *\  -->
+<!-- /* -------      Verkefni Vefhönnun Haust 2023      ------- *\ --> 
+
+
+        <!-- ----------------------------------------------- -->
+    <!-- --------------------- index.html --------------------- -->
+<!-- ------------------------------------------------------------- -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap icons -->
+    <link href="bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Mitt eigið CSS -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/mystyle.css'>
+
+
+    <!-- Þetta er online includes af bootstrap bundle og jquery - Virkja þetta ef hitt virkar ekki -->
+
+    <!-- Bootstrap JavaScript (with dependencies) -->
+    <!-- <script src="../../Bootstrap/dist/js/bootstrap.bundle.js"></script> -->
+    <!-- Jquery JS -->
+    <!-- <script src="../../Bootstrap/node_modules/jquery/dist/jquery.js"></script> -->
+
+
+<style>
+
+  /* ----------------------------- ÝMISLEGT ----------------------------- */
+ /* ---------------------------------------------------------------------- */
+/* -------------------------- FONT-FACE SOURCES --------------------------- */
+
+@font-face {
+    font-family: 'eastwood-font';
+    src: url('font/Eastwood/Eastwood.woff2') format('woff2'), /* WOFF2 format */
+         url('font/Eastwood/Eastwood.woff') format('woff'), /* WOFF format */
+         url('font/Eastwood/Eastwood.ttf') format('truetype'); /* TTF format */
+  }
+  
+  @font-face {
+      font-family: 'eastwood-font-italic';
+      src: url('font/Eastwood/Eastwood_Italic.woff2') format('woff2'), /* WOFF2 format */
+           url('font/Eastwood/Eastwood_Italic.woff') format('woff'), /* WOFF format */
+           url('font/Eastwood/Eastwood_Italic.ttf') format('truetype'); /* TTF format */
+    }
+  
+  /* Define the regular version of the Kirsty font */
+  @font-face {
+      font-family: 'kirsty-font';
+      src: url('font/Kirsty/kirsty_rg.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  /* Kirsty font */
+  @font-face {
+      font-family: 'kirsty-font';
+      src: url('font/Kirsty/kirsty_rg_it.otf') format('opentype');
+      font-weight: normal;
+      font-style: italic;
+  }
+  
+  /* Kirsty font - Bold */
+  @font-face {
+      font-family: 'kirsty-font';
+      src: url('font/Kirsty/kirsty_bd.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+  }
+  
+  /* Kirsty font - Bold & Italic */
+  @font-face {
+      font-family: 'kirsty-font';
+      src: url('font/Kirsty/kirsty_bd_it.otf') format('opentype');
+      font-weight: bold;
+      font-style: italic;
+  }
+  
+  /* Elektra font */
+  @font-face {
+      font-family: 'Elektra';
+      src: url('font/elektra/Elektra.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  /* Kevin Ghal font */
+  @font-face {
+      font-family: 'Kevin Ghal';
+      src: url('font/kevin-ghal/Kevin-Ghal.ttf') format('truetype'), 
+           url('font/kevin-ghal/Kevin-Ghal.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  /* Lazyday font */
+  @font-face {
+      font-family: 'Lazyday';
+      src: url('font/Lazyday/Lazyday.ttf') format('truetype'), 
+           url('font/Lazyday/Lazyday.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  
+  
+  
+  /* ----------------------------------------------------- */
+  /* -------------- Kirsty font css classes -------------- */
+  /* ----------------------------------------------------- */
+  
+  /* Kirsty font */
+  .kirsty-font {
+      font-family: 'kirsty-font', sans-serif;
+  }
+  
+  /* Kirsty font italic */
+  .kirsty-font-italic {
+      font-family: 'kirsty-font', sans-serif;
+      font-style: italic;
+  }
+  
+  /* Kirsty font bold */
+  .kirsty-font-bold {
+      font-family: 'kirsty-font', sans-serif;
+      font-weight: bold;
+  }
+  
+  /* Kirsty font bold italic */
+  .kirsty-font-bold-italic {
+      font-family: 'kirsty-font', sans-serif;
+      font-weight: bold;
+      font-style: italic;
+  }
+  
+  
+  
+  
+  /* ------------------------------------------------------- */
+  /* -------------- Eastwood font css classes -------------- */
+  /* ------------------------------------------------------- */
+  
+  /* Eastwood font */
+  .eastwood-font {
+      font-family: 'eastwood-font', sans-serif;
+  }
+  
+  /* Eastwood font bold */
+  .eastwood-font-bold {
+      font-family: 'easwood-font', sans-serif;
+      font-weight: bold;
+  }
+  
+  /* Eastwood font italic */
+  .eastwood-font-italic {
+      font-family: 'eastwood-font-italic', sans-serif;
+  }
+  
+  
+  
+  
+  
+  
+  /* ------------------------------------------------------ */
+  /* -------------- Elektra font css classes -------------- */
+  /* ------------------------------------------------------ */
+  
+  /* Elektra font */
+  .elektra {
+      font-family: 'Elektra', sans-serif;
+  }
+  /* Elektra font bold */
+  .elektra-bold {
+      font-family: 'Elektra', sans-serif;
+      font-weight: bold;
+  }
+  /* Elektra font italic */
+  .elektra-italic {
+      font-family: 'Elektra', sans-serif;
+      font-style: italic;
+  }
+  /* Elektra font bold & italic */
+  .elektra-italic {
+      font-family: 'Elektra', sans-serif;
+      font-style: italic;
+      font-weight: bold;
+  }
+  
+  
+  .kevin-ghal {
+      font-family: 'Kevin Ghal', sans-serif;
+  }
+  
+  .kevin-ghal-bold {
+      font-family: 'Kevin Ghal', sans-serif;
+      font-weight: bold;
+  }
+  
+  .kevin-ghal-italic {
+      font-family: 'Kevin Ghal', sans-serif;
+      font-style: italic;
+  }
+  
+  .kevin-ghal-bold-italic {
+      font-family: 'Kevin Ghal', sans-serif;
+      font-weight: bold;
+      font-style: italic;
+  }
+  
+  
+  .lazyday {
+      font-family: 'Lazyday', sans-serif;
+  }
+  
+  .lazyday-bold {
+      font-family: 'Lazyday', sans-serif;
+      font-weight: bold;
+  }
+  
+  .lazyday-italic {
+      font-family: 'Lazyday', sans-serif;
+      font-style: italic;
+  }
+  
+  .lazyday-bold-italic {
+      font-family: 'Lazyday', sans-serif;
+      font-weight: bold;
+      font-style: italic;
+  }
+
+</style>
+
+    <!-- Titill síðunnar -->
+    <title>IT Conference Weekend - Hreiðar Pétursson</title>
+
+</head>
+
+
+
+<!-- Background dark - text white - custom-text (my custom font) -->
+<body class="bg-dark text-white kirsty-font-italic">
+
+
+
+    <div class="splash-screen">
+        <div class="splash-content">
+          <img src="img/splash.jpg" alt="Subscribe to our IT Conference Newsletter" class="subscribe-image">
+          <button type="button" class="btn-close" aria-label="Close" onclick="closeSplashScreen()"></button>    
+        </div>
+      </div>
+      
+
+    <!-- dynamic navbar container placeholder -->
+    <div id="navbar-placeholder"></div>
+
+
+    <!-- dynamic carousel container placeholder -->
+    <div id="carousel-placeholder" class="carousel-css"></div>
+                    
+
+
+
+    <!-- main-content container -->
+    <div class="main-content mx-auto d-flex justify-content-center vh-100" style="display: none;">
+        <!-- dynamic content is loaded here :) -->
+    </div> <!-- main-content -->
+
+    <!-- About the event container --> 
+    <!-- <div id="about-placeholder" class="about-event-css"></div> -->
+
+
+
+
+</div>
+<!-- Bootstrap and jquery javascript files inclusion -->
+<script src="bootstrap/bootstrap.bundle.js"></script>
+<script src="jquery/jquery.js"></script>
+
+
+
+<!-- JavaScript file inclusion - validation and my spa js files -->
+
+
+<script src="js/spa.js"></script>
+<script src="js/validation.js"></script>
+<!-- <script src="js/extras.js"></script> -->
+
+</body>

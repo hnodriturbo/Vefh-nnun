@@ -1,0 +1,90 @@
+<!--
+//////////////////////////////////// - \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////        Author: Hreiðar Pétursson        \\\\\\\\\\\\\\\\
+///////////////         Course: Vefhönnun Áfangi 3         \\\\\\\\\\\\\\\
+/////////////               - Skilaverkefni 3 -             \\\\\\\\\\\\\\
+//////   Description: Contains the navigation bar & other header   \\\\\\\
+////  elements,  included in the base layout to ensure consistent    \\\\\
+//                  header content across the website.                 \\\
+//////////////////     for unified site navigation.    \\\\\\\\\\\\\\\\\\\
+-->
+
+<!-- 
+
+    Update:
+            23-24 april late in the evening I finally think I got the 
+            accordion and the buttons in the navbar correctly set.
+
+ -->
+
+
+<!-- Banner Image -->
+<div class="container-fluid">
+    <!-- Responsive image banner -->
+    <img src="{{ url_for('static', filename='img/banner-1.jpg') }}" class="img-fluid" alt="Banner image">
+</div>                      
+
+
+<hr> <!-- A horizontal line to separate the banner from the navbar -->
+
+<!-- Navbar container, it collapses at lg size, is in dark mode and has brand and toggler -->
+<!-- Navbar container, collapses at lg size, in dark mode with brand and toggler -->
+<div class="container-fluid bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="navbar-header">
+            <!-- Navbar Title Brand -->
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <h3>MediaMatrix</h3> <!-- Assuming 'MediaMatrix' is your site's name -->
+            </a>
+        </div>
+
+        <!-- Toggler Button for Mobile View -->
+        <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarContent" 
+                aria-controls="navbarContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar-collapse -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Main Navigation Links (Left-aligned) -->
+            <ul class="navbar-nav me-auto">
+                {% for main_key, main_details in nav_data.items() if main_details.get('icon') %}
+                    <li class="nav-item p-2">
+                        <a class="nav-link btn btn-outline-secondary my-navbtn-styles" href="{{ main_details['route'] }}">
+                            {{ main_key }}
+                            {% if main_details['icon'] %}
+                                <i class="{{ main_details['icon'] }} ms-2"></i>
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Accordion Navigation Links (right aligned) -->
+            <ul class="navbar-nav ms-auto">
+                {% for section_key, section_details in nav_data.items() if section_details.get('sections') %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="{{ section_key }}Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ section_details['title'] }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="{{ section_key }}Dropdown">
+                            {% for button_key, button_details in section_details['sections'].items() %}
+                                <a class="dropdown-item" href="{{ url_for('show_section', item_type=section_key.lower(), section=button_key) }}">
+                                    {{ button_details['title'] }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div> <!-- collapse navbar-collapse -->
+    </nav> <!-- navbar navbar-expand-lg navbar-dark -->
+</div> <!-- container-fluid bg-dark text-white -->
+
+
+    

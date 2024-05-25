@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <h1 class="text-center text-white mb-4">{{ post.title }}</h1>
+    <div class="card mb-4">
+        {% if post.image_url %}
+            <img src="{{ post.image_url }}" class="card-img-top" alt="{{ post.title }}">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.content }}</p>
+        </div>
+        <div class="card-footer">
+            {% if g.user and (g.user.is_admin or g.user.user_id == post.author_id) %}
+                <a href="{{ url_for('post.edit_post', post_id=post_id) }}" class="btn btn-warning">Edit</a>
+                <a href="{{ url_for('post.delete_post', post_id=post_id) }}" class="btn btn-danger">Delete</a>
+            {% endif %}
+        </div>
+    </div>
+    <h3 class="text-white">Replies</h3>
+    <div class="list-group mb-4">
+        {% for reply_id, reply in replies.items() %}
+            <div class="list-group-item">
+                <h5>{{ reply.reply_author_email }}</h5>
+                <p>{{ reply.reply_content }}</p>
+                <small>{{ reply.timestamp }}</small>
+            </div>
+        {% endfor %}
+    </div>
+    {% if g.user %}
+        <form action="{{ url_for('post.view_post', post_id=post_id) }}" method="post">
+            <div class="mb-3">
+                <label for="replyContent" class="form-label text-white">Your Reply</label>
+                <textarea class="form-control" id="replyContent" name="content" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Reply</button>
+        </form>
+    {% else %}
+        <p class="text-white">You need to <a href="{{ url_for('login') }}">log in</a> to add a reply.</p>
+    {% endif %}
+</div>
+{% endblock %}

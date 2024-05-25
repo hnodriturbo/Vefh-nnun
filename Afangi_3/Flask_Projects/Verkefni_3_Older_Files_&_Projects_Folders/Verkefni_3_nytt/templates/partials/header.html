@@ -1,0 +1,104 @@
+<!--
+//////////////////////////////////// - \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////        Author: Hreiðar Pétursson        \\\\\\\\\\\\\\\\
+///////////////         Course: Vefhönnun Áfangi 3         \\\\\\\\\\\\\\\
+/////////////               - Skilaverkefni 3 -             \\\\\\\\\\\\\\
+//////   Description: Contains the navigation bar & other header   \\\\\\\
+////  elements,  included in the base layout to ensure consistent    \\\\\
+//                  header content across the website.                 \\\
+//////////////////     for unified site navigation.    \\\\\\\\\\\\\\\\\\\
+-->
+
+<!-- This is file is included at the beginning of this -->
+<!-- <div class="container p-4 my-5 master-container"> -->
+<!-- In the file base.html. This file serves as navbar -->
+
+
+<!-- Banner Image -->
+<div class="container-fluid">
+    <!-- Responsive image banner -->
+    <img src="{{ url_for('static', filename='img/banner-1.jpg') }}" class="img-fluid" alt="Banner image">
+</div>
+
+
+<hr> <!-- A horizontal line to separate the banner from the navbar -->
+
+
+<!-- Navbar container, it collapses at lg size, is in dark mode and has brand and toggler -->
+<div class="container-fluid bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <!-- Navbar Title Brand - Clicking the brand navigates the user back to the homepage -->
+        <a class="navbar-brand" href="/">
+            <h3>MediaMatrix</h3> <!-- MediaMatrix was my own name choice -->
+        </a>
+
+        <!-- Toggler Button for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!-- The icon for the toggle button -->
+        </button>
+
+        <!--
+        Navbar-collapse - Contains collapsible navbar buttons, left aligned and right aligned. The left aligned are
+        two buttons, Movies & TV Shows. Clicking on either one opens a modal which is at the bottom of this file 
+        -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+            <!-- Navigation Links on the Left (me-auto) -->
+            <ul class="navbar-nav me-auto">
+                <!-- Iterating through each category to create a collapsible section for each -->
+                {% for category, data in accordion_categories.items() %}
+                    <!-- Navbar Item -->
+                    <li class="nav-item p-2">
+                        <!-- Button that triggers the collapse of its corresponding accordion section -->
+                        <!-- data-target points to the id of the collapsible content -->
+                        <button class="nav-link btn btn-outline-secondary my-navbtn-styles" data-bs-toggle="collapse" data-bs-target="#{{ data.id }}" role="button" aria-expanded="false">
+                            {{ category }} <i class="bi bi-chevron-down"></i> <!-- Category name and an arrow icon indicating collapsibility -->
+                        </button>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Navigation Links on the right (ml-auto) -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Iterating through nav_links to create navigation buttons -->
+                {% for name, url in nav_links.items() %}
+                    <li class="nav-item p-2">
+                        <!-- Navigation link -->
+                        <a class="nav-link btn btn-outline-secondary my-navbtn-styles" href="{{ url }}">{{ name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</div>
+
+ 
+
+<!-- A horizontal line to separate the navbar from the content below -->
+<hr> <!-- Why is this <hr> like 1px larger then the other ones ??? check out !!! -->
+
+
+
+<!-- Accordion Content - The sub menu of either movies or tv shows -->
+<div id="myAccordion">
+    {% for category, data in accordion_categories.items() %}
+        <!-- Collapsible Section for Each Category -->
+        <div class="collapse" id="{{ data.id }}" data-bs-parent="#myAccordion">
+            <div class="card-body grey700 border-radius-15">
+                <!-- Container for Links Within the Category -->
+                <div class="d-flex justify-content-around">
+                    <!-- Iterating through links in the category to create buttons -->
+                    {% for link in data.links %}
+                        <!-- Button to navigate to the specified endpoint -->
+                        <!-- Uses url_for to generate the URL based on endpoint and args -->
+                        <a href="{{ url_for(link.endpoint, **(link.args if 'args' in link else {})) }}" class="btn btn-dark w-25 d-flex justify-content-center align-items-center my-accordion-btn-styles">
+                            {{ link.name }} <!-- The name of the link as specified -->
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <hr>
+        </div>
+    {% endfor %}
+</div>

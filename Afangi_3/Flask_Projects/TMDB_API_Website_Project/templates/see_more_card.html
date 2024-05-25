@@ -1,0 +1,11 @@
+<!-- _special_card.html -->
+<div class="col-sm-6 col-md-3 mb-4">
+    <div class="card bg-secondary index-card text-center d-flex flex-column justify-content-center align-items-center" style="padding: 20px;">
+        <h4 class="text-white">Explore More</h4>
+        <p>Check out all the titles in this category!</p>
+        <!-- Circular button that leads to the specific category listing -->
+        <a href="{{ url_for('show_section', item_type=item_type, app_route=category) }}" class="btn btn-lg btn-primary rounded-circle" style="width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;">
+            <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+</div>

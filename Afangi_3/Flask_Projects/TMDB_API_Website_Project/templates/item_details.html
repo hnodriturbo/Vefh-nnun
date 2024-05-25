@@ -1,0 +1,127 @@
+<!--
+//////////////////////////////////// - \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////        Author: Hreiðar Pétursson        \\\\\\\\\\\\\\\\
+///////////////         Course: Vefhönnun Áfangi 3         \\\\\\\\\\\\\\\
+/////////////               - Skilaverkefni 3 -             \\\\\\\\\\\\\\
+///// Description: Provides detailed information about a specific  \\\\\\\
+////  movie or TV show, including ratings, trailers, and in-depth   \\\\\\
+///     descriptions to enhance user interaction and engagement.   \\\\\\\
+//////////////////////  with multimedia content. \\\\\\\\\\\\\\\\\\\\\\\\\
+-->
+
+
+
+<!-- Injected information: 
+return render_template('item_details.html', item_details=item_details, item_type=item_type, trailer_key=trailer_key)
+-->
+
+
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="row text-center mb-4">
+            <h1>{{ title }}</h1>
+        </div>
+        <hr>
+        <div class="card bg-secondary border-radius-15">
+            <div class="row g-3">
+
+                <!-- Image Column -->
+                <div class="col-md-6 p-1 d-flex justify-content-center align-items-center" style="max-height: 100%;">
+                    <div style="width: 450px; height: 450px; overflow: hidden; border-radius: 15px;">
+                        <img src="https://image.tmdb.org/t/p/w780{{ item_details['poster_path'] }}" class="img-fluid border-radius-15" alt="{{ item_details['title'] or item_details['name'] }}" style="object-fit: cover; width: 100%; height: 100%;">
+                    </div>
+                </div>
+
+                <!-- Details Column -->
+                <div class="col-md-6 p-3">
+                    <div class="card-body">
+                        <div class="card-title d-flex justify-content-between align-items-center mb-2">
+                            <h1>{{ item_details['title'] or item_details['name'] }}</h1>
+                            
+                            <!-- A badge containing the rating with only 1 digit after the comma and a tooltip for the number of votes placed -->
+                            <span id="tooltip" class="badge bg-dark fs-5" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ item_details['vote_count'] }} votes">
+                                Rating: {{ item_details['vote_average'] | round(1) }}/10
+                            </span>
+
+                        </div>
+                        <hr>
+                        <p class="card-text">
+                            {{ item_details['overview'] }}
+                        </p>
+
+                        <!-- Use list-group-flush to get rid of basic list styles to use my own-->
+                        <ul class="list-group list-group-flush">
+
+                            <!-- Release date and original language-->
+                            <li class="list-group-item bg-secondary">
+                                Release Date: {{ item_details.get('release_date', 'N/A') }}
+                            </li>
+
+                            <li class="list-group-item bg-secondary">
+                                Original Language: {{ item_details['original_language'] }}
+                            </li>
+                            
+                            <!-- Genres -->
+                            <li class="list-group-item bg-secondary">
+                                Genres: 
+                                {% for genre in item_details['genres'] %}
+                                    {{ genre['name'] }}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </li>
+
+                            <!-- Rating and Vote Count -->
+                            <li class="list-group-item bg-secondary">
+                                Rating: {{ item_details['vote_average'] }} ({{ item_details['vote_count'] }} votes)
+                            </li>
+                            
+                            {% if trailer_key %}
+                            <!-- Watch Trailer Button -->
+                            <li class="list-group-item bg-secondary">
+                                <button type="button" class="btn btn-dark w-100" data-bs-toggle="modal" data-bs-target="#trailerModal" onclick="playTrailer('{{ trailer_key }}')">Watch Trailer</button>
+                            </li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button Row -->
+            <div class="card-footer bg-secondary">
+                <div class="row mt-2">
+                    <!-- Back to Category Button -->
+                    <div class="col d-flex justify-content-center align-items-center m-0 p-0">
+                        <a href="{{
+                            session['breadcrumbs'][-2] if session['breadcrumbs']|length > 1 else url_for('home')
+                        }}" class="btn btn-dark w-75">
+                            Back to Category
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Trailer Modal -->
+<div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true" data-trailer-key="TRAILER_KEY">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-secondary">
+            <div class="modal-header">
+                <h5 class="modal-title" id="trailerModalLabel">Trailer for: {{ item_details['title'] or item_details['name'] }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                <iframe id="trailerIframe" width="100%" height="315" src="https://www.youtube.com/embed/{{ trailer_key }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,145 @@
+/* Fontið mitt */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../font/mycustomfont.ttf');
+}
+@font-face {
+  font-family: 'MyCustomFont2';
+  src: url('../font/Art\ Brewery.ttf');
+}
+@font-face {
+  font-family: 'MyCustomFont3';
+  src: url('../font/Axtaja\ Elang.ttf');
+}
+@font-face {
+  font-family: 'MyCustomFont4';
+  src: url('../font/BillionStars.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+/* bakgrunnur og ýmislegt annað */
+body {
+  margin: 0 auto;
+  text-shadow: 1px 1px black;
+  color: white;
+  background-image: url('../pics/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* ýmislegt */    
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+nav {
+  text-align: center;
+}
+.font1 {
+  font-family: MyCustomFont, sans-serif;
+}
+.font2 {
+  font-family: MyCustomFont2, sans-serif;
+}
+.font3 {
+  font-family: MyCustomFont3, sans-serif;
+}
+.font4 {
+  font-family: MyCustomFont4, sans-serif;
+}
+
+
+/* Container hafa samband formsins */
+.containerhafasamband {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: MyCustomFont;
+
+}
+
+/* Css stillingar fyrir table sjálft */
+#contact-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 2vw;
+  border-radius: 10%;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,5);
+
+  font-size: 1.5vw; /* set font size to 1.5vw */
+  max-width: 90%;
+
+}
+/* td er hvert cell í dálk */
+td {
+  padding: 1vw;
+  padding-top: 2vw;
+}
+/* Þetta velur fyrsta dálkinn */
+td:first-child {
+  width: fit-content;
+  padding-left: 2vw;
+}
+/* Þetta velu aðra dálka en fyrsta */
+td:not(:first-child) {
+  width: 90%;
+}
+/* Þetta velur text email og textarea reitinga */
+input[type=text],
+input[type=email],
+textarea {
+  padding: 1vw;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 1vw;
+  font-size: 1.5vw; /* set font size to 1.5vw */
+  width: 90%;
+  font-family: MyCustomFont;
+}
+/* Þetta er submit takkinn græni flotti */
+input[type=submit] {
+  background-color: #4CAF50;
+
+  padding: 0.7vw 8vw 1vw;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 60%;
+}
+/* Þegar músin fer yfir takkann */
+input[type=submit]:hover {
+  background-color: #3e8e41;
+  color: white;
+}
+/* Divið sem kemur í staðinn fyrir table og sýnis skilaboð */
+#thank-you-message {
+  display: none;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 2vw;
+  border-radius: 10%;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,5);
+  font-size: 2vw;
+  text-align: center;
+}
+/* Sýnir takk skilaboðin */
+.show {
+  display: block;
+}
+
+.mp3 {
+  font-size: 2vw;
+}
+
+
+  
+

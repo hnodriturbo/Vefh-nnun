@@ -1,0 +1,90 @@
+<!--
+//////////////////////////////////// - \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////        Author: Hreiðar Pétursson        \\\\\\\\\\\\\\\\
+///////////////         Course:  Vefhönnun Áfangi 3        \\\\\\\\\\\\\\\
+/////////////               - Skilaverkefni 3 -             \\\\\\\\\\\\\\
+///// Description: Base HTML structure, integrates all components, \\\\\\\
+////  styles, and scripts for a consistent layout across the website.  \\\a
+///     It includes the main navigation and global page templates.      \\
+///////////////// with interactive user interface elements. \\\\\\\\\\\\\\
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <title>
+            TV Shows & Movies Database
+        </title>
+
+        <!-- 5 - Bootstrap Icons-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-icons.css') }}">
+
+        <!-- 2 - Font from google, dowmnloaded and manually made font -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-css.css') }}">
+
+        <!-- 3 - Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+        <!-- 4 - My Custom CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/myStyles.css') }}">
+        
+        <!-- 1 - Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous"> -->
+
+        
+    </head>
+
+
+
+    <body>
+        <!-- This master container has padding=4 and margin-y-axis=5 -->
+        <div class="container p-4 my-5 master-container">
+
+            {% include 'header.html' %}
+
+            <div class="container-fluid">
+                <!-- Check for any flash messages to display (error messages or even success messages) -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    
+                    {% if messages %}
+
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+
+                    {% endif %}
+
+                {% endwith %}
+
+                <!-- This is the index.html block that displays content and then we endblock the command -->
+                {% block content %}{% endblock %}
+
+
+            </div> <!-- container-fluid -->
+
+        </div> <!-- container p-4 my-5 master-container -->
+
+
+        <!-- Here at the bottom but before closing of the body tag, I include the JS files -->
+        <!-- - 1 - Local Bootstrap JS bundle pack -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+        <!-- - 2 - JQuery to make sure all js components of bootstrap works -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- - 3 - Custom JavaScript for MediaMatrix - Best loading that last in case of some overrides -->
+        <script src="{{ url_for('static', filename='js/mediamatrix.js') }}"></script>
+
+    </body>
+
+</html>

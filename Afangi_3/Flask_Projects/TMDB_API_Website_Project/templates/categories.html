@@ -1,0 +1,53 @@
+<!--
+//////////////////////////////////// - \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////        Author: Hreiðar Pétursson        \\\\\\\\\\\\\\\\
+///////////////         Course: Vefhönnun Áfangi 3         \\\\\\\\\\\\\\\
+/////////////               - Skilaverkefni 3 -             \\\\\\\\\\\\\\
+///// Description: Displays genre-based categories for navigating \\\\\\\\
+////  to detailed listings of movies or TV shows, tailored to user    \\\
+///     preferences. Also manages dynamic content generation.        \\
+//////////////////  based on the selected genre. \\\\\\\\\\\\\\\\\\\\\\\\
+-->
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-4">
+    <div class="row text-center mb-4">
+        <h1>{{ title }}</h1>
+    </div>
+    <div class="row">
+        {% for genre_id, info in genres.items() %}
+        <div class="col-md-4 mb-4">
+            <div class="card grey700 h-100 border-radius-15">
+                <div class="card-header d-flex justify-content-center">
+                    <!-- Icon for the genre -->
+                    <i class="{{ info['icon'] }} fa-3x text-white-50 my-3"></i>
+                </div>
+                <div class="card-body text-center">
+                    <!-- Link to view listings for this category -->
+                    <a href="{{ url_for('show_section', item_type=item_type, app_route=info['app_route'], genre_id=genre_id) }}" class="btn btn-lg btn-dark w-75">    
+                        {{ info['title'] }}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {% else %}
+            <p class="text-white">No categories found.</p>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- I saw no reason -->
+<!-- Name of the genre in h5 -->
+<!--
+<h5 class="card-title bold-text">
+    {{ info['name'] }}
+</h5>
+-->

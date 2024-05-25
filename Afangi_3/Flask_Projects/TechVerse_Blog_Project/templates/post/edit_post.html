@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center text-white mb-4">Edit Post</h1>
+    <div class="card">
+        <div class="card-body">
+            <form action="{{ url_for('post.edit_post', post_id=post.id) }}" method="post">
+                <div class="mb-3">
+                    <label for="title" class="form-label text-white">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" value="{{ post.title }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label text-white">Content</label>
+                    <textarea class="form-control" id="content" name="content" rows="5" required>{{ post.content }}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label text-white">Category</label>
+                    <select class="form-control" id="category" name="category" required onchange="updateSubcategories()">
+                        <option value="">Select a category</option>
+                        {% for category, subcategories in categories.items() %}
+                            <option value="{{ category }}" {% if category == post.category %}selected{% endif %}>{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-3" id="subcategory-container" style="display: none;">
+                    <label for="subcategory" class="form-label text-white">Subcategory</label>
+                    <select class="form-control" id="subcategory" name="subcategory">
+                        <!-- Subcategories will be dynamically populated here -->
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-secondary">Update Post</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Use a unique name to avoid conflicts
+        const categoryData = JSON.parse('{{ categories | tojson | safe }}');
+        const selectedCategory = "{{ post.category }}";
+        const selectedSubcategory = "{{ post.subcategory }}";
+
+        function updateSubcategories() {
+            const categorySelect = document.getElementById('category');
+            const subcategoryContainer = document.getElementById('subcategory-container');
+            const subcategorySelect = document.getElementById('subcategory');
+
+            const selectedCategoryValue = categorySelect.value;
+            const subcategories = categoryData[selectedCategoryValue];
+
+            if (subcategories && Object.keys(subcategories).length > 0) {
+                subcategoryContainer.style.display = 'block';
+                subcategorySelect.innerHTML = '';
+
+                for (const [key, value] of Object.entries(subcategories)) {
+                    const option = document.createElement('option');
+                    option.value = value.title;
+                    option.textContent = value.title;
+                    if (value.title === selectedSubcategory) {
+                        option.selected = true;
+                    }
+                    subcategorySelect.appendChild(option);
+                }
+            } else {
+                subcategoryContainer.style.display = 'none';
+                subcategorySelect.innerHTML = '';
+            }
+        }
+
+        updateSubcategories(); // Initialize subcategories on page load
+    });
+</script>
+{% endblock %}

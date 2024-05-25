@@ -1,0 +1,98 @@
+{
+    "Emerging Technologies": {
+        "icon": "fa-rocket",
+        "route": "emerging-technologies",
+        "subcategories": {
+            "5G": {
+                "icon": "fa-wifi",
+                "route": "5g",
+                "title": "5G"
+            },
+            "AR&VR": {
+                "icon": "fa-vr-cardboard",
+                "route": "ar-vr",
+                "title": "Augmented and Virtual Reality"
+            },
+            "Blockchain": {
+                "icon": "fa-link",
+                "route": "blockchain",
+                "title": "Blockchain"
+            },
+            "IoT": {
+                "icon": "fa-network-wired",
+                "route": "iot",
+                "title": "Internet of Things"
+            },
+            "Quantum Computing": {
+                "icon": "fa-atom",
+                "route": "quantum-computing",
+                "title": "Quantum Computing"
+            }
+        },
+        "title": "Emerging Technologies"
+    },
+    "Tech Industry Trends": {
+        "icon": "fa-chart-line",
+        "route": "tech-industry-trends",
+        "subcategories": {
+            "Investment": {
+                "icon": "fa-chart-line",
+                "route": "investment",
+                "title": "Investment"
+            },
+            "Market Analysis": {
+                "icon": "fa-chart-pie",
+                "route": "market-analysis",
+                "title": "Market Analysis"
+            },
+            "Mergers & Acquisitions": {
+                "icon": "fa-handshake",
+                "route": "mergers-acquisitions",
+                "title": "Mergers and Acquisitions"
+            },
+            "Startups": {
+                "icon": "fa-lightbulb",
+                "route": "startups",
+                "title": "Startups"
+            },
+            "Tech Giants": {
+                "icon": "fa-building",
+                "route": "tech-giants",
+                "title": "Tech Giants"
+            }
+        },
+        "title": "Tech Industry Trends"
+    },
+    "Technology": {
+        "icon": "fa-microchip",
+        "route": "technology",
+        "subcategories": {
+            "AI": {
+                "icon": "fa-brain",
+                "route": "ai",
+                "title": "Artificial Intelligence"
+            },
+            "Cybersecurity": {
+                "icon": "fa-shield-alt",
+                "route": "cybersecurity",
+                "title": "Cybersecurity"
+            },
+            "Gadgets": {
+                "icon": "fa-mobile-alt",
+                "route": "gadgets",
+                "title": "Gadgets"
+            },
+            "Programming": {
+                "icon": "fa-code",
+                "route": "programming",
+                "title": "Programming"
+            },
+            "Software Development": {
+                "icon": "fa-laptop-code",
+                "route": "software-development",
+                "title": "Software Development"
+            }
+        },
+        "title": "Technology"
+    }
+}

@@ -1,0 +1,49 @@
+<!-- 
+    Hérna ætla ég að hafa sér method sem sækir 10 items (eða 20 sem er heil síða)
+    og displayar þau carousel fyrir carousel en fyrst þarf method til að sækja öll 
+    gögnin úr öllum flokkum sem eru í boði á síðunni og ég þarf líka að bæta við 
+    öðrum drop down button og vill að hann sýni nokkra aðra valmöguleika af endpoints 
+    fyrir tmdb API möguleikana 
+-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4 p-1">
+    {% for type, categories in data.items() %}
+        <hr>
+
+        <h1 class="mt-4 text-center">{{ type.capitalize() }} Categories</h1>
+        
+        <hr>
+        {% for category, items in categories.items() %}
+
+            <div class="row my-2">
+                <div class="mb-3 p-1">
+
+                    <h3 class="ms-5">{{ category.replace('_', ' ').capitalize() }}</h3>
+                    <hr>
+                    <div class="scrolling-wrapper automatic-scrolling">
+
+                        {% for item in items %}
+
+                            {% with item_type=type %}
+                                {% include 'index_card.html' %}
+                            {% endwith %}
+
+
+                        {% endfor %}
+                        <!-- Include the special CTA card -->
+                        {% with category=category, item_type=type %}
+                            {% include 'see_more_card.html' %}
+                        {% endwith %}
+                    
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+    {% endfor %}
+</div>
+{% endblock %}

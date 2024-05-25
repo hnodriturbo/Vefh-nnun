@@ -1,0 +1,201 @@
+
+
+
+<!-- Banner Container -->
+
+<div class="banner-container">
+    <img src="{{ url_for('static', filename='img/banner-1.jpg') }}" class="img-fluid" alt="Banner image">
+</div>
+
+<hr>
+
+
+
+
+
+
+<div class="container-fluid bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+
+        <div class="navbar-header">
+            <!-- Navbar Title Brand - Clicking the brand navigates the user back to the homepage -->
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <h3>MediaMatrix</h3> <!-- MediaMatrix was my own name choice -->
+            </a>
+        </div>
+        <!-- Toggler Button for Mobile View -->
+        <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarContent" 
+                aria-controls="navbarContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!-- The icon for the toggle button -->
+        </button>
+
+
+
+
+        <!--
+        Navbar-collapse - Contains collapsible navbar buttons, left aligned and right aligned. The left aligned are
+        two buttons, Movies & TV Shows. Clicking on either one opens a modal which is at the bottom of this file 
+        -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+
+            <!-- Main Navigation Links (Left-aligned) -->
+            <ul class="navbar-nav me-auto">
+                {% for button_title, button_details in nav_system.accordion_buttons.items() %}
+                    <li class="nav-item p-2">
+                        <button class="nav-link btn btn-outline-secondary my-navbtn-styles" data-bs-toggle="collapse" data-bs-target="#{{ button_details['accordion'] }}" role="button" aria-expanded="false">
+                            {{ button_title }} <i class="{{ button_details['icon'] }} ms-2"></i>
+                        </button>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Main Navigation Links (right aligned) -->
+            <ul class="navbar-nav ms-auto">
+
+                {% for button_title, button_details in nav_system.nav_buttons.items() %}
+
+                    <li class="nav-item p-2">
+                            <a class="nav-link btn btn-outline-secondary my-navbtn-styles" href="{{ button_details['app_route'] }}">
+                                {{ button_title }}
+                                <i class="{{ button_details['icon'] }} ms-2"></i>
+                            </a>
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+
+
+        </div> <!-- collapse navbar-collapse -->
+    </nav> <!-- navbar navbar-expand-lg navbar-dark -->
+</div> <!-- container-fluid bg-dark text-white -->
+
+<!-- <hr> -->
+
+
+    <!--
+        Þar sem ég vill ekki eyða meiri tíma í þetta verkefni ákvað ég að sleppa að hafa search
+        og sleppa að integrate-a þennan trending takka inn og bara commenta það út því ég vill
+        fara byrja á verkefni 5.
+    -->
+<!-- 
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+
+                    <div class="col-2 d-flex align-items-center justify-content-end">
+                        <button class="btn btn-primary btn-lg btn-block my-navbtn-styles">Trending Now</button>
+                    </div>
+
+
+                    
+
+                        <div class="col-10">
+                            <form class="form">
+                                <div class="row">
+
+                                    <div class="col-4 d-flex align-items-center justify-content-end">
+                                        <div class="btn btn-lg btn-secondary my-navbtn-styles btn-block">
+                                            Search TMDB
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-8 d-flex align-items-center justify-content-end">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col">
+
+                                                    <div class="form-group w-100">
+                                                        <input type="text" class="form-control w-100" id="searchInput" placeholder="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="moviesCheckbox" value="movies">
+                                                        <label class="form-check-label" for="moviesCheckbox">All Movies</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="tvShowsCheckbox" value="tvShows">
+                                                        <label class="form-check-label" for="tvShowsCheckbox">All TV Shows</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="searchAllCheckbox" value="searchAll">
+                                                        <label class="form-check-label" for="searchAllCheckbox">Search All</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+ -->
+
+<!-- A horizontal line to separate the navbar from the content below -->
+<hr> <!-- Why is this <hr> like 1px larger then the other ones ??? check out !!! -->
+
+<!-- Accordion Content - The sub menu of either movies or tv shows -->
+<div id="myAccordion">
+
+    {% for category, details in nav_system.accordion_buttons.items() %}
+        <div class="collapse" id="{{ details['accordion'] }}" data-bs-parent="#myAccordion">
+
+            <div class="card-body grey700 border-radius-15 p-3">
+                <div class="d-flex justify-content-around">
+
+                    {% for button_name, button_info in details['buttons'].items() %}
+                        {% if button_info['app_route'] == 'list_categories' %}
+                            <!-- Use the list_categories route for the categories button -->
+                            <a href="{{ url_for('list_categories', item_type=details['item_type']) }}"
+                            class="btn btn-dark w-25 d-flex justify-content-center my-accordion-btn-styles">
+                                {{ button_info['title'] }}
+                                <i class="{{ button_info['icon'] }} ms-2 d-flex align-items-center justify-content-center"></i>
+                            </a>
+                        {% else %}
+                            <!-- Use the show_section route for other buttons -->
+                            <a href="{{ url_for('show_section', item_type=details['item_type'], app_route=button_info['app_route']) }}"
+                            class="btn btn-dark w-25 d-flex justify-content-center my-accordion-btn-styles">
+                                {{ button_info['title'] }}
+                                <i class="{{ button_info['icon'] }} ms-2 d-flex align-items-center justify-content-center"></i>
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+
+                </div> <!-- d-flex justify-content-around -->
+            </div><!-- card-body grey700 border-radius-15 p-3 -->
+
+            <hr> <!-- The line -->
+
+        </div> <!-- collapse -->
+
+    {% endfor %}
+</div>

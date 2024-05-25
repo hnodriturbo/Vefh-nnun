@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid mt-2">
+    <div class="text-center text-muted text-white mb-1 light-spacing light-italic bold-underlined text-black-50">
+        <h3>Other categories in {{ parent_category.title }}:</h3>
+        <hr>
+        <div class="d-flex flex-wrap justify-content-around">
+            {% for other_subcategory, details in parent_category.subcategories.items() %}
+                {% if other_subcategory != subcategory %}
+                    <a href="{{ url_for('navigation.view_category', category=parent_category.route, subcategory=details.route) }}" class="me-2">
+                        <i class="fa {{ details.icon }} me-2 text-justify"></i>  {{ details.title }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <hr>
+    <h1 class="text-center text-white mb-1">{{ subcategory.title }}</h1>
+    <div class="row mt-3">
+        {% if posts %}
+            <ul class="list-group w-100">
+                {% for post_id, post_details in posts.items() %}
+                    <li class="list-group-item grey600 text-white mb-2">
+                        <div class="d-flex align-items-center">
+                            {% if post_details.image_url %}
+                                <img src="{{ post_details.image_url }}" class="img-thumbnail me-3" style="width: 100px;" alt="{{ post_details.title }}">
+                            {% endif %}
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1">{{ post_details.title }}</h5>
+                                <p class="mb-1 text-muted">{{ post_details.content[:150] }}...</p>
+                                <small>
+                                    <a href="{{ url_for('navigation.view_post', post_id=post_id) }}" class="btn btn-link p-0 text-info">Read More</a>
+                                    {% if g.user and (g.user.is_admin or g.user.id == post_details.author_id) %}
+                                        <a href="{{ url_for('post.edit_post', post_id=post_id) }}" class="btn btn-link p-0 text-warning">Edit</a>
+                                        <a href="{{ url_for('post.delete_post', post_id=post_id) }}" class="btn btn-link p-0 text-danger">Delete</a>
+                                    {% endif %}
+                                </small>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-center text-white">No posts available in this subcategory.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

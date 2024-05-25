@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='mystyle.css'>
+    <link rel="stylesheet" type="text/css" href="font/mycustomfont.ttf">
+    <link rel="stylesheet" type="text/css" href="font/Art Brewery.ttf">
+    <link rel="stylesheet" type="text/css" href="font/Axtaja Elang.ttf">
+    <link rel="stylesheet" type="text/css" href="font/BillionStars.ttf">
+    <title>Vefsíðan mín - Avatar - Verkefni 6</title>
+
+</head>
+
+<script>
+    var dropdownBtns = document.querySelectorAll(".dropdown-btn");
+
+
+
+    dropdownBtns.forEach(function(btn) {
+        btn.addEventListener("mouseenter", function() {
+            this.nextElementSibling.classList.add("show");
+            fadeIn(this, 0);
+        });
+
+        btn.addEventListener("mouseleave", function() {
+            this.nextElementSibling.classList.remove("show");
+        });
+    });
+
+
+    
+</script>
+<body>
+     <!-- header síðunnar er container og section er reiturinn -->
+    <header class="containerheader center">
+            <h1 class="center innihaldheader1">Velkomin á Avatar fan síðuna mína</h1>
+            <div class="center innihaldheader2">
+                <table class="mp3">
+                    <tr>
+                        <td>Avatar - I See You Theme Soundtrack</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio controls>
+                                <source src="your-audio-file.mp3" type="audio/mpeg">
+                              </audio>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h2 class="center innihaldheader2">Verkefni Sex</h2>
+           
+    </header>  
+    
+    <!-- Banner container og content -->
+    <div class="bannercontainer">
+        <img src="pics/banneravatar.jpg" class="bannerefst">
+    </div> 
+    
+    
+    
+    <nav class="containermenuefst font1">
+        <div class="innihaldmenuefst"><a href="#avatar1"><h2>Avatar 1</h2></a></div>
+        <div class="innihaldmenuefst"><a href="#avatar2"><h2>Avatar 2</h2></a></div>
+        <div class="innihaldmenuefst"><a href="#avatar3"><h2>Avatar 3</h2></a></div>
+        <div class="innihaldmenuefst"><a href="#leikstjori"><h2>Leikstjóri</h2></a></div>
+        <div class="innihaldmenuefst"><a href="#leikarar"><h2>Leikarar</h2></a></div>
+    </nav>
+
+
+
+     <!-- hérna kemur aðalefni síðunnar... container og 2 dálkar -->
+    <main class="containermain center">
+
+
+
+        <!-- ég ætla nota fyrstu greinina sem "um avatar 1 myndina sem kemur með trailer inn á síðuna" -->
+
+        <div class="containerblockquote">
+            <p class="innihaldmain2 font1">
+                The world of Avatar is rich and immersive, with stunning visuals and a detailed mythology.</p>
+            <blockquote class="font1" style="font-size: 1.5vw;"> 
+                    Na'vi are portrayed as a spiritual and interconnected species, deeply 
+                    connected to their environment and the living things around them.
+            </blockquote> 
+            <p class="innihaldmain2 font1">
+                    The humans, on the other hand, are depicted as greedy and exploitative, willing to destroy anything in
+                    their path to get what they want. The conflict between these two groups forms the central narrative of the film, as Jake becomes increasingly torn between his loyalty 
+                    to the humans and his growing attachment to the Na'vi and their way of life.
+            </p>
+        </div>
+        <div class="container2">
+            <section class="innihaldmain font1">
+                Avatar was a groundbreaking film in many ways, not least of which was its use of 3D technology to create an immersive and fully realized world. The film was a critical 
+                and commercial success, grossing over $2.7 billion worldwide and becoming the highest-grossing film of all time until it was surpassed by Avengers: Endgame in 2019. 
+                The film's success has led to plans for multiple sequels, with the first one set to be released in 2022. Despite some criticism for its depiction of indigenous cultures 
+                and its use of the "white savior" trope, Avatar remains a beloved and influential film that continues to captivate audiences around the world.
+            </section>
+        </div>
+    </main>
+
+
+
+    <!-- Video hluti síðunnar -->
+    <main>
+        <div class="containeravatar1" id="avatar1">
+            <div class="innihaldavatardalkur1 font1 center">
+                <table>
+                    <tr>
+                        <td>
+                            <h2>Avatar 1 - The movie</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.5vw;">
+                            Avatar is a science fiction film that was directed and co-written by James Cameron and released in 2009. It is set in the year 2154 and follows the story of Jake Sully, 
+                            a paralyzed former Marine who is sent to Pandora. The mission of the humans on Pandora is to extract a valuable mineral called unobtanium, but in order to do so, they 
+                            must relocate the Na'vi. Jake is recruited to infiltrate the Na'vi and gain their trust in order to help the humans achieve their goal.
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="innihaldavatardalkur2 center">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5PSNL1qE6VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="containeravatar2" id="avatar2">
+            <div class="innihaldavatar2dalkur1 center">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/d9MyW72ELq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+            </div>
+                <div class="innihaldavatar2dalkur2 font1 center">
+                    <table>
+                        <tr>
+                            <td>
+                                <h2>Avatar 2 - Way Of The Water</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 1.5vw;">
+                                After finding a new family among the Na'vi on Pandora, Jake Sully faces a familiar threat in the sequel to Avatar. As he and his allies fight to protect their home, 
+                                they must also navigate the complex relationships between the human and Na'vi races. With the help of Neytiri and the Na'vi army, Jake will once again use his unique 
+                                skills to defend his newfound home and protect the people he loves.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+
+        <div class="containeravatar3" id="avatar3">
+            <div class="innihaldavatardalkur1 font1 center">
+                <table>
+                    <tr>
+                        <td>
+                            <h2>Avatar 3 - Not Released Yet</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.5vw;">
+                            Avatar 3 is the highly anticipated third installment in the Avatar franchise, set to be released in 2024. The film will continue the story of the Na'vi people and their 
+                            struggle to protect their home on the alien planet Pandora. James Cameron, the director of the first two films, has promised that Avatar 3 will explore new themes and 
+                            introduce new characters. With the success of the first two films, the anticipation for Avatar 3 is higher than ever.
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="innihaldavatardalkur2 center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nxjOFZqtLJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Leikarar og leikstjóri hluti síðunnar -->
+    <section class="container4dalkar">
+        <div class="innihald4dalkar" id="leikstjori">
+            <a href="https://www.imdb.com/name/nm0000116/?ref_=tt_ov_dr">
+                <table>
+                    <tr>
+                        <td>
+                            <h4 style="font-size: 1.5vw;">James Cameron</h4>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="pics/jamescameron.jpg" class="myndir">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.5vw;">Leikstjóri</td>
+                    </tr>
+                </table>
+            </a>
+        </div>
+        <div class="innihald4dalkar" id="leikarar">
+            <a href="https://www.imdb.com/name/nm0941777/?ref_=tt_ov_st">
+                <table>
+                    <tr>
+                        <td>
+                            <h4 style="font-size: 1.5vw;">Sam Worthington</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="pics/sam.jpg" class="myndir">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.5vw;">Leikari</td>
+                    </tr>
+                </table>
+            </a>
+        </div>
+        <div class="innihald4dalkar" id="leikarar">
+            <a href="https://www.imdb.com/name/nm0757855/?ref_=tt_ov_st">
+                <table>
+                    <tr>
+                        <td>
+                            <h4 style="font-size: 1.5vw;">Zoe Zaldana</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="pics/zoe.jpg" class="myndir">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.5vw;">Leikkona</td>
+                    </tr>
+                </table>
+            </a>
+        </div>
+        <div class="innihald4dalkar" id="leikarar">
+            <a href="https://www.imdb.com/name/nm0000244/?ref_=tt_ov_st">
+                <table>
+                    <tr>
+                        <td>
+                            <h4 style="font-size: 1.5vw;">Sigourney Weaver</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center">
+                            <img src="pics/sigourney.jpg" class="myndir">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.5vw;">Leikkona</td>
+                    </tr>
+                </table>
+            </a>
+        </div>
+    </section>
+
+
+
+<!-- Menu og map hluti síðunnar -->
+<footer>
+    <nav class="containermenu">
+        <div class="innihaldmap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1740.7180642495996!2d-21.85025452284902!3d64.13258931772987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d675b9db2d849b%3A0x18d814492029cd60!2sDugguvogur%2015%2C%20104%20Reykjav%C3%ADk!5e0!3m2!1sen!2sis!4v1683395111896!5m2!1sen!2sis" width="100%" height="100%" style="border:1px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-btn" style="font-size: 1.5vw;">Tenglar</button>
+            <div class="dropdown-content">
+                <a href="#" class="dropdown-item" style="font-size: 1.5vw;">Um okkur</a>
+                <a href="#" class="dropdown-item" style="font-size: 1.5vw;">Hafa samband</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropdown-btn" style="font-size: 1.5vw;">Ýmislegt</button>
+            <div class="dropdown-content">
+                <a href="https://www.imdb.com/title/tt0499549/" class="dropdown-item" style="font-size: 1.5vw;">Avatar á IMDB</a>
+                <a href="http://www.avatar.com" class="dropdown-item" style="font-size: 1.5vw;">Official Avatar Síðan</a>
+            </div>
+        </div>
+
+    </nav>
+    <p class="center">&copy;2023 Hnoðritúrbó</p>
+</footer>
+
+
+</body>
+</html>

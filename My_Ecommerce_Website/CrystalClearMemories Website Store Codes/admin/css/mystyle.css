@@ -1,0 +1,1482 @@
+/* ----------- VELKOMIN Í CSS SKJALIÐ MITT ----------- */
+/* -----------      HREIÐAR PÉTURSSON     ----------- */
+   /* -----------      ADMIN SÍÐAN     ----------- */
+
+
+
+  /* ----------------------------- ÝMISLEGT ----------------------------------- */
+ /* -------------------------------------------------------------------------- - */
+/* ------------ HÉR ER AÐ FINNA SMÁVÆGILEGU LITLU HLUTI SÍÐUNNAR ---------------- */
+
+/* My custom text shadow */
+.my-text-shadow {
+  text-shadow: 3px 3px 5px var(--bs-gray-900) !important;
+}
+
+/* The stroke border around every letter */
+.my-text-stroke {
+  -webkit-text-stroke: 1px var(--bs-gray-400); /* For Safari/WebKit browsers */
+  text-stroke: 1px var(--bs-gray-400); /* For modern browsers that support the standard text-stroke property */
+  /* color: transparent */ /* Set the text color to transparent to only show the stroke */
+  /* Alternatively, set a fallback color for browsers that don't support text-stroke */
+  /* color: #adb5bd; */
+}
+
+/* Force text to not wrap */
+.nowrap {
+  white-space: nowrap;
+}
+/* Force text not to wrap and hide overflow */
+.nowrap-overflow-hidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.grey-text-white-shadow {
+  color: black;
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+}
+.description-container {
+  /* Set a fixed height for the description container */
+  height: 90%; /* Adjust the height as needed */
+  overflow: hidden;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Miðja texta og items */
+.center {
+  text-align: center;
+  align-items: center;
+}
+.text-align-end {
+  text-align: end;
+}
+/* ? */
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
+
+
+/* Línan */
+.my-horizontal-line {
+  border-top: 3px solid rgb(124, 116, 116);
+  opacity: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.my-horizontal-line-black {
+  border-top: 3px solid rgb(0, 0, 0); 
+  opacity: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+/* Blái text info textinn með smá skugga */
+.text-info-subtle-shadow {
+  color: var(--bs-info);   /* This uses Bootstrap's text-info color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* This applies a subtle black shadow */
+}
+
+/* Image thumbnail setting */
+.mythumbnail {
+  max-width: 10vw;
+  max-height: 10vw;
+  width: auto;
+  height: auto;
+}
+.margin-top {
+  margin-top: 100px;
+}
+/* Fallega subtle hvítur texti */
+.whitetext {
+  color: #CCCCCC;
+}
+/* Underlined text */
+.underline {
+  text-decoration: underline;
+}
+/* Breyta úr align start í center í minni skjám - orders_action.php card header */
+@media (max-width: 1200px) {
+  .xl-align-start {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.textarea-like-span {
+  display: inline-block;
+  overflow-y: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+
+/* Shrink the text a little bit when screen goes smaller and my white text with shadow setting */
+.my-white-text-with-shadow {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 20px;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+  color: white;
+}
+@media (max-width: 1200px) {
+  .my-white-text-with-shadow {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .my-white-text-with-shadow {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+/* Make the font size of the message popup smaller according to screen size */
+.order-items-message-font-size {
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  .order-items-message-font-size {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .order-items-message-font-size {
+    font-size: 14px;
+  }
+}
+
+
+/* ----- Create Order ----- */
+
+/* Title Text In Create Order */
+.create-order-headline-text {
+  display: block;
+  font-weight: 100;
+  font-size: 40px;
+}
+@media (max-width: 992px) {
+  .create-order-headline-text {
+    font-size: 26px;
+  }
+}
+@media (max-width: 576px) {
+  .create-order-headline-text {
+    font-size: 20px;
+  }
+}
+/* Go back button - Clear button - Proceed button */
+.create-order-button {
+  font-size: 20px;
+  /* width: fit-content; */
+  height: 45px;
+}
+@media (max-width: 1200px) {
+  .create-order-button {
+    font-size: 16px;
+  }
+}
+.create-order-button-logo {
+  font-size: 22px;
+
+}
+@media (max-width: 576px) {
+  .create-order-sm-size-buttons {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.subtle-text-border {
+  text-shadow: 
+    -1px -1px 0 rgba(0,0,0,0.4),  
+    1px -1px 0 rgba(0,0,0,0.4),
+    -1px 1px 0 rgba(0,0,0,0.4),
+    1px 1px 0 rgba(0,0,0,0.4);
+}
+
+
+.font-size-22px {
+  font-size: 22px;
+}
+@media (max-width: 1200px) {
+  .font-size-22px {
+    font-size: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .font-size-22px {
+    font-size: 18px;
+  }
+}
+.font-size-30px {
+  font-size: 30px;
+}
+.card-header {
+  z-index: 5;
+}
+/* move card body up - below the card header */
+.card-body {
+  margin-top: -25px;
+}
+.card-footer {
+  border-top: 0px !important;
+}
+.card-header {
+  border-bottom: 0px !important;
+  
+}
+.borderradius {
+  border-radius: 40px !important;
+}
+
+.card-body-add-order {
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+
+
+/* Card header border radius  */
+/* Skoða hvernig þetta kemur inn á síðunni og modifya */
+.minnborderradius {
+  border-radius: 40px 40px 12px 12px !important;
+  width: 100%;
+  height: 100%;
+  padding: 0.3vw;
+  margin-bottom: -10px;
+  font-size: 22px;
+  /*  border-bottom: transparent !important;  */
+}
+
+.my-pseudo-element {
+  position: relative;  /* Ensure the parent element is positioned */
+}
+
+.my-pseudo-element::before {
+  content: "";  /* Necessary for the pseudo-element to show */
+  display: block;
+  position: absolute;  /* Absolute positioning to cover the entire element */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(121, 64, 57, 0.6);  /* Purple color with 50% opacity */
+  pointer-events: none;
+  border-radius: 40px;  /* Make sure interactions like clicking go through the overlay */
+}
+.img-fluid {
+  height: 100px;
+  width: 100px;
+}
+
+/*--------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+.scrollable-product-window {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.product {
+  width: 500px;
+  height: 500px;
+}
+.product-container {
+  padding: 15px 0; /* Space out each product */
+  border-bottom: 1px solid #eee; /* Optional line to separate products visually */
+}
+
+.product-container img {
+  max-width: 100%; /* Ensure images don't overflow their container */
+  display: block; /* Remove any unwanted space below the image */
+  margin: 0 auto; /* Center the image horizontally if it's smaller than the container */
+}
+
+.product-container h4 {
+  margin-top: 0; /* Remove default top margin */
+}
+
+
+
+/* ---------------------------------------------------------------------------------- */
+  /* ---------------------- BODY BACKGROUND AND OVERLAY --------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+/* Body taggið - background & solid color yfir með transparency */
+body {
+  margin: 0;
+  padding: 0;
+  /* text-shadow: 2px 2px 50px var(--bs-gray-500); */
+  background-image: url('../img/subtleNatureBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+}
+/* Setur lit yfir background myndina og hef hann smá gegnsæjann */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #221522, #3a343a); /* Adjusted colors */
+  /* background: linear-gradient(to bottom, #121212, #343a42); */
+  opacity: 0.9;
+  z-index: -1;
+  box-shadow: 0 0 12px rgba(108, 117, 125, 0.6);
+}
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------- */
+  /* ---------------------- SIDEBAR AND NAVBAR SETTINGS------------------------------ */
+/* ----------------------------------------------------------------------------------------- */
+
+.backgroundsidebar {
+  position: relative;
+  width: 12vw;
+  border-radius: 100px 100px 60px 60px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  background-image: url("../img/backgroundsidebar.jpg");
+  background-size: cover;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+
+.backgroundsidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(34, 21, 34), rgba(58, 52, 58));
+  opacity: 0.9;
+  z-index: 1;
+}
+
+
+
+/* Make the sidebar disappear when screen res goes below 767px */
+/* 
+@media (max-width: 1600px) {
+  .sidebar {
+    display: none;
+  }
+}
+ */
+/* Sidebar margin */
+.sidebar-margin {
+  margin-left: 2vw;
+  /* Add this line to include the margin within the element's width */
+  box-sizing: border-box; 
+}
+@media (max-width: 991.98px) {
+  .sidebar-margin {
+    margin-left: 0;
+  }
+}
+
+/* Litir sóttir úr navbar dark í sass.css */
+.sidebar-colors .nav-link {
+  color: rgba(255, 255, 255, 0.55);
+}
+.sidebar-colors .nav-link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+.sidebar-colors .nav-link.disabled {
+  color: rgba(255, 255, 255, 0.25);
+}
+.sidebar-colors .nav-link.active {
+  color: #fff;
+}
+.sidebar-colors .navbar-brand {
+  color: #fff;
+}
+.sidebar-colors .navbar-brand:hover {
+  color: #fff;
+}
+.sidebar-colors .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-colors .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------- NAVBAR SETTINGS --------------------- */
+
+.limited-height {
+
+  min-height: 60px;
+}
+
+.navbar-main-title {
+  left: 40px;
+  top: 5px;
+  /* style="left: 75px; top: 5px;" */
+  /* Using top 50% and transform -50% makes it always stay centered on Y axis (top, bottom) */
+  /* top: 50%; */ 
+  /* transform: translateY(-50%); */
+
+}
+/* This makes sure the navbar items doesnt wrap and also seem to be making the buttons size larger wich is good */
+.navbar-expand-lg {
+  flex-wrap: nowrap; /* Prevent navbar items from wrapping */
+}
+/* .center-breadcrumbs {
+  top: 50%; 
+  transform: translateY(-50%); 
+  line-height: 40px;
+} */
+.nav-link.btn.btn-outline-secondary.rounded-pill {
+  padding: 0.5vw; /* or 1rem for rem units */
+  font-size: 1vw; /* or 1.5rem for rem units */
+  border: 0.5px solid grey;
+  backdrop-filter: blur(3px);
+}
+.bi {
+  align-items: start;
+  justify-content: start;
+  text-align: left;
+}
+
+.navbar, .nav-item, .nav-link, .btn {
+  position: relative;
+  z-index: 2;  /* Above the ::before pseudo-element overlay */
+}
+.nav-link.btn .bi, .nav-link.btn span {
+  opacity: 1;  /* Makes them fully opaque */
+}
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030; /* High z-index ensures it stays on top */
+}
+
+
+#navbarTogglerDemo01 {
+  padding: 50px;
+/* 
+  padding-left: 50px;
+  padding-top: 50px;
+   */
+}
+
+.breadcrumb {
+  --bs-breadcrumb-padding-x: 0;
+  --bs-breadcrumb-padding-y: 0;
+  --bs-breadcrumb-margin-bottom: 1rem;
+  --bs-breadcrumb-bg: ;
+  --bs-breadcrumb-border-radius: ;
+  --bs-breadcrumb-divider-color: var(--bs-secondary-color);
+  --bs-breadcrumb-item-padding-x: 0.5rem;
+  --bs-breadcrumb-item-active-color: var(--bs-secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--bs-breadcrumb-padding-y) var(--bs-breadcrumb-padding-x);
+  margin-bottom: var(--bs-breadcrumb-margin-bottom);
+  font-size: var(--bs-breadcrumb-font-size);
+  list-style: none;
+  background-color: var(--bs-breadcrumb-bg);
+  border-radius: var(--bs-breadcrumb-border-radius);
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: var(--bs-breadcrumb-divider-color);
+  content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+}
+.breadcrumb-item.active {
+  color: var(--bs-breadcrumb-item-active-color);
+}
+/* $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><path d='M9.502 5.513a.144.144 0 0 0-.202.134V6.65a.5.5 0 0 1-.5.5H2.5v2.9h6.3a.5.5 0 0 1 .5.5v1.003c0 .108.11.176.202.134l3.984-2.933a.51.51 0 0 1 .042-.028.147.147 0 0 0 0-.252.51.51 0 0 1-.042-.028L9.502 5.513zM8.3 5.647a1.144 1.144 0 0 1 1.767-.96l3.994 2.94a1.147 1.147 0 0 1 0 1.946l-3.994 2.94a1.144 1.144 0 0 1-1.767-.96v-.503H2a.5.5 0 0 1-.5-.5v-3.9a.5.5 0 0 1 .5-.5h6.3v-.503z' fill='#{$breadcrumb-divider-color}'/></svg>");
+ */
+
+
+
+
+                 /* ---------- MY BREADCRUMBS SETTINGS ---------- */
+          /* ---------------------------------------------------------- */
+
+/* ----- DISABLE THE ORIGINAL SLASH ( "/" ) IN BOOTSTRAP'S BREADCRUMB-ITEMS ----- */
+          /* ---------------------------------------------------------- */
+
+
+/* This will override Bootstrap's default styling for breadcrumb dividers */
+.breadcrumb-item::before {
+  content: none !important; /* This removes the default slash */
+}
+
+/* You might need to adjust spacing or other styling once the default divider is removed */
+.breadcrumb-item + .breadcrumb-item {
+  /* padding-left: 30px !important;  *//* Adjust as needed */
+  /* padding-right: 30px !important; */
+}
+/* bi bi-forward is the logo arrow I want to display between the breadcrumbs */
+.bi.bi-forward {
+  padding-left: 30px !important; /* Set padding to create space between the breadcrumb and the arrow */
+  padding-right: 30px !important; /* Set padding to create space between the breadcrumb and the arrow */
+}
+
+/* 
+.breadcrumb .breadcrumb-item a {
+  text-decoration: none;
+  color: white; 
+} 
+*/
+
+.breadcrumb .breadcrumb-item a {
+  text-decoration: none;
+  color: white; 
+  padding: 0; 
+  padding-top: 20px !important; /* virkar ekki */
+  margin-top: 100px !important; /* virkar ekki */
+  margin: 0; /* or adjust as needed */ /* virkar ekki */
+  line-height: 1; /* or adjust as needed */
+}
+
+/* .breadcrumb .breadcrumb-item a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+  text-decoration: none; 
+
+}
+.breadcrumb .breadcrumb-item a.whitetext {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.breadcrumb .breadcrumb-item a.whitetext:hover {
+  text-decoration: none; 
+} */
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------- */
+  /* ----------------- ALLT INNAN ORDERS.PHP OG CHILD SITES ---------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+/* ORDERS_ACTION.PHP CARD HEADER */
+/* .my-card-header {
+  width: 110% !important;
+  height: 120px !important;
+  position: relative;
+  background-image: url('../img/backgroundsidebar.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  margin: 0; 
+  padding: 0; 
+  z-index: 1;
+  background-size: calc(100% + 2px) calc(100% + 2px); 
+}*/
+  /*   box-shadow: 0 0 12px rgba(108, 117, 125, 0.2);*/ 
+.my-card-header {
+  width: 100% !important;
+  height: 140px !important;
+  position: relative;
+  background-image: url('../img/backgroundsidebar.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* Adjust this if you want a specific size */
+  background-position: center center; /* Adjust to focus on part of image */
+  background-attachment: scroll; /* Image will not move with the page scroll */
+  z-index: 1;
+}
+  
+/* Setur lit yfir background myndina og hef hann smá gegnsæjann */
+.my-card-header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(34, 21, 34), rgba(58, 52, 58));
+  border-radius: 40px;
+  opacity: 0.9;
+  z-index: -1;
+}
+.my-add-order-card-header {
+  width: 100% !important;
+  height: 140px !important;
+  position: relative;
+  background-image: url('../img/backgroundsidebar.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* Adjust this if you want a specific size */
+  background-position: center center; /* Adjust to focus on part of image */
+  background-attachment: scroll; /* Image will not move with the page scroll */
+  z-index: 1;
+}
+.my-add-order-card-header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* Adjust the RGBA values to control transparency */
+/*   background-image: linear-gradient(to bottom, rgba(40, 167, 69, 0.7), rgba(58, 52, 58, 0.7));*/  
+  background-image: linear-gradient(to bottom, rgba(56, 79, 68, 0.9), rgba(58, 52, 58, 0.9));
+
+  border-radius: 40px;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+/* -------------------------------------------------- */
+  /* ----------- DELETION CARD HEADER ------------- */
+/* -------------------------------------------------- */
+
+/* CSS for the card header on the deletion site */
+.deletion-card-header {
+  /* Existing styles from the original .my-card-header class */
+  width: 110% !important;
+  height: 120px !important;
+  position: relative;
+  background-image: url('../img/backgroundsidebar.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  margin: 0; 
+  padding: 0; 
+  z-index: 1;
+  background-size: calc(100% + 2px) calc(100% + 2px);
+
+  /* New overlay properties */
+  /* Add a red overlay using RGBA color value */
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -5px;
+    right: 5px;
+    width: 100.6%;
+    height: 103%;
+    background: rgba(255, 0, 0, 0.5); /* Red overlay with 50% opacity */
+    border-radius: 40px;
+    opacity: 0.9; 
+    z-index: -1;
+    margin: 0;
+    padding: 0;  
+    box-shadow: 0 0 12px rgba(108, 117, 125, 0.6);
+  }
+}
+
+/* -------------------------------------------------- */
+
+
+/* -------------- REITIR SEM DISPLAYA INFO SEM EKKI HÆGT ER AÐ BREYTA ------------------ */
+/* LOOKS LIKE FORM CONTROL FIELD BUT IS NOT EDITBLE */
+.form-control-span {
+  display: inline-block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  /* font-size: 1rem; */
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  /* cursor: pointer; */ /* You can use 'pointer', 'crosshair', 'grab', 'zoom-in', etc. */
+  background-color: var(--bs-gray-900);
+   /* Add a transition effect for smooth changes */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add text shadow for a 3D effect */
+  text-transform: uppercase;
+}
+/* WHEN MOUSE HOVERS THIS SETTINGS GO ACTIVE */
+.form-control-span:hover {
+  color: var(--bs-gray-400);
+  background-color: var(--bs-gray-800);
+  border-color: #6c7581;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(104, 110, 119, 0.25);
+  transition: background-color 1s ease-in, border-color 1s ease-in, color 1s ease-in; /* Add 's' after 0.6 for border-color transition */
+}
+
+
+/* -------------------------------------------------- */
+
+
+/* DELETE TEXT IN ORDERS.PHP*/
+.delete-text {
+  width: 100%;
+  background-color: var(--bs-gray-500);
+  color: rgba(24, 20, 20, 0.5);
+  text-shadow: 0 0 2px rgba(252, 2, 2, 0.8);
+  font-size: 32px;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .delete-text {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+} 
+@media (max-width: 992px) {
+  .delete-text {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+  }
+} 
+/* Your existing styles for .alert, .borderradius, .nowrap, and .delete-text classes */
+/* ... */
+
+/* Create your custom class for the transparent background with opaque text */
+.custom-label {
+  background-color: transparent; /* Make the background transparent */
+  display: inline-block; /* Set the display property to inline-block to fit the content */
+}
+
+.custom-label h1 {
+  background-color: rgba(255, 255, 255, 0.7); /* Set the background color of the h1 element */
+  display: inline; /* Set the display property to inline to fit the content */
+  padding: 10px; /* Add some padding to the h1 element to make it more visible */
+}
+
+
+/* -------------------------------------------------- */
+
+
+/* --------- CHANGE FONT SIZE ORDERS_ACTION.PHP CARD ---------- */
+/* Orders_action.php change card header font size */
+.orders-card-header-font-size {
+  font-size: 30px;
+}
+/* minni en XL stærð er header font-size 90% */
+@media (max-width: 1200px) {
+  .orders-card-header-font-size {
+    font-size: calc(30px * 0.9) !important;
+  }
+}
+/* minni en LG stærð er header font-size 80% */
+@media (max-width: 992px) {
+  .orders-card-header-font-size {
+    font-size: calc(30px * 0.8) !important;
+  }
+}
+/* Orders info body font-size */
+.orders-card-body-font-size {
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  .orders-card-body-font-size {
+    font-size: 16px;
+  }
+}
+/* Setja font-size í original stærð í skjá minni en LG */
+@media (max-width: 992px) {
+  .orders-card-body-font-size {
+    font-size: 18px;
+  }
+}
+
+/* -------------------------------------------------- */
+
+/* ORDER STATUS LITAÐI REITURINN  */
+.form-control-order-status {
+  display: inline-block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  /* text-transform: uppercase; */
+}
+
+/* --------- ORDER STATUS BACKGROUND COLORS --------- */
+.status-made {
+  background-color: rgba(255, 240, 0, 0.4) !important; /* Bright yellow background with 70% transparency */
+  box-shadow: 0 0 12px rgba(108, 117, 125, 0.9) !important; /* Box shadow similar to status-confirmed */
+}
+.status-confirmed {
+  background-color: rgba(102, 204, 255, 0.4) !important; /* Bright blue background with 70% transparency */
+  box-shadow: 0 0 12px rgba(108, 117, 125, 0.9) !important; /* The existing box shadow you already have */
+}
+.status-processed {
+  background-color: rgba(102, 255, 102, 0.4) !important; /* Bright green background with 70% transparency */
+  box-shadow: 0 0 12px rgba(108, 117, 125, 0.9) !important; /* Box shadow similar to status-confirmed */
+}
+.status-delivered {
+  background-color: rgba(0, 255, 0, 0.4) !important; /* Another bright green background with 70% transparency */
+  box-shadow: 0 0 12px rgba(108, 117, 125, 0.9) !important; /* Box shadow similar to status-confirmed */
+}
+.status-cancelled {
+  background-color: rgba(255, 77, 77, 0.4) !important; /* Bright red background with 70% transparency */
+  box-shadow: 0 0 12px rgba(108, 117, 125, 0.9) !important; /* Box shadow similar to status-confirmed */
+}
+
+/* Add a sharper border color only on hover with a 1-second ease-in effect */
+.status-made:hover {
+  border-color: rgba(255, 240, 0, 0.6) !important; /* Sharper border color */
+  transition: border-color 1s ease-in; /* 1-second ease-in effect for the border color transition */
+}
+.status-confirmed:hover {
+  border-color: rgba(102, 204, 255, 0.6) !important; /* Sharper border color */
+  transition: border-color 1s ease-in; /* 1-second ease-in effect for the border color transition */
+}
+.status-processed:hover {
+  border-color: rgba(102, 255, 102, 0.6) !important; /* Sharper border color */
+  transition: border-color 1s ease-in; /* 1-second ease-in effect for the border color transition */
+}
+.status-delivered:hover {
+  border-color: rgba(0, 255, 0, 0.6) !important; /* Sharper border color */
+  transition: border-color 1s ease-in; /* 1-second ease-in effect for the border color transition */
+}
+.status-cancelled:hover {
+  border-color: rgba(255, 77, 77, 0.6) !important; /* Sharper border color */
+  transition: border-color 1s ease-in; /* 1-second ease-in effect for the border color transition */
+}
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------- */
+   /* -------------------- MÍNAR STILLINGAR Á TABLE OG CARD  ---------------------- */
+/* ---------------------------------------------------------------------------------- */
+
+/* My modification of the card class */
+.card {
+  background-color: transparent; /* MY MODIFICATION */
+  border: none; /* MY MODIFICATION */
+  border-radius: 20px;       /* var(--bs-card-border-radius); */
+}
+/* Make the table-dark transparent */
+.table-dark {
+  opacity: 0.9; /* þetta virkar */
+}
+
+.table {
+  margin-bottom: 0px;
+}
+
+/* Scrollable table og border radius utan um table (card body) */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: 30px 30px 4px 4px;
+  border-color: var(--bs-dark-border-subtle) !important;
+}
+
+
+/* --------------------------------------------------------------- */
+/* --------------------------------------------------------------- */
+
+
+/* ----- My own custom table settings class ----- */
+
+/* Set the table layout to fixed and to have min-width of 1000px */
+.mytable table {
+  table-layout: fixed;
+  min-width: 1000px;
+}
+
+/* Ensure that text that overflows is hidden */
+.mytable th,
+.mytable td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Custom styles for buttons in the action-column */
+.action-column {
+  width: fit-content; /* set the column to fit the button */
+}
+/* takkarnir view og delete */
+.custom-btn {
+  width: 95%; /* Set the desired width for the buttons */
+  opacity: 0.8; /* Transparency of the buttons */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------- */
+   /* -----------------  ER EKKI AÐ NOTA EN VILL SAMT GEYMA  ---------------------- */   
+/* ----------------------------------------------------------------------------------- */
+
+
+
+
+
+/* -------------------------------------------------------------------- */
+/* ------------- BREADCRUMB MODIFICATION IN THE TOPNAVBAR ------------- */
+/* -------------------------------------------------------------------- */
+/* Breadcrumb iconið sem er í navbar */
+/* .breadcrumb-item::before {
+  content: "\F3DC"; 
+  font-family: 'Bootstrap Icons';
+} */
+/* content: UNICODE value for bi-forward */
+/* Other styles if necessary */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* stillingar á background í sidebar */
+ /* núlla allt margin, padding og border - override bs settings */
+/* 
+.backgroundsidebar {
+  position: relative;
+  width: 12vw;
+  border-radius: 100px 100px 60px 60px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  background-image: url("../img/backgroundsidebar.jpg");
+  background-size: cover;
+
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+
+.sidebar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  --bs-bg-opacity: 0.8;
+ 
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+ */
+/* background-color: linear-gradient(to bottom, #221522, #3a343a), var(--bs-bg-opacity); */ /* Adjusted colors */
+
+
+
+
+
+
+/* sótt úr sass.css til að breyta */
+/* 
+.navbar-brand {
+  align-items: center;
+  padding-top: var(--bs-navbar-brand-padding-y);
+  padding-bottom: var(--bs-navbar-brand-padding-y);
+  margin-right: 0;
+  font-size: var(--bs-navbar-brand-font-size);
+  color: var(--bs-navbar-brand-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+ */
+
+
+/* Klasar til að minnka font-size í minni en LG stærð */
+/* 
+@media (max-width: 992px) {
+  .font-size-reduce-10 {
+    font-size: 90%;
+  }
+}
+@media (max-width: 992px) {
+  .font-size-reduce-20 {
+    font-size: 80%;
+  }
+}
+@media (max-width: 992px) {
+  .font-size-reduce-30 {
+    font-size: 70%;
+  }
+}
+@media (max-width: 992px) {
+  .font-size-reduce-30 {
+    font-size: calc(36px * 0.7) !important;
+  }
+}
+@media (max-width: 992px) {
+  .font-size-reduce-30 {
+    font-size: calc(36px * 0.7) !important;
+  }
+}
+@media (max-width: 992px) {
+  .font-size-reduce-50 {
+    font-size: 50%;
+  }
+}
+@media (max-width: 992px) {
+  .font-size-reduce-60 {
+    font-size: 40%;
+  }
+}
+
+
+
+
+
+/* Optional: Add styles for when the span is focused (e.g., when clicked or focused with Tab key) */
+/* 
+.form-control-span:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #86b7fe;
+}
+ */
+/* Custom CSS to modify the original btn-outline-danger class */
+/* 
+.custom-btn-outline-danger {
+  color: white;
+  border-color: red;
+  background-color: red;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5); 
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.custom-btn-outline-danger:hover {
+  color: rgb(255, 0, 0);
+  background-color: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.7);
+}
+ */
+
+/* Var reyna með þessu að gera bakgrunninn í card headerinum jafn stóran og síðan sjálf og gera
+card background wrapper --- skoða betur seinna */
+/* 
+.my-card-header {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 12px rgba(108, 117, 125, 0.6);
+  overflow: hidden; 
+}
+*/
+/* 
+.card-background-wrapper {
+ width: 100%;
+ height: 100%;
+ background-image: url('../img/backgroundsidebar.jpg'); 
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ position: relative;
+ top: 0;
+ left: 0;
+ z-index: -1; 
+ opacity: 0.6; 
+ box-shadow: 0 0 12px rgba(108, 117, 125, 0.6);
+}
+*/
+
+
+/* Optional: Add styles for when the span is disabled */
+/* 
+.form-control-span:disabled {
+  background-color: #e9ecef;
+  opacity: 0.7;
+}
+ */
+/* Optional: Add styles for when the span is selected or highlighted (e.g., during text selection) */
+/* 
+.form-control-span::selection {
+  color: #fff;
+  background-color: #007bff;
+}
+ */
+/* Optional: Add styles for placeholder text within the span */
+/* 
+.form-control-span::placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+ */
+/* Optional: Add styles for when the span is in an invalid state (e.g., invalid input) */
+/* 
+.form-control-span:invalid {
+}
+ */
+/* Optional: Add styles for when the span is in a valid state (e.g., valid input) */
+/* 
+.form-control-span:valid {
+  border-color: #28a745;
+}
+ */
+
+
+/* background: linear-gradient(to bottom, #07030a, #2e343b); */
+/* background-size: cover; */
+
+/*  
+.justify-content {
+  justify-content: center;
+  display: flex; 
+  justify-content: center; 
+} 
+ */
+
+
+/* Safari compatibility WEBKIT-TEXT-FILL-COLOR */
+/* 
+.outlined-text {
+  -webkit-text-fill-color: transparent; 
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  text-shadow: 0 0 2px #000;
+}
+ */
+/* 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  padding: 20px;
+  margin-left: 100px;
+  margin-left: 220px;
+}
+ */
+/* 
+#adminUsersCol,
+#usersListCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ */
+/* 
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .content {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+ */
+/* 
+.panel-body {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .panel-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+ */
+/* Minn eigin sidebar css style */
+/* 
+.sidebar {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  bottom: 25%;
+
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ */
+/*  
+ .sidebar {
+  width: 100%; 
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ */
+ 
+/* Þessi er ekki í notkun í augnablikinu sem prufa */
+/* Þessi geymir table structure sem inniheldur svo gögnin úr database */
+/* 
+.fixed-container {
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+ */
+  /* z-index: -1; */ /* Set a high z-index to ensure it appears above other elements */
+ /*  border-radius: 25%; */ /* Set the desired border radius for rounded corners */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */ /* Add a box shadow for a subtle effect */
+  /* top: 25%; *//* Adjust the top position as needed */
+  /* left: 22%; */  /* Adjust the left position as needed */
+/* } */
+/* 
+.container-fluid.backgroundsidebar {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+ */
+/*  
+.sidebar.sidebar-colors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+ */
+
+/* 
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+*/
+
+
+/* ----- ýmsar skipanir sem ég tími ekki eyða -----  */
+/* 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  flex-wrap: wrap; 
+}
+*/
+/* backdrop-filter: blur(4px); */
+/*  background-size: cover; */
+/*  background-blend-mode: multiply; */
+
+/* ýmislegt sem var ekki að virka í body */  
+    /* background-color: var(--bs-gray-900);   */
+    /* background-color: transparent; */
+    /* background-repeat: repeat-x; */
+    /* background-size: auto; */
+    /* background-image: url('img/background-image.jpg');  */ /* Replace with your image path */
+    /* background-size: cover;  */  /* Ensure the background image covers the entire body */
+    /* background-blend-mode: multiply; */   /* Blend the background image and color */
+
+/* virkar ekki í augnablikinu */
+
+
+/* Þetta virðist ekki virka. ég set bakgrunnsmyndina inn í body tag í htmlinu */
+/* 
+.background {
+    background-image: url('img/background-image.jpg');
+}
+*/
+
+/* 
+.container-fluid {
+  background-color: transparent;
+  background-image: url('img/backgroundsidebar.jpg') !important;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+*/
+/* 
+.container-fluid {
+  position: absolute;
+  top: 25%;
+  left: 6%;
+  bottom: 25%;
+  right: 6%;
+  border-radius: 25%; 
+  overflow: hidden; 
+}
+*/
+/* 
+.background-image {
+  background-image: url('img/backgroundsidebar.jpg'); 
+  background-size: cover;
+  background-blend-mode: multiply; 
+}
+ */
+ 
+/* Blur á bakgrunn á navbar expand */
+/* 
+.navbar-expand-lg {
+  backdrop-filter: blur(4px);
+}
+ */
+/* 
+  .table-responsive-custom {
+    overflow-x: auto;
+  }
+
+  .table-responsive-custom table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  @media (max-width: 576px) {
+    .table-responsive-custom table {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    .table-responsive-custom table {
+      width: 120%;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 992px) {
+    .table-responsive-custom table {
+      width: 130%;
+    }
+  }
+
+  @media (min-width: 993px) {
+    .table-responsive-custom table {
+      width: 140%;
+    }
+  } */
+

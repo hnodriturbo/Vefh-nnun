@@ -1,0 +1,59 @@
+.minnstill {
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.center {
+    text-align: center;
+}
+table {
+border-collapse: collapse;
+align-items: center;
+align-self: center;
+margin: 0 auto;
+}
+
+td {
+width: 33.33%;
+
+}
+.underline {
+    text-decoration: underline;
+}
+
+.umtexti1 {
+    text-align: justify;
+    font-size: 40px;
+    color:black
+    
+}
+.umtexti2 {
+    text-align: center;
+}
+.umtexti3 {
+    text-align: center;
+    border: 1px solid black;
+}
+.listi1 {
+    text-align: left;
+    font-size: 40px;
+    border: 1px solid black;
+}
+@font-face {
+    font-family: MyCustomFont;
+    src: url('font/mycustomfont.ttf');
+}
+
+body {
+font-family: mycustomfont, sans-serif;
+margin: 0 auto;
+max-width: 80em;
+
+background-image: url('pics/background.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+  

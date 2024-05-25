@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>{{ category }}</h1>
+    <div class="row">
+        {% for post_id, post in posts.items() %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{ post.content }}</p>
+                    <p class="card-text"><small class="text-muted">Posted by {{ post.author_email }}</small></p>
+                    {% if session.user and (session.user.localId == post.author_id or session.user.role == 'admin') %}
+                    <form method="POST" action="{{ url_for('delete_post', post_id=post_id) }}">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

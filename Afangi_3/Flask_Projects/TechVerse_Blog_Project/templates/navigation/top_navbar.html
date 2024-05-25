@@ -1,0 +1,37 @@
+    <!-- Fixed Navbar -->
+    <nav class="navbar navbar-dark fixed-top bg-dark my-border-bottom-1 light-spacing light-italic drop-shadow">
+
+
+        <div class="container-fluid">
+
+
+            <div class="no-wrap">
+                <a class="navbar-brand" href="#" style="font-size: 14px;">
+                    {% if 'user' in session %}
+                    You are logged in with e-mail :  {{ session.user['email'] }} 
+                    <a href="{{ url_for('logout') }}" class="btn btn-outline-danger" style="font-size: 14px;">
+                        <i class="fa fa-sign-out-alt"></i> Logout
+                    </a>
+                   
+                    {% else %}
+                        You are not logged in. <a href="{{ url_for('login') }}" class="btn btn-outline-info" style="font-size: 14px;">Login</a>.
+                    {% endif %}
+                  
+                </a>    
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav ml-auto">
+                    {% if user %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('logout') }}">Log out</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('login') }}">Log in</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>

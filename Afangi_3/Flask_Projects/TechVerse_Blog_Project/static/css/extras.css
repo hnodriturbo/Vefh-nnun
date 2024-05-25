@@ -1,0 +1,159 @@
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---////////////////////////////////// */
+/* \\\\\\\\\\\\\\\\\\      Author: Hreiðar Pétursson      //////////////// */
+/* \\\\\\\\\\\\\\\\       Course:  Vefhönnun Áfangi 3       ////////////// */
+/* \\\\\\\\\\\\\          -- Skilaverkefni 3 --              ///////////// */
+/*  \\    Description: Enhances the website with styles and effects     // */
+/*   \\  using  CSS for layout adjustments, enhancements, and custom   //  */
+/*    \\      interactivity for a seamless user experience.           //   */
+/*     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---///////////////////////////////    */
+
+
+
+/* Some greyish colors  */
+.grey500 {
+    background-color: var(--bs-gray-500);
+}
+
+.grey600 {
+    background-color: var(--bs-gray-600);
+}
+
+.grey700 {
+    background-color: var(--bs-gray-700);
+}
+
+.grey800 {
+    background-color: var(--bs-gray-800);
+}
+
+
+
+
+
+
+/* Border Radius  */
+
+
+.border-radius-15 {
+    border-radius: 15px;
+}
+
+.border-radius-25 {
+    border-radius: 25px;
+}
+
+
+
+
+/* Top Border Radius */
+.border-top-radius-15 {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Bottom Border Radius */
+.border-bottom-radius-15 {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+
+
+/* Custom outline alert styles */
+.alert-outline-danger {
+    border: 1px solid #dc3545;
+    background-color: transparent;
+    color: #dc3545;
+}
+
+.alert-outline-success {
+    border: 1px solid #198754;
+    background-color: transparent;
+    color: #198754;
+}
+
+.alert-outline-warning {
+    border: 1px solid #ffc107;
+    background-color: transparent;
+    color: #ffc107;
+}
+
+.alert-outline-info {
+    border: 1px solid #17a2b8;
+    background-color: transparent;
+    color: #17a2b8;
+}
+
+.alert-outline-primary {
+    border: 1px solid #007bff;
+    background-color: transparent;
+    color: #007bff;
+}
+
+.alert-outline-secondary {
+    border: 1px solid #6c757d;
+    background-color: transparent;
+    color: #6c757d;
+}
+
+.alert-outline-dark {
+    border: 1px solid #343a40;
+    background-color: transparent;
+    color: #343a40;
+}
+
+.nowrap {
+    white-space: nowrap; /* Stops the text from wrapping */
+    overflow: hidden; /* Hide instead of overflowing */
+}
+
+
+
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+
+
+
+.my-btn-box-shadow {
+    box-shadow: 0 0 8px 0 #919da7; /* Initial less intense shadow */
+    transition: box-shadow 0.9s ease-in-out; /* Transition effect for smooth animation */
+    border: 2px solid transparent; /* Ensure border size is accounted for to prevent shifting */
+}
+
+.my-btn-box-shadow:hover {
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; /* More intense glowing effect on hover */
+    border: 0px; /* Remove border on hover if desired */
+}
+
+.my-box-shadow-animation {
+    box-shadow: 0 0 8px 0 #919da7;
+    transition: box-shadow 0.9s ease-in-out; /* Smooth transition */
+}
+.my-box-shadow-animation-toggle {
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; /* Glowing effect */
+    /* box-shadow: 0 4px 12px 2px #919da7, 0 0 16px 4px #919da7; */
+}
+
+
+
+
+/* Not in need for these in this project */ 
+/*
+.btn-dark {
+    border-radius: 15px !important;
+}
+
+.btn-outline-dark {
+    border-radius: 15px !important;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(108, 117, 125, 1); 
+}
+ */
+

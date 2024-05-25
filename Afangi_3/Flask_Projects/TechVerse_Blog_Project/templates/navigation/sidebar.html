@@ -1,0 +1,40 @@
+<div class="bg-dark light-spacing light-italic drop-shadow min-vh-100" id="sidebar-menu" style="margin-top: 50px;">
+
+    <!-- Search Form -->
+    <form class="search-form mt-2 light-spacing light-italic drop-shadow">
+        <input type="text" class="form-control mb-2 light-spacing light-italic drop-shadow" placeholder="Search...">
+        <button type="submit" class="btn btn-outline-success w-100 light-spacing light-italic drop-shadow">Search</button>
+    </form>
+
+    <!-- Accordion Menu -->
+    <div class="flex-grow-1 d-flex flex-column justify-content-start mt-5 h-100">
+        <div class="accordion m-2 no-wrap rounded" id="accordionExample">
+            {% for category, details in g.request_context['categories'].items() %}
+           
+                <div class="accordion-item grey600 border-0">
+                    
+                    <h2 class="accordion-header algreya light-spacing light-italic drop-shadow" id="heading-{{ loop.index }}">
+                        <button class="accordion-button collapsed text-white grey600 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#category-{{ loop.index }}" aria-expanded="false" aria-controls="category-{{ loop.index }}">
+                            <i class="fa {{ details.icon }} me-2"></i> {{ details.title }}
+                        </button>
+                    </h2>
+                    
+                    <div class="accordion-collapse collapse" id="category-{{ loop.index }}" aria-labelledby="heading-{{ loop.index }}" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <hr>
+                            {% for subcategory, subdetails in details.subcategories.items() %}
+                            
+                                <a class="text-start text-white d-block no-wrap" href="{{ url_for('navigation.view_category', category=category, subcategory=subcategory, parent_category=category) }}">
+                                    <i class="fa {{ subdetails.icon }} me-2"></i>{{ subdetails.title }}
+                                </a>
+                                <hr>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

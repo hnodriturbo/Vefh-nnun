@@ -1,0 +1,53 @@
+
+
+<div class="container-fluid">
+    <img src="{{ url_for('static', filename='img/banner-1.jpg') }}" class="img-fluid" alt="Banner image">
+</div>
+
+<hr>
+
+
+
+
+
+
+
+<!-- Navbar container -->
+<div class="container-fluid bg-dark text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Navbar Brand or Logo -->
+        <a class="navbar-brand" href="/"><h3>MediaMatrix</h3></a>
+        <!-- Toggler Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#customNavbar" aria-controls="customNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse my-nav-styles" id="customNavbar">
+            <!-- Left-aligned links -->
+            <ul class="navbar-nav me-auto">
+                {% for dropdown_title, dropdown_items in dropdown_menus.items() %}
+                    <li class="nav-item dropdown p-2">
+                        <a class="btn btn-outline-secondary dropdown-toggle my-navbtn-styles" href="#" id="{{dropdown_title}}Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ dropdown_title }}
+                        </a>
+                        <ul class="dropdown-menu p-3" aria-labelledby="{{dropdown_title}}Dropdown">
+                            {% for item_title, item_url in dropdown_items.items() %}
+                                <li><a class="dropdown-item btn btn-secondary" href="{{ item_url }}">{{ item_title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+            <!-- Right-aligned dropdowns -->
+            <ul class="navbar-nav ml-auto">
+                {% for name, url in nav_links.items() %}
+                <li class="nav-item p-2">
+                    <a class="btn btn-outline-secondary my-navbtn-styles" href="{{ url }}">{{ name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<hr>

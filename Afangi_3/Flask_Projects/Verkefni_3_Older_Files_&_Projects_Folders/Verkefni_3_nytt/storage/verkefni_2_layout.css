@@ -1,0 +1,219 @@
+/* ########## Hreiðar Pétursson ########## */
+/*  ######## Vefhönnun Áfanginn ########  */
+/*   ######### Skilaverkefni 3 ########  */
+/*    ########   Apríl 2024   ########  */
+
+
+
+
+
+
+
+
+
+
+/* This way I can get 3 cards per row instead of two by reducing 
+the calculation of the width by 30px */
+.container-fluid {
+    width: calc(100% - 30px); 
+    margin: auto; 
+}
+
+
+
+
+
+/* ----- Body Styles ----- */
+body {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: normal;
+}
+
+/* Use light to revert the background color and color */
+.light {
+    background-color: var(--bs-light); 
+    color: var(--bs-dark); 
+}
+.dropdown-menu {
+    z-index: 1050 !important; /* Bootstrap's default z-index for dropdowns */
+}
+
+
+/* ----- Master Container Settings and Styles ----- */
+.master-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px; 
+    width: 80%;
+    margin: 40px auto;
+    border: 2px solid #6c757d;
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; 
+    border-radius: 15px;
+    /* overflow: hidden; */
+    padding-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .master-container {
+        width: 97%;
+    }
+}
+
+
+/* ----- Navbar Styles ----- */
+.my-navbar-button-styles {
+    box-shadow: 0 0 4px 0 #919da7, 0 0 8px 2px #919da7; /* Glowing effect */
+    display: inline-flex; /* Align items inline but use flex for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: 150px; /* Fixed width for all buttons */
+    height: 50px; /* Fixed height for all buttons */
+    margin: 5px; /* Add some space around buttons */
+    text-align: center; /* Ensure text is centered */
+    border-radius: 15px; /* Keep your desired border radius */
+}
+
+/* Adjust the .navbar-collapse for wrapping if necessary */
+.navbar-collapse {
+    flex-wrap: wrap; /* Allow the items to wrap to the next line */
+}
+/* 
+.my-navbar-button-styles {
+    box-shadow: 0 0 4px 0 #919da7, 0 0 8px 2px #919da7; 
+}
+ */
+/* These style will apply when the navbar is open */
+.navbar-collapse .my-navbar-button-styles {
+    display: block; /* Ensure each link is on a new line */
+    text-align: center; /* Center-align the text */
+    border-radius: 15px;
+    margin-bottom: 25px !important;
+    width: auto;
+    box-sizing: border-box;
+}
+
+/* I change the toggler a little bit for clearer appearance */
+.navbar-toggler {
+    /* opacity: 0.2 !important; */
+    box-shadow: 0 0 4px 0 #919da7, 0 0 8px 2px #919da7 !important;
+    /* margin-bottom: 25px !important; */
+}
+
+
+
+
+
+/* myStyles.css */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This will create equal spacing between items */
+}
+
+/* Adjusting event card width to fit 3 per row with margins for gap */
+.events-container .col-sm-6.col-md-4 {
+    width: calc(33.333% - 20px); 
+    margin-bottom: 20px; 
+}
+
+/* You might need to adjust this for different screen sizes */
+@media (max-width: 768px) {
+    .events-container .col-sm-6.col-md-4 {
+        width: calc(50% - 15px); 
+    }
+}
+
+@media (max-width: 576px) {
+    .events-container .col-sm-6.col-md-4 {
+        width: 100%; 
+    }
+}
+
+
+/* Content Container Styles */
+.content-container-styles {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    border-radius: 15px;
+    /* opacity: 0.5; */
+}
+
+
+
+/* ----- Image Settings -----  */
+
+.banner-container {
+    width: 100%;
+    padding: 20px;
+    
+    box-sizing: border-box;
+    
+}
+
+
+.img-fluid {   
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 15px !important;
+    /* margin: 20px; */
+    /* box-sizing: border-box; */
+}
+
+
+.card {
+    border-radius: 25px;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+.card:hover {
+    transform: scale(1.03); /* Slightly enlarges the card */
+}
+
+/* ----- Storage Code ----- */
+
+
+
+/* Only apply margin in the collapsed state, not when expanded */
+/* .navbar-collapse:not(.show) .my-navbar-button-styles {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px; 
+    border-radius: 15px;
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; 
+}
+    */
+
+/* 
+.master-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    max-width: 1200px; 
+    width: 80%;
+    border: 2px solid #6c757d;
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; 
+    border-radius: 15px;
+}
+    */
+    /* background-color: var(--bs-dark); */
+    /* height: 100vh; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin: 40px auto; */
+    /* overflow: hidden; */
+    /* z-index: -1; */
+    /* opacity: 1; */
+    
+
+/* 
+@media (max-width: 992px) {
+    .master-container {
+        width: 90%;
+    }
+}
+    */

@@ -1,0 +1,60 @@
+<!-- Banner Container -->
+
+<div class="banner-container">
+    <img src="{{ url_for('static', filename='img/banner-1.jpg') }}" class="img-fluid" alt="Banner image">
+</div>
+
+<hr>
+
+<!-- Navbar container -->
+<div class="container-fluid">
+
+
+
+
+    <nav class="navbar navbar-expand-md p-1">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <div class="collapse navbar-collapse nav-fill nav-justified nowrap" id="navbarNav">
+
+                
+
+                <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <h2><i class="bi bi-arrow-down-square-fill" style="color: grey; z-index: 5000;">Menu</i></h2>
+                </button>
+                
+                <!-- Render standard links -->
+                {% for name, url in nav_links.items() %}
+                    <a class="nav-item btn btn-secondary my-navbar-button-styles m-3 d-flex align-items-center" href="{{ url }}">{{ name }}</a>
+                {% endfor %}
+    
+                <!-- Render dropdown menus -->
+                {% for dropdown_title, dropdown_items in dropdown_menus.items() %}
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle my-navbar-button-styles m-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ dropdown_title }}
+                        </button>
+                        <ul class="dropdown-menu">
+                            {% for item_title, item_url in dropdown_items.items() %}
+                                <li><a class="dropdown-item" href="{{ item_url }}">{{ item_title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </nav> <!-- navbar navbar-expand-md p-1 -->
+
+
+
+</div> <!-- container-fluid -->
+
+
+<hr>
+
+    <!-- Navbar toggler button -->
+<!--
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+-->

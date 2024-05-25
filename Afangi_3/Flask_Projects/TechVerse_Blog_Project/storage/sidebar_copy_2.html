@@ -1,0 +1,63 @@
+
+
+<div class="container-fluid min-vh-100 sidebar" id="sidebar-menu">
+
+    <!-- Login and Logout Buttons -->
+    <div class="d-inline-block gap-1">
+        <!-- The login button in outline info class (light blue outlined color) -->
+        <a href="{{ url_for('login') }}" class="btn btn-outline-info me-2">
+            <i class="fa fa-sign-in-alt"></i> <span class="">Login</span>
+        </a>
+
+        <!-- The logout button in outline danger class (red outlined color) -->
+        <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">
+            <i class="fa fa-sign-out-alt"></i> <span class="">Logout</span>
+        </a>
+    </div> <!-- btn-group -->
+
+    <div class="accordion bg-dark rounded" id="accordionExample">
+        {% for category, details in categories.items() %}
+            <div class="accordion-item bg-dark border-0">
+                <h2 class="accordion-header" id="heading-{{ loop.index }}">
+                    <button class="accordion-button collapsed text-white bg-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#category-{{ loop.index }}" aria-expanded="false" aria-controls="category-{{ loop.index }}">
+                        <i class="fa {{ details.icon }} me-2"></i> {{ details.title }}
+                    </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="category-{{ loop.index }}" aria-labelledby="heading-{{ loop.index }}" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="d-grid gap-2">
+                            {% for subcategory, subdetails in details['subcategories'].items() %}
+                                <a class="text-white py-1" href="{{ url_for('view_category', subcategory=subdetails.route) }}">
+                                    <i class="fa {{ subdetails.icon }} me-2"></i> {{ subdetails.title }}
+                                </a>
+                            {% endfor %}
+                        </div> <!-- d-grid gap-2 -->
+                    </div> <!-- accordion-body -->
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <form class="search-form mt-3 fixed-size">
+        <input type="text" class="form-control mb-2" placeholder="Search...">
+        <button type="submit" class="btn btn-outline-success w-100">Search</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

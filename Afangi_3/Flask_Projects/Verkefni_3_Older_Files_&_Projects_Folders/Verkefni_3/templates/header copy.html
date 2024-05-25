@@ -1,0 +1,63 @@
+
+
+
+<!-- Navbar toggler button -->
+<!--
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+-->
+
+
+
+
+
+        <!-- Banner Container -->
+        
+        <div class="banner-container">
+            <img src="{{ url_for('static', filename='img/banner-1.jpg') }}" class="img-fluid" alt="Banner image">
+        </div>
+        
+        <hr>
+
+        <!-- Navbar container -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md p-1">
+                <div class="container-fluid d-flex justify-content-center align-items-center">
+
+                    <!-- Navbar toggler button -->
+                <!--
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                -->
+                    <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <h2><i class="bi bi-arrow-down-square-fill" style="color: grey;"> Menu</i></h2>
+                    </button>
+                
+                    <!-- Start of the collapseble navbar with nav-fill and nav-justified -->
+                    <div class="collapse navbar-collapse nowrap" id="navbarNav">
+                        {% for name, url in menu_items.items() %}
+                            <a class="nav-item btn btn-secondary m-3 p-2 my-navbar-button-styles" href="{{ url }}">{{ name }}</a>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+        

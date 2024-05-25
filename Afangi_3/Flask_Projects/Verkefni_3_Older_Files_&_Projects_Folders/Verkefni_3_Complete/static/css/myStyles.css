@@ -1,0 +1,279 @@
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---////////////////////////////////// */
+/* \\\\\\\\\\\\\\\\\\      Author: Hreiðar Pétursson      //////////////// */
+/* \\\\\\\\\\\\\\\\       Course:  Vefhönnun Áfangi 3       ////////////// */
+/* \\\\\\\\\\\\\          -- Skilaverkefni 3 --              ///////////// */
+/*  \\    Description: Enhances the website with styles and effects     // */
+/*   \\  using  CSS for layout adjustments, enhancements, and custom   //  */
+/*    \\      interactivity for a seamless user experience.           //   */
+/*     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---///////////////////////////////    */
+
+:root {
+    --font-weight: 400;
+}
+
+.dynamic-weight:hover {
+    --font-weight: 700;  /* Increases weight on hover */
+}
+
+/* Custom Classes for Italic and Bold Text using Alegreya */
+.my-font-italic {
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.my-font-bold {
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Additional body styles if needed */
+body {
+    font-weight: normal;
+}
+
+
+
+/* ************************************************* */
+/* ----- ----- ----- Layout  Styles ----- ---- ----- */
+/* ************************************************* */
+
+
+/* General HTML and Body Styles */
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    background: linear-gradient(to bottom, #212529 0%, #495057 100%);
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+
+
+    font-family: 'Alegreya', serif;
+    font-weight: 400; /* Default weight */
+    font-style: normal;
+
+
+
+   /*  color: #FFF;  *//* Assuming you want a light color text */
+}
+
+
+body {
+    color: var(--bs-light);
+}
+
+
+.master-container {
+    max-width: 1200px;
+
+    box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important;
+    border-radius: 25px !important;
+
+    background-color: var(--bs-dark);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----- ----- ----- Layout  Styles ----- ---- ----- */
+/* ************************************************* */
+
+
+
+
+/* ************************************************* */
+/* --- ----- ----- Navbar Menu Styles ----- ---- --- */
+/* ************************************************* */
+
+.my-nav-styles {
+    /* This margin is between the brand and the first navbar dropdown button */
+    margin-left: 30px;
+}
+
+.my-navbtn-styles {
+    border-radius: 25px;
+    min-width: 150px;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out !important;
+
+}
+
+.my-navbtn-styles:hover {
+    box-shadow: 0 0 10px rgba(108, 117, 125, 1) !important; /* Adjust the color to match btn-secondary */
+    transform: scale(1.05); /* Enlarge text by 5% */
+}
+
+/* 
+.navbar-collapse .nav-item .my-navbtn-styles {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+ */
+
+/* Target the nav-item directly inside navbar-collapse to center the buttons and make them 75% wide */
+.navbar-collapse .nav-item {
+    display: flex;  /* Use flexbox for alignment */
+    justify-content: center;  /* Center the button horizontally in the nav-item */
+
+    width: 100%;  /* Ensure nav-item takes the full width of its parent to allow correct percentage calculation */
+}
+
+.navbar-collapse .nav-item .my-navbtn-styles {
+    display: block;  /* Ensures the button stretches to fit the flex container */
+    text-align: center;  /* Centers the text inside the button */
+    width: 75%;  /* Button width as 75% of its parent, which is now effectively the nav-item */
+    border-radius: 15px;
+    box-sizing: border-box;  /* Includes padding and border in width calculation */
+    align-items: center;
+}
+
+/* Ensure the navbar uses flexbox and centers items vertically */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Center the navbar-brand taking into account the toggler's width */
+.navbar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the brand to use any available space */
+    position: relative; /* Positioned relative to potentially adjust for the toggler */
+}
+
+.navbar-brand {
+    position: absolute; /* Position absolutely within its flex container */
+    left: 50%; /* Center based on the total width of the navbar-header */
+    transform: translateX(-50%); /* Adjust back by half its own width to center exactly */
+}
+
+.navbar-toggler {
+    z-index: 2; /* Ensure the toggler stays clickable */
+}
+
+
+
+
+
+.my-accordion-btn-styles {
+    max-height: 35px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(52, 58, 64, 1) !important; /* Updated to match btn-dark color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out !important;
+}
+
+.my-accordion-btn-styles:hover {
+    box-shadow: 0 0 15px rgba(52, 58, 64, 1) !important; /* Adjust the color to match btn-dark */
+    transform: scale(1.05); /* Enlarge text by 5% */
+}
+/* --- ----- ----- Navbar Menu Styles ----- ---- --- */
+/* ************************************************* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************* */
+/* -- ----- ----- Dropdown Menu Styles ----- ---- -- */
+/* ************************************************* */
+.navbar .dropdown-menu {
+    left: 50%; /* Start from the middle of the button */
+    transform: translateX(-50%);
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    background-color: var(--bs-dark); /* Same as navbar background color */
+    border: none;
+    box-shadow: 0 0 5px rgba(108, 117, 125, 1); /* Subtle shadow for depth */
+    border-radius: 15px;
+}
+
+.dropdown-item {
+    color: var(--bs-light); /* Same as navbar text color */
+    transition: transform 0.3s ease, background-color .2s ease-in-out; /* Smooth transition for the hover effects */
+    text-align: center;
+}
+
+/* Settings for the hover and focus effects on the dropdown items */
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: var(--bs-secondary); /* Slightly lighter shade on hover and focus */
+    color: var(--bs-dark); /* Dark text color on hover and focus */
+    transform: scale(1.05);
+}
+
+/* -- ----- ----- Dropdown Menu Styles ----- ---- -- */
+/* ************************************************* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************* */
+/* ----- --- Extras settings & adjustments --- ----- */
+/* ************************************************* */
+.border-radius-15 {
+    border-radius: 15px;
+}
+
+.btn-dark {
+    border-radius: 15px !important;
+}
+
+.btn-outline-dark {
+    border-radius: 15px !important;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(108, 117, 125, 1); /* Subtle shadow for depth */
+}
+
+/* Some greyish colors  */
+.grey500 {
+    background-color: var(--bs-gray-500);
+}
+
+.grey600 {
+    background-color: var(--bs-gray-600);
+}
+
+.grey700 {
+    background-color: var(--bs-gray-700);
+}
+
+.grey800 {
+    background-color: var(--bs-gray-800);
+}
+
+
+
+
+/* ----- --- Extras settings & adjustments --- ----- */
+/* ************************************************* */

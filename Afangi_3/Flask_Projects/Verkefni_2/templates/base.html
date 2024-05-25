@@ -1,0 +1,94 @@
+<!-- 
+/* ########## Hreiðar Pétursson ########## */
+/*  ######## Vefhönnun Áfanginn ########  */
+/*   ######### Skilaverkefni 1 ########  */
+/*    ########    Mars 2024   ########  */
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours Of Iceland</title>
+
+
+    <!-- I include this only to be 1000% sure bootstrap's css works -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <!--  I created this one only so i can use the bootstrap variables and compiled the scss to css  -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+
+
+
+    <!-- My Custom CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/myStyles.css') }}" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+</head>
+
+
+
+<body>
+
+    <div class="master-container">
+
+    
+        <!-- Banner Container -->
+        
+        <div class="banner-container">
+            <img src="{{ url_for('static', filename='img/banner.jpg') }}" class="img-fluid" alt="Banner image">
+        </div>
+        
+        <hr>
+
+        <!-- Navbar container -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md p-1">
+                <div class="container-fluid d-flex justify-content-center align-items-center">
+
+                    <!-- Navbar toggler button -->
+                <!--
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                -->
+                    <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <h2><i class="bi bi-arrow-down-square-fill" style="color: grey;"> Menu</i></h2>
+                    </button>
+                
+                    <!-- Start of the collapseble navbar with nav-fill and nav-justified -->
+                    <div class="collapse navbar-collapse nav-fill nav-justified" id="navbarNav">
+                        {% for name, url in menu_items.items() %}
+                            <a class="nav-item btn btn-secondary m-3 p-2 my-navbar-button-styles" href="{{ url }}">{{ name }}</a>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+
+        <hr>
+
+
+        <!-- Main Content -->
+        <div class="container-fluid d-flex justify-content-center align-items-center content-container-styles flex-column">
+            {% block content %}{% endblock %}
+        </div>
+
+
+
+    </div> <!-- End of master-container -->
+
+
+
+    <!-- Include local Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+
+</body>
+</html>

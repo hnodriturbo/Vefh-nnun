@@ -1,0 +1,328 @@
+{
+    "categories": {
+      "Technology": {
+        "title": "Technology",
+        "icon": "fa-microchip",
+        "route": "technology",
+        "subcategories": {
+          "Programming": {
+            "title": "Programming",
+            "icon": "fa-code",
+            "route": "programming"
+          },
+          "AI": {
+            "title": "Artificial Intelligence",
+            "icon": "fa-brain",
+            "route": "ai"
+          },
+          "Cybersecurity": {
+            "title": "Cybersecurity",
+            "icon": "fa-shield-alt",
+            "route": "cybersecurity"
+          },
+          "Gadgets": {
+            "title": "Gadgets",
+            "icon": "fa-mobile-alt",
+            "route": "gadgets"
+          },
+          "Software Development": {
+            "title": "Software Development",
+            "icon": "fa-laptop-code",
+            "route": "software-development"
+          }
+        }
+      },
+      "Emerging Technologies": {
+        "title": "Emerging Technologies",
+        "icon": "fa-rocket",
+        "route": "emerging-technologies",
+        "subcategories": {
+          "Blockchain": {
+            "title": "Blockchain",
+            "icon": "fa-link",
+            "route": "blockchain"
+          },
+          "Quantum Computing": {
+            "title": "Quantum Computing",
+            "icon": "fa-atom",
+            "route": "quantum-computing"
+          },
+          "IoT": {
+            "title": "Internet of Things",
+            "icon": "fa-network-wired",
+            "route": "iot"
+          },
+          "5G": {
+            "title": "5G",
+            "icon": "fa-wifi",
+            "route": "5g"
+          },
+          "AR&VR": {
+            "title": "Augmented and Virtual Reality",
+            "icon": "fa-vr-cardboard",
+            "route": "ar-vr"
+          }
+        }
+      },
+      "Tech Industry Trends": {
+        "title": "Tech Industry Trends",
+        "icon": "fa-chart-line",
+        "route": "tech-industry-trends",
+        "subcategories": {
+          "Startups": {
+            "title": "Startups",
+            "icon": "fa-lightbulb",
+            "route": "startups"
+          },
+          "Tech Giants": {
+            "title": "Tech Giants",
+            "icon": "fa-building",
+            "route": "tech-giants"
+          },
+          "Investment": {
+            "title": "Investment",
+            "icon": "fa-chart-line",
+            "route": "investment"
+          },
+          "Mergers & Acquisitions": {
+            "title": "Mergers and Acquisitions",
+            "icon": "fa-handshake",
+            "route": "mergers-acquisitions"
+          },
+          "Market Analysis": {
+            "title": "Market Analysis",
+            "icon": "fa-chart-pie",
+            "route": "market-analysis"
+          }
+        }
+      }
+    },
+    "posts": {
+      "-AdminPost1": {
+        "title": "Admin Post in Programming",
+        "content": "This is an admin post in the Programming category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Programming",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Programming post.",
+            "reply_author_id": "user1",
+            "reply_author_email": "user1@example.com",
+            "timestamp": "2024-05-23T10:00:00Z"
+          }
+        }
+      },
+      "-AdminPost2": {
+        "title": "Admin Post in AI",
+        "content": "This is an admin post in the AI category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "AI",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the AI post.",
+            "reply_author_id": "user2",
+            "reply_author_email": "user2@example.com",
+            "timestamp": "2024-05-23T11:00:00Z"
+          }
+        }
+      },
+      "-AdminPost3": {
+        "title": "Admin Post in Cybersecurity",
+        "content": "This is an admin post in the Cybersecurity category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Cybersecurity",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Cybersecurity post.",
+            "reply_author_id": "user3",
+            "reply_author_email": "user3@example.com",
+            "timestamp": "2024-05-23T12:00:00Z"
+          }
+        }
+      },
+      "-AdminPost4": {
+        "title": "Admin Post in Gadgets",
+        "content": "This is an admin post in the Gadgets category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Gadgets",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Gadgets post.",
+            "reply_author_id": "user4",
+            "reply_author_email": "user4@example.com",
+            "timestamp": "2024-05-23T13:00:00Z"
+          }
+        }
+      },
+      "-AdminPost5": {
+        "title": "Admin Post in Software Development",
+        "content": "This is an admin post in the Software Development category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Software Development",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Software Development post.",
+            "reply_author_id": "user5",
+            "reply_author_email": "user5@example.com",
+            "timestamp": "2024-05-23T14:00:00Z"
+          }
+        }
+      },
+      "-AdminPost6": {
+        "title": "Admin Post in Blockchain",
+        "content": "This is an admin post in the Blockchain category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Blockchain",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Blockchain post.",
+            "reply_author_id": "user6",
+            "reply_author_email": "user6@example.com",
+            "timestamp": "2024-05-23T15:00:00Z"
+          }
+        }
+      },
+      "-AdminPost7": {
+        "title": "Admin Post in Quantum Computing",
+        "content": "This is an admin post in the Quantum Computing category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Quantum Computing",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Quantum Computing post.",
+            "reply_author_id": "user7",
+            "reply_author_email": "user7@example.com",
+            "timestamp": "2024-05-23T16:00:00Z"
+          }
+        }
+      },
+      "-AdminPost8": {
+        "title": "Admin Post in IoT",
+        "content": "This is an admin post in the IoT category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "IoT",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the IoT post.",
+            "reply_author_id": "user8",
+            "reply_author_email": "user8@example.com",
+            "timestamp": "2024-05-23T17:00:00Z"
+          }
+        }
+      },
+      "-AdminPost9": {
+        "title": "Admin Post in 5G",
+        "content": "This is an admin post in the 5G category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "5G",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the 5G post.",
+            "reply_author_id": "user9",
+            "reply_author_email": "user9@example.com",
+            "timestamp": "2024-05-23T18:00:00Z"
+          }
+        }
+      },
+      "-AdminPost10": {
+        "title": "Admin Post in AR&VR",
+        "content": "This is an admin post in the AR&VR category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "AR&VR",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the AR&VR post.",
+            "reply_author_id": "user10",
+            "reply_author_email": "user10@example.com",
+            "timestamp": "2024-05-23T19:00:00Z"
+          }
+        }
+      },
+      "-AdminPost11": {
+        "title": "Admin Post in Startups",
+        "content": "This is an admin post in the Startups category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Startups",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Startups post.",
+            "reply_author_id": "user11",
+            "reply_author_email": "user11@example.com",
+            "timestamp": "2024-05-23T20:00:00Z"
+          }
+        }
+      },
+      "-AdminPost12": {
+        "title": "Admin Post in Tech Giants",
+        "content": "This is an admin post in the Tech Giants category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Tech Giants",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Tech Giants post.",
+            "reply_author_id": "user12",
+            "reply_author_email": "user12@example.com",
+            "timestamp": "2024-05-23T21:00:00Z"
+          }
+        }
+      },
+      "-AdminPost13": {
+        "title": "Admin Post in Investment",
+        "content": "This is an admin post in the Investment category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Investment",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Investment post.",
+            "reply_author_id": "user13",
+            "reply_author_email": "user13@example.com",
+            "timestamp": "2024-05-23T22:00:00Z"
+          }
+        }
+      },
+      "-AdminPost14": {
+        "title": "Admin Post in Mergers & Acquisitions",
+        "content": "This is an admin post in the Mergers & Acquisitions category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Mergers & Acquisitions",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Mergers & Acquisitions post.",
+            "reply_author_id": "user14",
+            "reply_author_email": "user14@example.com",
+            "timestamp": "2024-05-23T23:00:00Z"
+          }
+        }
+      },
+      "-AdminPost15": {
+        "title": "Admin Post in Market Analysis",
+        "content": "This is an admin post in the Market Analysis category.",
+        "author_id": "3kQRtVLhE6eB3cbMD2hcr6OfGV23",
+        "author_email": "admin@admin.com",
+        "category": "Market Analysis",
+        "replies": {
+          "reply1": {
+            "reply_content": "This is a sample reply to the Market Analysis post.",
+            "reply_author_id": "user15",
+            "reply_author_email": "user15@example.com",
+            "timestamp": "2024-05-24T00:00:00Z"
+          }
+        }
+      }
+    }
+  }
+  

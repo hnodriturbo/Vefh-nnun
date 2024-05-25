@@ -1,0 +1,284 @@
+/* ########## Hreiðar Pétursson ########## */
+/*  ######## Vefhönnun Áfanginn ########  */
+/*   ######### Skilaverkefni 1 ########  */
+/*    ########    Mars 2024   ########  */
+
+
+
+
+
+
+/* -------------- Font Styles ------------- */
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800; /* ExtraBold */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-ExtraLight.ttf') format('truetype');
+    font-weight: 200; /* ExtraLight */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Regular.ttf') format('truetype');
+    font-weight: normal; /* Regular */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* SemiBold */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Thin.ttf') format('truetype');
+    font-weight: 100; /* Thin */
+}
+
+/* Continuing from the .medium-text class */
+
+.semi-bold-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: 600; /* SemiBold */
+}
+
+.bold-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: bold; /* Bold, equivalent to 700 */
+}
+
+.extra-bold-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: 800; /* ExtraBold */
+}
+
+.extra-light-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: 200; /* ExtraLight */
+}
+
+.thin-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: 100; /* Thin */
+}
+
+.regular-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: normal; /* Regular, equivalent to 400 */
+}
+
+
+
+
+
+
+/* --------------- EXTRAS  STYLES --------------- */
+
+.my-btn-box-shadow {
+    box-shadow: 0 0 4px 0 #919da7, 0 0 8px 2px #919da7;
+}
+
+/* Stop text from wrapping and hide the overflow */
+.nowrap {
+    white-space: nowrap; /* Stops the text from wrapping */
+    overflow: hidden; /* Hide instead of overflowing */
+}
+
+
+.my-border-radius {
+    border-radius: 15px;
+}
+
+
+h1 {
+    font-weight: 700;
+}
+
+
+
+
+
+.container-fluid {
+    width: calc(100% - 30px); 
+    margin: auto; 
+}
+
+
+
+
+
+/* ----- Body Styles ----- */
+body {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: normal;
+}
+
+/* Use light to revert the background color and color */
+.light {
+    background-color: var(--bs-light); 
+    color: var(--bs-dark); 
+}
+
+
+
+/* ----- Master Container Settings and Styles ----- */
+.master-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px; 
+    width: 80%;
+    margin: 40px auto;
+    border: 2px solid #6c757d;
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; 
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .master-container {
+        width: 97%;
+    }
+}
+
+
+/* ----- Navbar Styles ----- */
+
+.my-navbar-button-styles {
+    box-shadow: 0 0 4px 0 #919da7, 0 0 8px 2px #919da7; /* Glowing effect */
+}
+
+/* These style will apply when the navbar is open */
+.navbar-collapse .my-navbar-button-styles {
+    display: block; /* Ensure each link is on a new line */
+    text-align: center; /* Center-align the text */
+    border-radius: 15px;
+    margin-bottom: 25px !important;
+    
+
+}
+
+/* I change the toggler a little bit for clearer appearance */
+.navbar-toggler {
+    opacity: 0.2;
+    box-shadow: 0 0 4px 0 #919da7, 0 0 8px 2px #919da7; /* Glowing effect */
+    margin-bottom: 25px;
+}
+
+
+
+
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+    justify-content: center;
+    /* padding: 20px; */
+}
+
+/* Content Container Styles */
+.content-container-styles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 15px;
+    /* opacity: 0.5; */
+}
+
+
+
+/* ----- Image Settings -----  */
+
+.banner-container {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+
+.img-fluid {   
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 25px !important;
+    /* margin: 20px; */
+    /* box-sizing: border-box; */
+}
+
+
+.card {
+    border-radius: 25px;
+}
+
+
+/* ----- Storage Code ----- */
+
+
+
+/* Only apply margin in the collapsed state, not when expanded */
+/* .navbar-collapse:not(.show) .my-navbar-button-styles {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px; 
+    border-radius: 15px;
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; 
+}
+ */
+
+/* 
+.master-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    max-width: 1200px; 
+    width: 80%;
+    border: 2px solid #6c757d;
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; 
+    border-radius: 15px;
+}
+ */
+    /* background-color: var(--bs-dark); */
+    /* height: 100vh; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin: 40px auto; */
+    /* overflow: hidden; */
+    /* z-index: -1; */
+    /* opacity: 1; */
+ 
+
+/* 
+@media (max-width: 992px) {
+    .master-container {
+        width: 90%;
+    }
+}
+ */

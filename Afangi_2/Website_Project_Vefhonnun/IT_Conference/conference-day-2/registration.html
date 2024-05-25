@@ -1,0 +1,455 @@
+<!--    /* ------------------------------------------------- *\    -->
+<!--   /* -----------      Hreiðar Pétursson      ----------- *\   -->
+<!--  /* ------------- -- ------------------- -- ------------- *\  -->
+<!-- /* -------      Verkefni Vefhönnun Haust 2023      ------- *\ --> 
+
+
+        <!-- ----------------------------------------------- -->
+    <!-- ----------------- registration.html ------------------ -->
+<!-- ------------------------------------------------------------- -->
+
+
+<div class="container-fluid kirsty-font-bold-italic">
+    <div class="container-fluid mt-4 border center border-radius px-3 py-3">
+        <div class="row p-4">
+            <!-- Registration 1 button -->
+            <div class="col-12 col-lg-4 p-lg-0 p-2 border-right-mine pb-4">
+                <a class="btn btn-lg btn-outline-secondary toggle-btn-outline-secondary-box-shadow menu-takkar" type="button" data-bs-toggle="collapse" data-bs-target="#standardRegistrationContainer">
+                    Click here to register!
+                </a>
+            </div>
+
+            <!-- VIP Registration button -->
+            <div class="col-12 col-lg-4 p-lg-0 p-2 border-right-mine pb-4">
+                <a class="btn btn-lg btn-outline-secondary toggle-btn-outline-secondary-box-shadow menu-takkar" type="button" data-bs-toggle="collapse" data-bs-target="#vipRegistrationContainer">
+                    Click here for VIP tickets!
+                </a>
+            </div>
+
+            <!-- Speaker Registration button -->
+            <div class="col-12 col-lg-4 p-lg-0 p-2">
+                <a class="btn btn-lg btn-outline-secondary toggle-btn-outline-secondary-box-shadow menu-takkar" type="button" data-bs-toggle="collapse" data-bs-target="#speakerRegistrationContainer">
+                    Become a speaker!
+                </a>
+            </div>
+        </div> <!-- row p-4 w-100 -->
+    
+
+        <!-- Standard Registration Form Container -->
+        <div class="row p-4 collapse w-100" id="standardRegistrationContainer">
+            <!-- Standard Registration Form -->
+            <div class="container py-4 px-4 my-4 border border-radius mt-3">
+                <h2 class="text-center mb-4">Standard Event Registration</h2>
+        
+                <form id="eventRegistrationForm" class="needs-validation" novalidate>
+                    <!-- Full name -->
+                    <div class="row mb-3">
+                        <label for="name" class="col-sm-4 col-form-label">Full Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="name" placeholder="Full name (required)" data-validate="true" required>
+                            <div class="invalid-feedback">
+                                Please provide a full name.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-mail address -->
+                    <div class="row mb-3">
+                        <label for="email" class="col-sm-4 col-form-label">Email Address</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email" placeholder="E-mail (required)" data-validate="true" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone number -->
+                    <div class="row mb-3">
+                        <label for="phone" class="col-sm-4 col-form-label">Phone Number</label>
+                        <div class="col-sm-8">
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone number (Only numbers and 7 digit minimum)" pattern="[0-9]{7,}" data-validate="true" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid phone number.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="row mb-3">
+                        <label for="date" class="col-sm-4 col-form-label">Your Birth Date</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="date">   
+                            <div class="invalid-feedback">
+                                Please provide your birth date.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pick a day -->
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-4 pt-0">Pick a day(s) (required)</legend>
+                        <div class="col-sm-8 checkbox-group" data-validate="true">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="dayFriday" required>
+                                <label class="form-check-label" for="dayFriday">Friday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="daySaturday" required>
+                                <label class="form-check-label" for="daySaturday">Saturday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="daySunday" required>
+                                <label class="form-check-label" for="daySunday">Sunday</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select at least one day.
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Gender radio buttons -->
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-4 pt-0">Gender (required)</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderOptions" id="genderMale" value="male" data-validate="true" required>
+                                <label class="form-check-label" for="genderMale">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderOptions" id="genderFemale" value="female" data-validate="true" required>
+                                <label class="form-check-label" for="genderFemale">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderOptions" id="genderOther" value="other" data-validate="true" required>
+                                <label class="form-check-label" for="genderOther">Other</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select a gender.
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Comments -->
+                    <div class="row mb-3">
+                        <label for="textarea" class="col-sm-4 col-form-label">Comments</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="textarea" rows="2" placeholder="If you have any comments or would like to bring something to our attention, please write it here."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="row mb-3">
+                        <div class="offset-sm-4 col-sm-8">
+                            <button type="submit" class="btn btn-lg btn-outline-info w-100">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- VIP Registration Form Container -->
+        <div class="row p-4 collapse w-100" id="vipRegistrationContainer">
+            <!-- VIP Registration Form -->
+             <div class="container py-4 px-4 my-4 border border-radius mt-3">
+                <h2 class="text-center mb-4">VIP Event Registration</h2>
+        
+                <form id="eventRegistrationForm" class="needs-validation" novalidate>
+                    <!-- Full name -->
+                    <div class="row mb-3">
+                        <label for="name" class="col-sm-4 col-form-label">Full Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="name" placeholder="Full name (required)" data-validate="true" required>
+                            <div class="invalid-feedback">
+                                Please provide a full name.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-mail address -->
+                    <div class="row mb-3">
+                        <label for="email" class="col-sm-4 col-form-label">Email Address</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email" placeholder="E-mail (required)" data-validate="true" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone number -->
+                    <div class="row mb-3">
+                        <label for="phone" class="col-sm-4 col-form-label">Phone Number</label>
+                        <div class="col-sm-8">
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone number (Only numbers and 7 digit minimum)" pattern="[0-9]{7,}" data-validate="true" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid phone number.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="row mb-3">
+                        <label for="date" class="col-sm-4 col-form-label">Your Birth Date</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="date">   
+                            <div class="invalid-feedback">
+                                Please provide your birth date.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pick a day -->
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-4 pt-0">Pick a day(s) (required)</legend>
+                        <div class="col-sm-8 checkbox-group" data-validate="true">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="dayFriday" required>
+                                <label class="form-check-label" for="dayFriday">Friday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="daySaturday" required>
+                                <label class="form-check-label" for="daySaturday">Saturday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="daySunday" required>
+                                <label class="form-check-label" for="daySunday">Sunday</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select at least one day.
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Gender radio buttons -->
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-4 pt-0">Gender (required)</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderOptions" id="genderMale" value="male" data-validate="true" required>
+                                <label class="form-check-label" for="genderMale">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderOptions" id="genderFemale" value="female" data-validate="true" required>
+                                <label class="form-check-label" for="genderFemale">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderOptions" id="genderOther" value="other" data-validate="true" required>
+                                <label class="form-check-label" for="genderOther">Other</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select a gender.
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Comments -->
+                    <div class="row mb-3">
+                        <label for="textarea" class="col-sm-4 col-form-label">Comments</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="textarea" rows="2" placeholder="If you have any comments or would like to bring something to our attention, please write it here."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="row mb-3">
+                        <div class="offset-sm-4 col-sm-8">
+                            <button type="submit" class="btn btn-lg btn-outline-info w-100">Become a VIP</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Speaker Registration Form Container -->
+        <div class="row p-4 collapse w-100" id="speakerRegistrationContainer">
+            <div class="container py-4 px-4 my-4 border border-radius mt-3">
+                <h2 class="text-center mb-4">VIP Event Registration</h2>
+                <!-- Speaker Registration Form -->
+                <form id="speakerRegistrationForm" class="needs-validation" novalidate>
+
+                    <!-- Full name (actively validate) -->
+                    <div class="row mb-3">
+                        <label for="speakerName" class="col-sm-4 col-form-label">Full Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="speakerName" placeholder="Fill in your full name (required)" data-validate="true" required>
+                            <div class="invalid-feedback">
+                                Please provide a full name.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- E-mail address (actively validate) -->
+                    <div class="row mb-3">
+                        <label for="speakerEmail" class="col-sm-4 col-form-label">Email Address</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="speakerEmail" placeholder="Fill in your email address (required)" data-validate="true" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Gender radio buttons -->
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-4 pt-0">Gender (required)</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderOptions" id="genderMale" value="male" data-validate="true" required>
+                                <label class="form-check-label" for="genderMale">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderOptions" id="genderFemale" value="female" data-validate="true" required>
+                                <label class="form-check-label" for="genderFemale">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="genderOptions" id="genderOther" value="other" data-validate="true" required>
+                                <label class="form-check-label" for="genderOther">Other</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select a gender.
+                            </div>
+                        </div>
+                    </fieldset>
+
+                
+                    <!-- Days available to speak (grouped for validation) -->
+                    <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-4 pt-0">Days Available to Speak</legend>
+                        <div class="col-sm-8 checkbox-group" data-validate="true"> <!-- Added data-validate attribute -->
+                            <!-- Group checkboxes together for collective validation -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="dayOptions" id="dayFriday" value="friday">
+                                <label class="form-check-label" for="dayFriday">Friday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="dayOptions" id="daySaturday" value="saturday">
+                                <label class="form-check-label" for="daySaturday">Saturday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" name="dayOptions" id="daySunday" value="sunday">
+                                <label class="form-check-label" for="daySunday">Sunday</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please select at least one day to speak.
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+
+                    <!-- Short biography -->
+                    <div class="row mb-3">
+                        <label for="speakerBio" class="col-sm-4 col-form-label">Short Biography</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="speakerBio" rows="3" data-validate="true" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Previous speaking experience -->
+                    <div class="row mb-3">
+                        <label for="previousSpeakingExp" class="col-sm-4 col-form-label">Previous Speaking Experience</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="previousSpeakingExp" rows="3" data-validate="false"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Topics of interest -->
+                    <div class="row mb-3">
+                        <label for="topicInterest" class="col-sm-4 col-form-label">Topics of Interest</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="topicInterest" data-validate="false">
+                        </div>
+                    </div>
+                    
+                    <!-- Upload a photo -->
+                    <div class="row mb-3">
+                        <label for="speakerPhoto" class="col-sm-4 col-form-label">Upload a Photo</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="form-control" id="speakerPhoto" data-validate="false">
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="row mb-3">
+                        <div class="offset-sm-4 col-sm-8">
+                            <button type="submit" class="btn btn-lg btn-outline-info w-100">Register as Speaker</button>
+                        </div>
+                    </div>
+
+                </form> <!-- end of form -->
+            </div> <!-- end of container -->
+        </div> <!-- end of row p-4 collapse w-100" id="speakerRegistrationContainer" -->
+
+
+
+    </div> <!-- container-fluid mt-4 border center border-radius px-3 py-3 -->
+    
+
+    <div class="container-fluid bg-dark text-white py-4">
+        <div class="row">
+        
+            <!-- About Info Column -->
+            <div class="col-lg-12 mb-4 border border-radius">
+                <div class="p-4">
+                    <h3 class="mb-3 center">About IT Conference</h3>
+                
+                    <p class="center">
+                        Hosted by Hreiðar Pétursson, the IT Conference is an annual event presented by the students of Tækniskólinn. This conference serves as a beacon for innovation, showcasing cutting-edge research and development in information technology. This year, we delve into the theme "Navigating the Digital Frontier," exploring the latest trends in cybersecurity, artificial intelligence, and software development. Join us for a transformative experience filled with engaging talks, interactive sessions, and collaborative workshops that will shape the future of technology.
+                    </p>
+                
+                    <br>
+                
+                    <!-- Row to put the learn more button and connect with us to seperate colums within the same row -->
+                    <div class="row">
+                
+                        <div class="col-6 d-flex align-items-center justify-content-center">
+                            <a href="#" class="btn btn-lg btn-outline-light">Learn More About The Conference</a>
+                        </div>
+                
+                        <div class="col-6 d-flex align-items-center justify-content-center">
+                            <div class="p-2">
+                                <h3 class="text-light mb-3 center">Connect with Us</h3>
+                                <div class="social-links">
+                                    <!-- Facebook -->
+                                    <a href="https://facebook.com" target="_blank" class="btn btn-secondary btn-circle btn-lg me-2" aria-label="Facebook">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                    <!-- Twitter -->
+                                    <a href="https://twitter.com" target="_blank" class="btn btn-secondary btn-circle btn-lg me-2" aria-label="Twitter">
+                                        <i class="bi bi-twitter"></i>
+                                    </a>
+                                    <!-- Instagram -->
+                                    <a href="https://instagram.com" target="_blank" class="btn btn-secondary btn-circle btn-lg me-2" aria-label="Instagram">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                    <!-- LinkedIn -->
+                                    <a href="https://linkedin.com" target="_blank" class="btn btn-secondary btn-circle btn-lg me-2" aria-label="LinkedIn">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <!-- Add more platforms as needed -->
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div> <!-- row -->
+                
+                
+                </div> <!-- p-4 - frame to make padding to size 4 -->
+            
+            </div> <!-- col-lg-12 mb-4 border border-radius -->
+        
+        </div> <!-- row -->
+    </div> <!-- container-fluid bg-dark text-white py-4 -->
+</div> <!-- container-fluid kirsty-font-bold-italic -->
+
+
+    
+
+
+
+
+
+
+
+    

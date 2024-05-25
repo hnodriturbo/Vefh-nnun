@@ -1,0 +1,126 @@
+
+
+
+<!-- Navbar that collapses when size of the screen gets to the lg breaking point and then the toggler is shown on the side of the brand -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark my-border-5-navbar border-radius-15 my-1">
+    <div class="container-fluid">
+
+        <!-- Right Links -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+
+        <button href="#" data-bs-target="#sidebarColumn" data-bs-toggle="collapse" class="btn btn-secondary my-navbtn-styles m-2 p-2 me-auto">
+            <i class="fa fa-navicon fa-lg py-2 p-1"></i> Menu
+        </button>
+
+
+
+
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <!-- Center Brand -->
+            <a class="navbar-brand w-100 text-center d-flex align-items-center justify-content-center hover-grow" href="{{ url_for('home') }}">TechVerse Blog</a>
+
+            <ul class="navbar-nav ms-lg-auto navbar-header">
+
+                {% for link in links %}
+                    <li class="nav-item">
+                        <a class="nav-link m-3 btn btn-outline-dark my-navbtn-styles" href="{{ link.url }}">{{ link.name }}</a>
+                    </li>
+                {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link m-3 btn btn-outline-dark my-navbtn-styles" href="{{ url_for('user_info') }}">
+                        {% if 'user' in session %}
+                            You are logged in as {{ session['user']['email'] }}
+                        {% else %}
+                            Log In
+                        {% endif %}
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+id="toggleSidebarBtn"
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+            Menu
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+
+
+
+
+                {% for link in links %}
+
+                <li class="nav-item">
+                    <a class="nav-link my-navbtn-styles m-3" href="{{ link.url }}">{{ link.name }}</a>
+                </li>
+
+                {% endfor %}
+
+
+
+            </ul> 
+
+
+
+
+            <ul class="navbar-nav ms-auto">
+     
+
+
+
+                <li class="nav-item d-lg-none">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
+                        Toggle Sidebar
+                    </button>
+                </li>
+            </ul>
+
+
+
+        </div>
+        
+
+
+
+    </div> 
+</nav> 
+ -->

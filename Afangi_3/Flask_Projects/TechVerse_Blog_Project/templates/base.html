@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- My Title, I Like TechVerse Alot :) -->
+    <title>TechVerse</title>
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap-icons.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+    <!-- My Font CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-css.css') }}">
+    <!-- My Styles CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/myStyles.css') }}">
+    <!-- My Extras CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/extras.css') }}">
+    <!-- My Extras Border Styles CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/border-styles.css') }}">
+    <!-- My Extras Linear Gradient CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/linear-gradient-styles.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+
+
+<body>
+    <div class="container-fluid light-spacing light-italic drop-shadow">
+
+            <div class="row flex-nowrap">
+
+                <div class="col-lg-2 col-auto p-0 position-sticky collapse-horizontal show overflow-hidden" id="sidebarColumn">
+                    <div class="min-vh-100" id="sidebar-menu">
+                        {% include 'navigation/sidebar.html' %}
+                    </div>
+
+                </div> <!-- col-lg-2 col-auto collapse collapse-horizontal show py-3 -->
+
+
+                <div class="col-lg col" id="contentColumn">
+
+                    <div class="banner">
+                        <img src="{{ url_for('static', filename='img/banner.jpg') }}" alt="Banner Image" class="border-bottom-radius-15">
+                    </div>
+
+                    {% include 'navigation/top_navbar.html' %}
+                    {% include 'navigation/navigation.html' %}
+
+
+                    <div class="content">
+                        <!-- Flash messages display area -->
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                                {% for category, message in messages %}
+                                    <div class="d-flex align-items-center justify-content-center w-100">
+                                        <div class="alert alert-{{ category }} alert-dismissible show text-black w-75 text-center" role="alert">
+                                            <h2 class="drop-shadow light-spacing">{{ message }}</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+
+                        {% block content %}
+                        {% endblock %}
+
+
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <!-- Bootstrap bundle js, jquery and my own blogSite.js includes with script src -->
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/blogSite.js') }}"></script>
+</body>
+</html>

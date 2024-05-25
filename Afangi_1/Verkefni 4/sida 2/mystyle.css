@@ -1,0 +1,344 @@
+/* Fontið mitt */
+@font-face {
+    font-family: MyCustomFont;
+    src: url('font/mycustomfont.ttf');
+}
+/* bakgrunnur og ýmislegt annað */
+body {
+  font-family: mycustomfont, sans-serif;
+  margin: 0 auto;
+  text-shadow: 2px 2px black;
+  color: white;
+  background-image: url('pics/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* ýmislegt */    
+a {
+  color: rgb(161, 23, 150)
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+}
+.velkominn {
+  font-size: 46px;
+}
+section {
+  font-size: 16px;
+}
+h2 {
+  font-size: 20px;
+}
+h1 {
+  font-size: 26px;
+}
+
+
+
+
+/* boxið utan um allt */
+.box {
+  display: grid;
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 5px solid black;
+  grid-template-areas: 
+              "A  B  B  B"
+              "A  C  G  G"
+              "A  F  F  F"
+              "A  E  E  E"
+              "D  D  D  D";         
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .box {
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 5px solid black;
+    grid-template-areas: 
+                "A  A  A"
+                "B  B  B"
+                "C  C  C"
+                "G  G  G"
+                "F  F  F"
+                "E  E  E"
+                "D  D  D";         
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .box {
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 5px solid black;
+    grid-template-areas: 
+                "A  A"
+                "B  B"
+                "C  C"
+                "G  G"
+                "F  F"
+                "E  E"
+                "D  D";         
+  }
+
+}
+
+/* Velkominn boxið og innihald þess */
+.boxvelkominn {  
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  grid-area: B;
+}
+.innihaldvelkominn {
+  border: 2px solid black;
+  margin: 10px; 
+  color: white;
+  height: fit-content;
+}
+.verkefni4 {
+  height: 60px;
+  margin: 10px;
+  color: white;
+  border: 2px solid black;
+  background-color: rgba(2, 2, 2, 0.55);
+}
+
+
+
+
+ /* Boxið sem er utan um allt menu */
+.boxmenu {
+  display: grid;  
+  margin: 10px; 
+  grid-area: A; 
+  border: 2px solid black;
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .boxmenu {
+    display: grid;  
+    margin: 10px; 
+    grid-area: A; 
+    border: 2px solid black;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .boxmenu {
+    display: grid;  
+    margin: 10px; 
+    grid-area: A; 
+    border: 2px solid black;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+/* Innihald menu */
+.menu {       
+  margin: 10px;
+  height: 100px; 
+}
+
+
+
+
+/* Boxið með einum dálk og innihald */
+.box1dalkur {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-area: C;
+}
+.content1dalkur {
+  margin: 10px;
+  color: white;
+  border: 2px solid black;
+}
+
+
+
+
+/* Boxið með tveim dálkum og innihald */
+.box2dalkar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: G;
+}
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .box2dalkar {
+    display: grid;
+    grid-area: G;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.content2dalkar {
+  margin: 10px;
+  color: white;  
+  border: 2px solid black;
+}
+
+
+
+
+/* Boxið utan um 4 dálka */
+.box4dalkar {
+  display: grid;
+  grid-area: E;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .box4dalkar {
+    display: grid;
+    grid-area: E;
+    grid-template-rows: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .box4dalkar {
+    display: grid;
+    grid-area: E;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+/* Innihald 4 dálkar */
+.content4dalkar {
+  margin: 10px;
+  color: white;
+  border: 2px solid black;
+}
+
+
+
+/* boxið utan um banner á síðunni */
+.boxbanner{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 10px;
+  grid-area: F;
+  background-image: url("pics/avatarbanner2.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .boxbanner {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    grid-area: F;
+    background-image: url("pics/avatarbanner21000.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .boxbanner {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    grid-area: F;
+    background-image: url("pics/avatarbanner2600.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+/* Innihald banner á síðunni */
+.banner {
+  height: 331px;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .banner {
+    height: 275px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    background-size: 100%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .banner {
+    height: 165px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    background-size: 100%;
+  }
+}
+
+
+
+/* boxið utan um banner á síðunni */
+.boxbannernidri{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 10px;
+  grid-area: D;
+  background-image: url("pics/avatarbanner.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .boxbannernidri {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    grid-area: D;
+    background-image: url("pics/avatarbanner1200.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .boxbannernidri {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    grid-area: D;
+    background-image: url("pics/avatarbanner800.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+/* Innihald banner neðst á síðunni */
+.bannernidri {
+  height: 393px;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  .bannernidri {
+    height: 336px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    background-size: 100%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+  .bannernidri {
+    height: 225px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    background-size: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+name: Deploy to Firebase Hosting on merge
+
+on:
+  push:
+    branches:
+      - master  # Set this to your default branch
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Navigate to project directory
+      run: cd parent/child/child2  # Adjust this path to your actual project directory
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+
+    - name: Install Python dependencies
+      run: |
+        cd Afangi_3/Flask_Projects/Verkefni_6_Blog_Website_Project  # Adjust this path to your actual project directory
+        python -m venv venv
+        . venv/bin/activate
+        pip install -r requirements.txt
+
+    - name: Deploy to Firebase
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      run: |
+        cd Afangi_3/Flask_Projects/Verkefni_6_Blog_Website_Project  # Adjust this path to your actual project directory
+        firebase deploy --only hosting

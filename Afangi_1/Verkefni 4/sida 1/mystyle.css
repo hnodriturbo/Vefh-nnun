@@ -1,0 +1,157 @@
+/* Fontið mitt */
+@font-face {
+    font-family: MyCustomFont;
+    src: url('font/mycustomfont.ttf');
+}
+/* bakgrunnur og ýmislegt annað */
+body {
+  font-family: mycustomfont, sans-serif;
+  margin: 0 auto;
+  
+  grid-template-columns: 20% repeat(4, 1fr);
+  /* Add a new column for the sidebar menu */
+  grid-template-rows: auto;
+  /* Use auto for the row height to adjust to content */
+  background-image: url('pics/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* ýmislegt */    
+a {
+  color: white
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+}
+.velkominn {
+  font-size: 46px;
+}
+
+
+
+/* boxið utan um allt */
+.box {
+  display: grid;
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 90%;
+  border: 5px solid black;
+}
+
+.boxvelkominn {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.innihaldvelkominn {
+  margin: 10px;
+  border: 2px solid black;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  height: fit-content;
+}
+
+
+
+.box2dalkar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 2px solid black;
+}
+
+.content2dalkar {
+  margin: 10px;
+  border: 2px solid black;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  
+  
+}
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .box2dalkar {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 599px) {
+  .box2dalkar {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+
+
+/* Boxið utan um 3 dalka */
+.box3dalkar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid black;
+}
+/* Innihald 3 dalkar */
+.content3dalkar {
+    margin: 10px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid black;
+}
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .box3dalkar {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 599px) {
+  .box3dalkar {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+
+
+
+/* Boxið utan um 4 dalka*/
+.box4dalkar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid black;
+}
+/* Innihald 4 dalkar */
+.content4dalkar {
+  margin: 10px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid black;
+}
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .box4dalkar {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 599px) {
+  .box4dalkar {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+
+
+
+/* boxið utan um banner á síðunni */
+.boxbannernidri{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    
+}
+
+.bannernidri {
+    height: 300px;
+    text-align: center
+}

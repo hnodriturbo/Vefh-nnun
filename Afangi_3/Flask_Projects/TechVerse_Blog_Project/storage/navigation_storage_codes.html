@@ -1,0 +1,120 @@
+<!-- The navigation accordion menu i'm using that's causing errors -->
+
+<!-- 
+    <div class="accordion bg-dark rounded" id="accordionExample">
+        {% for category, details in categories.items() %}
+            <div class="accordion-item bg-dark border-0">
+                <h2 class="accordion-header" id="heading-{{ loop.index }}">
+                    <button class="accordion-button collapsed text-white bg-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#category-{{ loop.index }}" aria-expanded="false" aria-controls="category-{{ loop.index }}">
+                        <i class="fa {{ details.icon }} me-2"></i> {{ details.title }}
+                    </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="category-{{ loop.index }}" aria-labelledby="heading-{{ loop.index }}" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="d-grid gap-2">
+                            {% for subcategory, subdetails in details.subcategories.items() %}
+                                <a class="text-white py-1" href="{{ url_for('view_category', category=category, subcategory=subcategory) }}">
+                                    <i class="fa {{ subdetails.icon }} me-2"></i> {{ subdetails.title }}
+                                </a>
+                            {% endfor %}
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+-->
+
+
+
+
+
+
+
+<!-- 
+        <div class="accordion bg-dark rounded" id="accordionExample">
+        {% for category, details in categories.items() %}
+            <div class="accordion-item bg-dark border-0">
+                <h2 class="accordion-header" id="heading-{{ loop.index }}">
+                    <button class="accordion-button collapsed text-white bg-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#category-{{ loop.index }}" aria-expanded="false" aria-controls="category-{{ loop.index }}">
+                        <i class="fa {{ details.icon }} me-2"></i> {{ details.title }}
+                    </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="category-{{ loop.index }}" aria-labelledby="heading-{{ loop.index }}" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="d-grid gap-2">
+                            {% for subcategory, subdetails in details.subcategories.items() %}
+                                <a class="text-white py-1" href="{{ url_for('view_category', category=category, subcategory=subcategory) }}">
+                                    <i class="fa {{ subdetails.icon }} me-2"></i> {{ subdetails.title }}
+                                </a>
+                            {% endfor %}
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+ -->
+
+
+
+
+
+
+<!-- 
+
+id="toggleSidebarBtn"
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <button class="btn btn-outline-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+            Menu
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+
+
+
+
+                {% for link in links %}
+
+                <li class="nav-item">
+                    <a class="nav-link my-navbtn-styles m-3" href="{{ link.url }}">{{ link.name }}</a>
+                </li>
+
+                {% endfor %}
+
+
+
+            </ul> 
+
+
+
+
+            <ul class="navbar-nav ms-auto">
+     
+
+
+
+                <li class="nav-item d-lg-none">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
+                        Toggle Sidebar
+                    </button>
+                </li>
+            </ul>
+
+
+
+        </div>
+        
+
+
+
+    </div> 
+</nav> 
+ -->

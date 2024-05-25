@@ -1,0 +1,114 @@
+<!--
+//////////////////////////////////// - \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////        Author: Hreiðar Pétursson        \\\\\\\\\\\\\\\\
+///////////////         Course:  Vefhönnun Áfangi 3        \\\\\\\\\\\\\\\
+/////////////               - Skilaverkefni 3 -             \\\\\\\\\\\\\\
+///// Description: Base HTML structure, integrates all components, \\\\\\\
+////  styles, and scripts for a consistent layout across the website.  \\\
+///     It includes the main navigation and global page templates.      \\
+///////////////// with interactive user interface elements. \\\\\\\\\\\\\\
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>
+        TV Shows & Movies Database
+    </title>
+
+    <!-- Google Font Alegreya -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+
+    <!-- 1 - Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+    <!-- 2 - My Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/myStyles.css') }}">
+
+    <!-- 3 - Bootstrap Icons-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-icons.css') }}">
+
+    
+    
+</head>
+
+
+
+<body>
+    <div class="container p-4 my-5 master-container">
+    
+
+        {% include 'partials/header.html' %}
+
+        <!-- Main Content -->
+        <div class="container-fluid">
+
+            <!-- Flash messages display area -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            {% block content %}{% endblock %}
+        </div>
+
+
+    </div>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Local Bootstrap JS bundle pack -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Custom JavaScript for MediaMatrix -->
+    <script src="{{ url_for('static', filename='js/mediamatrix.js') }}"></script>
+
+    <!-- Include Swiper's JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+
+
+
+</html>
+
+
+
+
+<!-- Storage codes -->
+
+    <!-- I include this only to be 1000% sure bootstrap's css works -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    
+    <!--  I created this one only so i can use the bootstrap variables and compiled the scss to css  -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+    <!--
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/extras.css') }}">
+    -->

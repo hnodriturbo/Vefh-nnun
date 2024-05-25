@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <!-- Container for the Our Employees display -->
+  
+    <div class="row p-3">
+        <h1>Our Employees</h1>
+    </div>
+
+    <div class="events-container mt-3">
+      {% for employee in employees %}
+      <!-- Each employee card -->
+      <div class="col-sm-6 col-md-4 mb-4">
+        <div class="card h-100 grey800">
+          <img src="{{ url_for('static', filename=employee.image) }}" class="card-img-top img-fluid" alt="{{ employee.name }}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title bold-text">{{ employee.name }}</h5>
+            <p class="card-text semi-bold-text">{{ employee.position }}</p>
+            <p class="card-text">{{ employee.bio }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,412 @@
+/* ########## Hreiðar Pétursson ########## */
+/*  ######## Javascript Áfanginn ########  */
+/*   ######### Skilaverkefni 5 #########   */
+/*    ########  Febrúar 2024   ########    */
+/*     #######   SPA  Events   #######     */
+
+
+
+/* --------------- EXTRAS  STYLES --------------- */
+
+
+body {
+    color: #a9a3a3 !important;
+}
+
+.master-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px; 
+    width: 80%;
+    margin: 40px auto;
+    border: 2px solid #6c757d; /* Bootstraps btn-secondary color */
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; /* Glowing effect */
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .master-container {
+        width: 100%;
+    }
+}
+
+.banner-container {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.img-fluid {
+    width: 100%;
+    height: auto;
+    display: flex; 
+    /* margin: 20px; */
+    border-radius: 15px;
+    /* box-sizing: border-box; */
+}
+
+.nowrap {
+    white-space: nowrap; /* Stops the text from wrapping */
+    overflow: hidden; /* Hide instead of overflowing */
+}
+
+
+/* --------------- BUTTONS STYLES --------------- */
+/* 
+.my-btn-box-shadow {
+    box-shadow: 0 0 8px 0 #919da7;
+}
+ */
+/* box-shadow: 0 0 8px 0 #6c757d; */
+/* 
+.my-btn-box-shadow:hover {
+    box-shadow: 0 0 16px 4px #919da7;
+    border: 0px;
+}
+ */
+/* box-shadow: 0 0 16px 4px #6c757d; */
+.my-btn-box-shadow {
+    box-shadow: 0 0 8px 0 #919da7; /* Initial less intense shadow */
+    transition: box-shadow 0.9s ease-in-out; /* Transition effect for smooth animation */
+    border: 2px solid transparent; /* Ensure border size is accounted for to prevent shifting */
+}
+
+.my-btn-box-shadow:hover {
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; /* More intense glowing effect on hover */
+    border: 0px; /* Remove border on hover if desired */
+}
+
+.my-box-shadow-animation {
+    box-shadow: 0 0 8px 0 #919da7;
+    transition: box-shadow 0.9s ease-in-out; /* Smooth transition */
+}
+.my-box-shadow-animation-toggle {
+    box-shadow: 0 0 8px 0 #919da7, 0 0 16px 4px #919da7; /* Glowing effect */
+    /* box-shadow: 0 4px 12px 2px #919da7, 0 0 16px 4px #919da7; */
+}
+
+
+/* --------------- NAV BAR STYLES --------------- */
+
+.my-nav-styles {
+    border: 2px solid #6c757d; /* Bootstrap's btn-secondary color */
+    box-shadow: 0 0 8px 0 #6c757d; /* Creates the glowing effect with the same color */
+/*     padding: 10px;
+    margin-bottom: 20px; */
+    /* background-color: white; */ /* Or any color that fits your design */
+    border-radius: 15px;
+    color: #a9a3a3 !important;
+}
+
+.my-nav-styles:hover {
+    box-shadow: 0 0 12px 2px #6c757d; /* Larger glow effect on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Search and price slider settings and styles */
+#event-search {
+    margin-right: 2%;
+}
+
+#price-slider .noUi-handle {
+    outline: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+#price-slider .noUi-connect {
+    background-color: #007bff;
+}
+
+
+
+/* Events container settings */
+
+#events-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+    justify-content: center;
+    /* padding: 20px; */
+}
+
+
+
+
+
+
+/* -------------------------------------------------- */
+  /* ---------------  CARD STYLING  --------------- */
+/* -------------------------------------------------- */
+
+.my-card {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    padding-top: 10px;
+                     
+    border-radius: 15px;
+
+    background-color: #1e1e1e;
+
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.5);
+
+    overflow: hidden;
+    /* This makes the transition effect of transformation in 0.2s */
+    transition: transform 0.2s; 
+
+}
+
+.my-card:hover {
+    transform: scale(1.05); 
+}
+
+.my-card h5 {
+    font-size: 1.25rem;
+    color: #e21313;
+}
+
+.my-card-body,
+.my-card-footer {
+    padding: 15px;
+    color: #adb5bd;
+}
+
+.my-card-footer {
+    width: 100%;
+    background: #000000;
+    border-top: 1px solid #303030;
+}
+
+.my-image-top {
+    display: flex;
+    width: 95%;
+    height: auto;
+    border-radius: 15px; 
+}
+
+
+
+/* --------------------------------------------------- */
+  /* --------- Modal settings and styles ----------- */
+/* --------------------------------------------------- */
+
+
+/* ATH!! Modal card is making a white background with the black one as overlay!, but the white
+background is not changeable or editable i think. Fix tomorrow!!! */
+.modal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+    padding-top: 10px;              
+    border-radius: 15px;
+    background-color: #1e1e1e;
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* opacity: 0.5; */
+}
+
+.modal-card img {
+    display: flex;
+    width: 95%;
+    height: auto;
+    border-radius: 15px; 
+}
+
+.modal-card-body, 
+.modal-card-footer {
+    padding: 15px;
+    color: #adb5bd;
+}
+.modal-card h5 {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #e21313;
+}
+.modal-card-footer {
+    width: 100%;
+    background: #000000;
+    border-top: 1px solid #303030;
+}
+
+
+
+
+
+
+.my-modal {
+    display: none;
+    position: fixed; /* Stay put */
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    
+    border: 1px solid #888;
+    width: 40%; /* Adjustable */
+    height: fit-content;
+    max-width: 400px;
+   
+    /* I need to use relative so i can put the close button above the card */
+    position: relative;
+    z-index: 1001; 
+
+    animation: fadeInContent 1.5s forwards; 
+
+
+
+
+
+}
+
+
+@keyframes fadeInContent {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close-button {
+    position: absolute;
+
+    color: white;
+
+    top: 10px;
+    right: 20px;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    cursor: pointer;
+    
+    z-index: 1000000;
+
+}
+
+
+.close-button:hover,
+.close-button:focus {
+    color: #7b71ec;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------- Storage ------------ */
+/* 
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    animation-name: fadeInContent;
+    animation-duration: 1s;
+     */
+    /* background-color: rgba(0,0,0,0.4);  *//* Black w/ opacity */
+
+    /* overflow: auto; */ /* Scroll if there is a need for it */
+    /* display: flex; */
+    /* animation-fill-mode: forwards; */
+/* object-fit: cover; */ /* test this to see if this works */
+/* 
+.my-card {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    padding-top: 10px;
+    
+    border-radius: 15px;
+
+    background-color: #1e1e1e;
+    
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    
+    overflow: hidden;
+    transition: transform 0.2s; 
+}
+
+.my-card:hover {
+    transform: scale(1.05); 
+}
+
+
+.my-image-top {
+    display: flex;
+    width: 95%;
+    height: auto;
+
+    border-radius: 15px;
+    
+}
+
+.my-card-body {
+    padding: 15px;
+}
+
+.my-card-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.my-card-text {
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+
+.my-card-body p:last-child {
+    color: #adadad; 
+    font-style: italic;
+}
+
+ */

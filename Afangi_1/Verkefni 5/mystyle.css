@@ -1,0 +1,187 @@
+/* Fontið mitt */
+@font-face {
+    font-family: MyCustomFont;
+    src: url('font/mycustomfont.ttf');
+}
+/* bakgrunnur og ýmislegt annað */
+body {
+  font-family: mycustomfont, sans-serif;
+  margin: 0 auto;
+  text-shadow: 2px 2px black;
+  color: white;
+  background-image: url('pics/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* ýmislegt */    
+a {
+  color: rgb(224, 211, 224);
+  display: block;
+  margin-bottom: 10px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+nav {
+  text-align: center;
+}
+
+
+section {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 28px;
+  margin: 50px;
+  text-align: justify;
+}
+
+figure {
+  position: relative;
+}
+
+
+
+
+
+/* Velkominn textinn */
+.velkominn {
+  font-size: 80px;
+}
+@media only screen and (max-width: 480px) {
+    .velkominn {
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+    .velkominn {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (min-width: 961px) and (max-width: 1280px) {
+    .velkominn {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (min-width: 1281px) {
+    .velkominn {
+        font-size: 80px;
+    }
+}
+
+
+
+/* Efsta mynd síðunnar */
+.efstamyndsidunnar {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+
+
+/* Header síðunnar */
+.containerheader {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 10px;
+    border: 1px solid black;
+}
+
+
+
+/* Container og content 2 dálkar og boxin innan þeirra */
+.container2dalkar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  .container2dalkar {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.container2dalkar2 {
+  grid-template-rows: 1fr 1fr 1fr;
+  
+}
+.thrjarradir {
+  margin: 10px;
+  text-justify: justify;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+
+
+
+
+/* Container og content 3 dálkar (6 reitir) sem innihalda mynd hver */
+.container3dalkar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+@media only screen and (min-width: 700px) and (max-width: 1080px) {
+  .container3dalkar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 700px) {
+  .container3dalkar {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    place-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.content6reitir {
+  display: grid;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid black;
+  max-width: 300px;
+  max-height: 300px;
+  background-size: 100%;
+  margin: 50px;
+  
+}
+
+
+
+
+/* Container fyrir footer */
+.container3dalkarfooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

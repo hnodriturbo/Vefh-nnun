@@ -1,0 +1,21 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Replace with your default branch if it's not master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      
+    - name: Build and deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages  # The branch the action should deploy to.
+        folder: 'Afangi_2/Website_Project_Vefhonnun/IT_Conference'  # The folder the action should deploy from.
+        token: ${{ secrets.GITHUB_TOKEN }}  # The repository's GitHub token for authentication.

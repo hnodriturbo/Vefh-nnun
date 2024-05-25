@@ -1,0 +1,128 @@
+/* Alegreya Regular */
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../fonts/Alegreya_Font/Alegreya_Variable_Font.woff2') format('woff2'),
+         url('../fonts/Alegreya_Font/Alegreya_Variable_Font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Alegreya Italic */
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../fonts/Alegreya_Font/Alegreya_Italic_Variable_Font.woff2') format('woff2'),
+         url('../fonts/Alegreya_Font/Alegreya_Italic_Variable_Font.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/* 10 usages of the alegreya font styles by using custom cpassesb */
+
+/* 1. Bold and Italic Text */
+/* Use for emphasis on key terms or quotes */
+.bold-italic {
+    font-family: 'Alegreya', serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* 2. Light and Italic Text */
+/* Ideal for subtle emphasis, such as captions or annotations */
+.light-italic {
+    font-family: 'Alegreya', serif;
+    font-weight: 300; /* Light weight */
+    font-style: italic;
+}
+
+/* 3. Bold and Underlined Header */
+/* Perfect for section titles or headings in the content */
+.bold-underlined {
+    font-family: 'Alegreya', serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 4. Small Caps */
+/* Suitable for legal texts, section labels, or acronyms */
+.small-caps {
+    font-family: 'Alegreya', serif;
+    font-variant: small-caps;
+}
+
+/* 5. Light Letter Spacing */
+/* Use in headers or menu items for a breathable, upscale look */
+.light-spacing {
+    font-family: 'Alegreya', serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* 6. Drop Shadow Text */
+/* Adds depth, great for headers on banners or overlay text */
+.drop-shadow {
+    font-family: 'Alegreya', serif;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+/* 7. Responsive Font Size */
+/* Adjusts font size based on the viewport width */
+.responsive-font {
+    font-family: 'Alegreya', serif;
+    font-size: calc(1rem + 0.5vw);
+}
+
+/* 8. High Contrast Bold */
+/* For important buttons or calls to action */
+.high-contrast-bold {
+    font-family: 'Alegreya', serif;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* 9. Elegant Italics */
+/* Use for quotes, italicized thoughts, or foreign words */
+.elegant-italics {
+    font-family: 'Alegreya', serif;
+    font-style: italic;
+    color: #6A5ACD; /* Slate Blue */
+}
+
+/* 10. Hover Grow */
+/* Font size increases when hovered over, useful for interactive elements */
+.hover-grow {
+    font-family: 'Alegreya', serif;
+    font-size: 100%;
+}
+.hover-grow:hover {
+    font-family: 'Alegreya', serif;
+    font-size: 170%;
+    transition: font-size 0.3s ease-in-out;
+}
+
+
+/* 
+Example ways of using these classes im HMTL:
+<p class="bold-italic">This is both bold and italic!</p>
+<h1 class="bold-underlined">Section Title</h1>
+<div class="small-caps">This is in small caps.</div>
+<span class="light-spacing">Breathable Spaced Text</span>
+<h2 class="drop-shadow">Shadowed Heading</h2>
+<p class="responsive-font">This font size adjusts to the screen width.</p>
+<button class="high-contrast-bold">Click Me!</button>
+<blockquote class="elegant-italics">"To be, or not to be, that is the question."</blockquote>
+<a href="#" class="hover-grow">Hover over me!</a>
+<p class="bold-italic">This is both bold and italic!</p>
+<h1 class="bold-underlined">Section Title</h1>
+<div class="small-caps">This is in small caps.</div>
+<span class="light-spacing">Breathable Spaced Text</span>
+<h2 class="drop-shadow">Shadowed Heading</h2>
+<p class="responsive-font">This font size adjusts to the screen width.</p>
+<button class="high-contrast-bold">Click Me!</button>
+<blockquote class="elegant-italics">"To be, or not to be, that is the question."</blockquote>
+<a href="#" class="hover-grow">Hover over me!</a>
+
+*/

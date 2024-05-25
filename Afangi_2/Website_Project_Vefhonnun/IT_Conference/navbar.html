@@ -1,0 +1,151 @@
+<!--    /* ------------------------------------------------- *\    -->
+<!--   /* -----------      Hreiðar Pétursson      ----------- *\   -->
+<!--  /* ------------- -- ------------------- -- ------------- *\  -->
+<!-- /* -------      Verkefni Vefhönnun Haust 2023      ------- *\ --> 
+
+
+    <!-- ------------------------------------------------------ -->
+<!-- ----------------------- navbar.html ------------------------- -->
+    <!-- ------------------------------------------------------ -->
+
+
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<!-- ----- ----- Navigation Menu ----- ----- -->
+<nav class="navbar navbar-expand-xl bg-dark-subtle fixed-top eastwood-font-italic">
+    <div class="container-fluid position-relative">
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+    <!-- Navbar Branding Logo and Title -->
+        <a class="navbar-brand load-content title-font-size" href="main-site.html">
+            <img src="img/Logo-3.png" alt="IT Conference Logo" height="50"> IT Conference
+        </a>
+
+        <!-- Navbar Toggler Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+    <!-- Navbar Content -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+            <ul class="navbar-nav">
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+    <!-- Home Button -->
+                <li class="nav-item"> 
+                    <button class="btn btn-outline-secondary load-content navbar-button my-icon-text-button-styling" type="button" href="main-site.html">
+                        <i class="bi bi-house icon-space"></i><span>Home</span> 
+                    </button>
+                </li>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+    <!-- Day 1 Button and Collapsible Content -->
+                <li class="nav-item">
+                    <button class="btn btn-outline-secondary navbar-button my-icon-text-button-styling" type="button" data-bs-toggle="collapse" data-bs-target="#day1Content" aria-expanded="false" aria-controls="day1Content">
+                        <i class="bi bi-1-circle icon-space"></i><span>Day 1</span> 
+                    </button>
+                </li>
+
+    <!-- Day 2 Button and Collapsible Content -->
+                <li class="nav-item">
+                    <button class="btn btn-outline-secondary navbar-button my-icon-text-button-styling" type="button" data-bs-toggle="collapse" data-bs-target="#day2Content" aria-expanded="false" aria-controls="day2Content">
+                        <i class="bi bi-2-circle icon-space"></i><span>Day 2</span> 
+                    </button>
+                </li>
+
+    <!-- Day 3 Button and Collapsible Content -->
+                <li class="nav-item">
+                    <button class="btn btn-outline-secondary navbar-button my-icon-text-button-styling" type="button" data-bs-toggle="collapse" data-bs-target="#day3Content" aria-expanded="false" aria-controls="day3Content">
+                        <i class="bi bi-3-circle icon-space"></i><span>Day 3</span> 
+                    </button>
+                </li>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+    <!-- About The IT Conference Event Button -->
+                <li class="nav-item"> 
+                    <button class="btn btn-outline-secondary load-content navbar-button text-nowrap" style="width:fit-content;" type="button" href="about.html">
+                        <i class="bi bi-info-circle icon-space"></i><span>About The Event</span> 
+                    </button>
+                </li>
+                
+            </ul> <!-- navbar-nav --> 
+
+            
+
+
+
+
+        </div>  <!-- "collapse navbar-collapse justify-content-end" id="navbarContent"  -->
+    </div> <!-- container-fluid -->
+</nav> <!-- navbar navbar-expand-lg bg-dark-subtle fixed-top eastwood-font-italic -->
+
+
+<!-- Collapsible Content for Day 1 -->
+<div class="collapse collapse-content" id="day1Content">
+    <div class="card card-body bg-dark-subtle text-white w-100 p-2" style="margin-top: -5px;">
+
+        <button href="conference-day-1/schedule.html" class="btn btn-outline-secondary load-content m-1 my-icon-text-button-styling mt-3">
+            <i class="bi bi-list-task icon-space d-none d-xxl-inline-flex"></i><span>Schedule</span>
+        </button>
+
+        <hr class="dropdown-divider m-1" style="border: 1px solid grey;">
+        
+        <button href="conference-day-1/registration.html" class="btn btn-outline-secondary load-content m-1 my-icon-text-button-styling">
+            <i class="bi bi-pencil icon-space d-none d-xxl-inline-flex"></i><span>Registration</span>
+        </button>
+
+    </div> <!-- card card-body bg-dark-subtle text-white w-100 p-2 -->
+</div> <!-- collapse collapse-content" id="day1Content" -->
+
+
+<!-- Collapsible Content for Day 2 -->
+<div class="collapse collapse-content" id="day2Content">
+    <div class="card card-body bg-dark-subtle text-white w-100 p-2" style="margin-top: -5px;">
+
+        <button href="conference-day-2/schedule.html" class="btn btn-outline-secondary load-content m-1 my-icon-text-button-styling mt-3">
+            <i class="bi bi-list-task icon-space d-none d-xxl-inline-flex"></i><span>Schedule</span>
+        </button>
+
+        <hr class="dropdown-divider m-1" style="border: 1px solid grey;">
+
+        <button href="conference-day-2/registration.html" class="btn btn-outline-secondary load-content m-1 my-icon-text-button-styling">
+            <i class="bi bi-pencil icon-space d-none d-xxl-inline-flex"></i><span>Registration</span>
+        </button>
+        
+    </div> <!-- card card-body bg-dark-subtle text-white w-100 p-2 -->
+</div> <!-- collapse collapse-content" id="day2Content" -->
+
+<!-- Collapsible Content for Day 3 -->
+<div class="collapse collapse-content" id="day3Content">
+    <div class="card card-body bg-dark-subtle text-white w-100 p-2" style="margin-top: -5px;">
+        
+        <button href="conference-day-3/schedule.html" class="btn btn-outline-secondary load-content m-1 my-icon-text-button-styling mt-3">
+            <i class="bi bi-list-task icon-space d-none d-xxl-inline-flex"></i><span>Schedule</span>
+        </button>
+        
+        <hr class="dropdown-divider m-1" style="border: 1px solid grey;">
+
+        <button href="conference-day-3/registration.html" class="btn btn-outline-secondary load-content m-1 my-icon-text-button-styling">
+            <i class="bi bi-pencil icon-space d-none d-xxl-inline-flex"></i><span>Registration</span>
+        </button>
+
+    </div> <!-- card card-body bg-dark-subtle text-white w-100 p-2 -->
+</div> <!-- collapse collapse-content" id="day3Content" -->
+
+
+<script>
+
+    
+</script>

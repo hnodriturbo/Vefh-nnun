@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/mystyle.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/hafasambandcss.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/umavatarcss.css'>
+    <link rel="stylesheet" type="text/css" href="font/mycustomfont.ttf">
+    <link rel="stylesheet" type="text/css" href="font/Art Brewery.ttf">
+    <link rel="stylesheet" type="text/css" href="font/Axtaja Elang.ttf">
+    <link rel="stylesheet" type="text/css" href="font/BillionStars.ttf">
+    <title>Vefsíðan mín - Avatar - Verkefni 7</title>
+
+</head>
+
+<script>
+    var dropdownBtns = document.querySelectorAll(".dropdown-btn");
+    dropdownBtns.forEach(function(btn) {
+        btn.addEventListener("mouseenter", function() {
+            this.nextElementSibling.classList.add("show");
+            fadeIn(this, 0);
+        });
+        btn.addEventListener("mouseleave", function() {
+            this.nextElementSibling.classList.remove("show");
+        });
+    });
+</script>
+<body>
+    <div class="arrow-container">
+        <a href="#top" class="arrow"></a>
+    </div>
+     <!-- header síðunnar er container og section er reiturinn -->
+     <a href="index.html">
+        <header class="containerheader center">
+                <h1 class="center innihaldheader1">Velkomin á Avatar fan síðuna mína</h1>
+                <div class="center innihaldheader2">
+                    <table class="mp3">
+                        <tr>
+                            <td>Avatar - I See You Theme Soundtrack</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <audio controls>
+                                    <source src="mp3/iseeyou.mp3" type="audio/mpeg">
+                                  </audio>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h2 class="center innihaldheader2">Verkefni Sex</h2>
+        </header>  
+        </a>
+    
+    <!-- Banner container og content -->
+    <div class="bannercontainer">
+        <img src="pics/banneravatar.jpg" class="bannerefst">
+    </div> 
+    
+    
+    
+    <nav class="containermenuefst font1">
+        <div class="innihaldmenuefst"><a href="#avatar1"><h2>Avatar 1</h2></a></div>
+        <div class="innihaldmenuefst"><a href="#avatar2"><h2>Avatar 2</h2></a></div>
+        <div class="innihaldmenuefst"><a href="#avatar3"><h2>Avatar 3</h2></a></div>
+        <div class="innihaldmenuefst"><a href="#leikstjori"><h2>Leikstjóri</h2></a></div>
+        <div class="innihaldmenuefst"><a href="#leikarar"><h2>Leikarar</h2></a></div>
+    </nav>
+
+    
+    
+    <main class="containertable2">
+      <table class="tableumavatar">
+          <caption>Avatar myndir topp innkoma á heimskvarða</caption>
+          <thead>
+            <tr>
+              <th scope="col">Topplistasæti</th>
+              <th scope="col">Titill</th>
+              <th scope="col">Upphæð</th>
+              <th scope="col">Ár</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row" data-label="Topplistasæti">1. Sæti</td>
+              <td data-label="Titill">Avatar</td>
+              <td data-label="Upphæð">$2,923,706,026</td>
+              <td data-label="Ár">2009</td>
+            </tr>
+            <tr>
+              <td scope="row" data-label="Topplistasæti">3. Sæti</td>
+              <td data-label="Titill">Avatar: The Way Of The Water</td>
+              <td data-label="Upphæð">$2,319,766,200</td>
+              <td data-label="Ár">2022</td>
+            </tr>
+            <tr>
+              <td scope="row" data-label="Topplistasæti">? ? ?</td>
+              <td data-label="Titill">Avatar: The Seed Bearer</td>
+              <td data-label="Upphæð">$ Búist við miklu</td>
+              <td data-label="Ár">2024</td>
+            </tr>
+        </tbody>
+      </table>
+    </main>
+    
+
+
+
+
+<!-- Menu og map hluti síðunnar -->
+<footer>
+    <nav class="containermenu">
+        <div class="innihaldmap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1740.7180642495996!2d-21.85025452284902!3d64.13258931772987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d675b9db2d849b%3A0x18d814492029cd60!2sDugguvogur%2015%2C%20104%20Reykjav%C3%ADk!5e0!3m2!1sen!2sis!4v1683395111896!5m2!1sen!2sis" width="100%" height="100%" style="border:1px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-btn" style="font-size: 1.5vw;">Tenglar</button>
+            <div class="dropdown-content">
+                <a href="umavatar.html" class="dropdown-item" style="font-size: 1.5vw;">Um Avatar</a>
+                <a href="hafasamband.html" class="dropdown-item" style="font-size: 1.5vw;">Hafa samband</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropdown-btn" style="font-size: 1.5vw;">Ýmislegt</button>
+            <div class="dropdown-content">
+                <a href="https://www.imdb.com/title/tt0499549/" class="dropdown-item" style="font-size: 1.5vw;">Avatar á IMDB</a>
+                <a href="http://www.avatar.com" class="dropdown-item" style="font-size: 1.5vw;">Official Avatar Síðan</a>
+                <a href="index.html" class="dropdown-item" style="font-size: 1.5vw;">Fara heim</a>
+            </div>
+        </div>
+
+    </nav>
+    <p class="center">&copy;2023 Hnoðritúrbó</p>
+</footer>
+<script>
+const form = document.querySelector('#contact-form');
+const thankYouMessage = document.querySelector('#thank-you-message');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // prevent the form from submitting
+
+  // show the thank you message
+  thankYouMessage.style.display = 'block';
+
+  // hide the form
+  form.style.display = 'none';
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<!-- A horizontal line to separate the navbar from the content below -->
+<hr> <!-- Why is this <hr> like 1px larger then the other ones ??? check out !!! -->
+
+
+
+<!-- Accordion Content - The sub menu of either movies or tv shows 
+<div id="myAccordion">
+
+    {% for category, data in navigation['accordion']['Movies'].items() %}
+      
+        <div class="collapse" id="{{ category }}" data-bs-parent="#myAccordion">
+            
+            
+            <div class="card-body grey700 border-radius-15">
+                
+             
+                <div class="d-flex justify-content-around">
+                    
+                    {% for name, button_details in data.items() %}
+                        <a href="{{ button_details['route'] }}" data-title="{{ button_details['title'] }}" class="btn btn-dark w-25 d-flex justify-content-center align-items-center my-accordion-btn-styles">
+                            {{ title }}<i class="bi {{ button_details['icon'] }}"></i>
+                        </a>
+                    {% endfor %}
+             
+                </div>
+
+            </div>
+
+            <hr>
+
+        </div>
+
+    {% endfor %}
+</div>
+-->

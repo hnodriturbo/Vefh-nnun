@@ -1,0 +1,32 @@
+
+
+<!-- Accordion Content - The sub menu of either movies or tv shows -->
+<div id="myAccordion">
+
+    {% for dictonary_button_title, data in navigation['accordion'].items() %}
+      
+        <div class="collapse" id="{{ data['route'] }}" data-bs-parent="#myAccordion">
+            
+            
+            <div class="card-body grey700 border-radius-15 p-3">
+                
+             
+                <div class="d-flex justify-content-around">
+                    
+                    {% for name, button_details in data['accordion_buttons'].items() %}
+                        <a href="{{ button_details['route'] }}" data-title="{{ button_details['title'] }}" class="btn btn-dark w-25 d-flex justify-content-center my-accordion-btn-styles">
+                        {{ button_details['title'] }}<i class="bi {{ button_details['icon'] }} ms-2 d-flex align-items-center justify-content-center"></i>
+                        </a>
+                    {% endfor %}
+             
+                </div>
+
+            </div>
+
+            <hr>
+
+        </div>
+
+    {% endfor %}
+</div>
+

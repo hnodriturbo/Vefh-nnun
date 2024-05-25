@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sample of inclunding Bootstrap icons -->
+    <link href="img/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Sample of using cdn link to include bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <!-- Sample of including local Bootstrap CSS - Note: there is also a cdn possibility -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Sample of including your own css styling sheet    ( mystyle.css being a sample name of css file ) -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/mystyle.css'>
+
+    <!-- Sample for including your own javascript file     ( menu.js being a sample name of the js file) -->
+    <script src="js/menu.js"></script>
+    <!-- !!! NOTE !!! -->
+    <!-- Usually it's best practice to include your own javascript file at the bottom before the closing of the body tag -->
+    <!-- But sometime, like in this instance above, it's menu.js and therefore needs loading at the beginnind and not the end -->
+
+    <!-- <script src="js/jquery.js"></script> jquery er núna orðinn hluti af bootstrap bundle -->
+  
+    <!-- Here's how you make use of your own downloaded fonts - also google fonts and font awesome are availeble -->
+    <style>
+          /* Font-face and custom-text styles */
+    @font-face {
+      font-family: 'customFont';
+      src: url('font/Eastwood.woff2') format('woff2'), /* WOFF2 format */
+           url('font/Eastwood.woff') format('woff'), /* WOFF format */
+           url('font/Eastwood.ttf') format('truetype'); /* TTF format */
+    }
+    .custom-text {
+      font-family: 'customFont', sans-serif;
+    }
+    </style>
+
+
+
+    <!-- Titill síðunnar -->
+    <title>Some Title for the webpage</title>
+  
+</head>
+<body>
+
+
+
+<!-- Including the bootstrap bundle must be just before the closing of the body tag -->
+<!--  - Note: there is also a cdn possibility -->
+<script src="js/bootstrap.bundle.js"></script>
+</body>

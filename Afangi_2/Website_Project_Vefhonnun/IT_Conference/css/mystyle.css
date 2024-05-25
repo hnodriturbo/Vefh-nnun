@@ -1,0 +1,546 @@
+      /* ------------------------------------------------- *\
+     /* -----------      Hreiðar Pétursson      ----------- *\
+    /* ------------- -- ------------------- -- ------------- *\
+   /* -------      Verkefni Vefhönnun Haust 2023      ------- *\
+
+
+    <!-- ------------------------------------------------- -->
+  <!-- -------------------- mystyle.css -------------------- -->
+<!-- --------------------------------------------------------- -->
+
+
+
+/* 
+
+ * -------------------------------------------------
+ * Comment type for describive commenting
+ * -------------------------------------------------
+ *
+ * Description: 
+ * This section styles the main navigation bar. It includes layout, 
+ * color scheme, and responsiveness.
+ *
+ * The navbar is designed to adapt to various screen sizes.
+ *
+ * Navbar is always with fixed top
+
+*/
+
+
+
+    /* ---------------------------------------------------- */
+  /* ---------------------- Main Parts ---------------------- */
+/* ------------------------------------------------------------ */
+
+/* Main content container - Dynamic loading with SPA JS */
+.main-content {
+    max-width: 1200px; /* Make sure the max width is 1200px */
+    margin: 0 auto; /* For centering the main-content container */
+    width: 100%; /* Always use 100% of it's width */
+    min-height: 100vh; /* For full viewport height */
+}
+
+/* Carousel container - Dynamic slideshow of images */
+.carousel-css {
+    max-width: 1200px; /* Make sure the max width is 1200px */
+    margin: 0 auto; /* For centering the main-content container */
+    width: 100%; /* Always use 100% of it's width */
+    padding-top: 80px; /* Push the page little bit down because of the navbar */
+}
+/* Direct effect to the images */    
+.carousel-image {
+    max-height: 400px; /* Set the maximum height you want */
+    width: auto; /* This will preserve the aspect ratio */
+    object-fit: cover; /* This will ensure the image covers the area without stretching */
+}
+  
+.about-event-css {
+    max-width: 1200px; /* Make sure the max width is 1200px */
+    margin: 0 auto; /* For centering the main-content container */
+    width: 100%; /* Always use 100% of it's width */
+}
+
+
+
+
+
+
+
+
+
+    /* ---------------------------------------------------- */
+  /* ---------------------- -- Other -- --------------------- */
+/* ------------------------------------------------------------ */
+
+
+.border-radius {
+    border-radius: 10px;
+}
+.top-border-radius {
+    border-radius: 10px 10px 0 0;
+}
+
+
+/* Title of the page */
+.title-font-size {
+    font-size: 30px;
+}
+@media (max-width: 991.98px) {
+    .title-font-size {
+        font-size: 22px;
+    }
+}
+
+.icon-space {
+    margin-right: 5px;
+}
+
+
+/* Border right is used when dividing content when in columns */
+.border-right-mine {
+    border-right: 1px solid white;
+}
+/* When the columns change to stacked (rows) then use this settings */
+@media (max-width: 991.98px) {
+    .border-right-mine {
+        border-right: none; /* No need for border right when stacked */
+        border-bottom: 1px solid white; /* Put the border to the bottom */
+        margin-bottom: 20px; /* Adjusts bottom margin for spacing after stacking */
+    }
+}
+
+
+
+/* Font size 24px class */
+.font-size-24 {
+    font-size: 24px;
+}
+
+/* Reduce font size on smaller screens in the FAQ table */
+@media (max-width: 991.98px) {
+    .form-font-size {
+        font-size: 14px;
+    }
+}
+@media (max-width: 576px) {
+    .form-font-size {
+        font-size: 10px;
+    }
+}
+
+/* For centering everything */
+.all-center {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+/* Center text, content and items */
+.center {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Align text, content and items to end */
+.align-end {
+    text-align: end;
+    justify-content: end;
+    align-items: end;
+}
+
+/* Align text, content and items to start */
+.align-start {
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+}
+
+
+/* Set width to auto setting */
+.width-auto {
+    width: auto;
+}
+
+
+    /* ---------------------------------------------------- */
+  /* ------------------- Navbar & Dropdown ------------------ */
+/* ------------------------------------------------------------ */
+
+
+/* My navbar buttons settings */
+.navbar-button {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+    width: 200px;
+    z-index: 1040; /* Ensures navbar is above the collapsible content */
+}
+
+.collapse-content {
+    position: fixed;
+    width: 200px;          
+    z-index: 500; /* Below the navbar but above other content */
+}
+
+.my-icon-text-button-styling {
+    display: flex;
+    justify-content: center;
+    position: relative; /* Needed for absolute positioning of the icon */
+}
+
+.my-icon-text-button-styling .bi {
+    position: absolute;
+    left: 10px; /* Adjust as needed for spacing */
+}
+
+.my-icon-text-button-styling span {
+    flex-grow: 1; /* Ensures the span takes up all available space */
+    text-align: center;
+}
+
+
+@media (max-width: 1400px) {
+    .navbar-button {
+        font-size: 14px;
+        width: 120px;
+    }
+    .collapse-content {
+        width: 120px;   
+    
+
+    }
+    .my-icon-text-button-styling {
+        font-size: 14px;         
+    }
+}
+@media (max-width: 1199.98px) { /* Bootstrap XL breakpoint */
+    .navbar .navbar-nav .nav-item .btn {
+        width: calc(100% - 30px); /* Full width with some margin */
+        margin: 5px 15px; /* Adjust margin as needed */
+    }
+    .collapse-content {
+        width: 50%;   
+        z-index: 1500;  
+        position: absolute;
+
+    }
+}
+
+
+.collapsing {
+    -webkit-transition: height 0.35s ease; /* For Safari */
+    transition: height 0.35s ease; /* Transition time in seconds (e.g., 0.5s) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.my-icon-text-button-styling {
+    display: flex;
+    justify-content: center;
+}
+
+.my-icon-text-button-styling .bi {
+    margin-right: auto; 
+}
+
+.my-icon-text-button-styling span {
+    text-align: center;
+    margin-left: auto;
+}
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media query for screens smaller than 992px */
+/* 
+@media (max-width: 991.98px) {
+    .navbar-button {
+        width: 100%;
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+ */
+
+
+/* Social links settings for appealing visualization */
+.social-links a {
+    color: #ffffff; /* White icons for better visibility on dark background */
+    font-size: 24px; /* Icon size */
+    margin: 0 10px; /* Spacing between icons */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; 
+    height: 50px; 
+}
+
+.social-links a:hover {
+    color: #ddd; /* Lighter color on hover for visual feedback */
+    text-decoration: none; /* Remove the underline on hover */
+}
+
+/* This is for making circle buttons for the social links */
+.btn-circle {
+    border-radius: 50%; /* Makes the buttons round */
+}
+/* Container for the splash screen, covering the entire viewport */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible; /* Make sure it's visible to start the animation */
+    opacity: 1; /* Start fully opaque */
+    z-index: 9999; /* High z-index to ensure it's above other content */
+  }
+  
+  /* Content of the splash screen */
+  .splash-content {
+    width: 100px; /* Set a starting width */
+    height: 100px; /* Set a starting height */
+    opacity: 0; /* Start fully transparent */
+    transform-origin: 50% 50%; /* Center the transformation to the middle of the element */
+    animation: flyInAndScaleUp 3.5s forwards; /* Apply the animation */
+  }
+  
+/* Define the keyframes for the circular motion and scaling */
+@keyframes flyInAndScaleUp {
+    0% {
+      /* Start from the top, scaled down */
+      transform: translate(0, -100vh) scale(0.1);
+      opacity: 0;
+    }
+    25% {
+      /* Move right and down, scale up a bit */
+      transform: translate(-40vw, 25vh) scale(0.25);
+      opacity: 0.25;
+    }
+    50% {
+      /* Move right and down, scale up more */
+      transform: translate(25vw, -25vh) scale(0.40);
+      opacity: 0.5;
+    }
+    75% {
+      /* Move left and down, scale up more */
+      transform: translate(0, 25vh) scale(0.60);
+      opacity: 0.75;
+    }
+    100% {
+      /* Return to center, full size */
+      transform: translate(-16vw, -40vh) scale(0.70);
+      opacity: 1;
+    }
+  }
+  
+  .btn-close {
+    position: absolute;
+    top: 30px; /* Adjust as needed */
+    right: 30px; /* Adjust as needed */
+    z-index: 10; /* Ensure it's above other elements */
+    background-color: white; /* For visibility, adjust as needed */
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+
+
+/* Custom styles for dark accordion */
+.my-dark-accordion .accordion-button,
+.my-dark-accordion .accordion-body {
+    background-color: #343a40; /* Bootstrap dark background color */
+    color: #fff; /* Text color for dark background */
+}
+
+/* Style to ensure the accordion button text remains white even when collapsed */
+.my-dark-accordion .accordion-button.collapsed {
+    color: #fff;
+}
+
+
+
+
+@media (max-width: 768px) {
+    /* Hide table headers */
+    .table thead {
+      display: none;
+    }
+  
+    /* Make table cells display as block (like cards) */
+    .table td {
+      display: block;
+      text-align: right;
+    }
+  
+    /* Add a pseudo-element before each cell to serve as a label */
+    .table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    /* Clear floats */
+    .table td::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  
+
+
+/* ----- BOX SHADOW KEYFRAME ANIMATION EFFECT ON THE btn-outline-secondary BUTTON ----- */
+@keyframes btn-outline-secondary-box-shadow {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(108, 117, 125, 1.0);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(108, 117, 125, 1.0);
+    }
+  }
+  /* Apply the animation to the btn-outline-secondary button */
+  .toggle-btn-outline-secondary-box-shadow {
+    animation: btn-outline-secondary-box-shadow 1s infinite !important;
+  }
+  
+
+
+
+
+
+
+
+  /* .dropdown-menu {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.dropdown-menu.show {
+    opacity: 1;
+}
+
+.dropdown-toggle {
+    width: 150px; 
+}
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%; 
+} */
+/* 
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+}
+.dropdown-menu.show {
+    opacity: 1;
+}
+
+ */
+/* 
+.nav-item.dropdown {
+    position: relative;
+}
+ */
+
+
+ /** 
+/* nota kannski seinna */
+/* .fixed-size-button { */
+    /* white-space: nowrap;  *//* Prevent text from wrapping to the next line */
+   /*  width: auto; */ /* Set a fixed width or 'auto' for content-based width */
+   /*  overflow: hidden;  *//* Hide overflow text that exceeds the button's width */
+   /*  text-overflow: ellipsis;  *//* Show ellipsis (...) if text overflows */
+/* } */
+
+
+
+/* ----------------------------------------------------------------------------- */
+/*                                  SKOÐA BETUR                                  */
+/* ----------------------------------------------------------------------------- */
+
+/* Media query for screens smaller than 992px */
+/* 
+@media (max-width: 991.98px) {
+    .navbar .navbar-collapse .nav-item.dropdown .dropdown-menu {
+        display: none;
+    }
+
+    .navbar .navbar-collapse .nav-item.dropdown.show .dropdown-menu {
+        display: block;
+        opacity: 1;
+    }
+
+    .navbar .navbar-collapse .nav-link {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+ */
+/* ----------------------------------------------------------------------------- */
+
+
+
+
+
+/* 
+.dropdown-toggle {
+    width: 150px;
+} */
+
+

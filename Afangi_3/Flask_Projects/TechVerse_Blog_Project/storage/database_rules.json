@@ -1,0 +1,38 @@
+{
+    "rules": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "categories": {
+        ".read": "true",
+        ".write": "auth != null"
+      },
+      "posts": {
+        ".read": "true",
+        ".write": "auth != null"
+      },
+      "users": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
+  }
+
+
+
+  {
+    "rules": {
+      "categories": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      },
+      "posts": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      },
+      "users": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
+  }
+  

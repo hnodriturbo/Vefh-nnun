@@ -1,0 +1,22 @@
+<div class="container-fluid min-vh-100 sidebar" id="sidebar-menu">
+
+    <!-- Login and Logout Buttons -->
+    <div class="d-inline-block gap-1">
+        <!-- The login button in outline info class (light blue outlined color) -->
+        <a href="{{ url_for('login') }}" class="btn btn-outline-info me-2">
+            <i class="fa fa-sign-in-alt"></i> <span class="">Login</span>
+        </a>
+
+        <!-- The logout button in outline danger class (red outlined color) -->
+        <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">
+            <i class="fa fa-sign-out-alt"></i> <span class="">Logout</span>
+        </a>
+    </div> <!-- btn-group -->
+
+
+    
+    <form class="search-form mt-3 fixed-size">
+        <input type="text" class="form-control mb-2" placeholder="Search...">
+        <button type="submit" class="btn btn-outline-success w-100">Search</button>
+    </form>
+</div>

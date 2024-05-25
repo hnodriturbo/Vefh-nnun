@@ -1,0 +1,441 @@
+/* Fontið mitt */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../font/mycustomfont.ttf');
+}
+
+@font-face {
+    font-family: 'MyCustomFont2';
+    src: url('../font/Art\ Brewery.ttf');
+}
+
+@font-face {
+    font-family: 'MyCustomFont3';
+    src: url('../font/Axtaja\ Elang.ttf');
+}
+
+@font-face {
+    font-family: 'MyCustomFont4';
+    src: url('../font/BillionStars.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+/* örin sem vísar upp */
+.arrow-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-image: url("../pics/orsembendirupp.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.7;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+
+.arrow {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.arrow-container:hover {
+    opacity: 1;
+}
+    
+  
+/* bakgrunnur og ýmislegt annað */
+body {
+    margin: 0 auto;
+    text-shadow: 1px 1px black;
+    color: white;
+    background-image: url('../pics/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ýmislegt */    
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+nav {
+    text-align: center;
+}
+
+.font1 {
+    font-family: MyCustomFont, sans-serif;
+}
+
+.font2 {
+    font-family: MyCustomFont2, sans-serif;
+}
+
+.font3 {
+    font-family: MyCustomFont3, sans-serif;
+}
+
+.font4 {
+    font-family: MyCustomFont4, sans-serif;
+}
+
+h2,
+p {
+    font-size: 1.5vw;
+}
+
+.mp3 {
+    font-size: 3.5vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+caption {
+    font-size: 3vw;
+    padding: 3vw;
+}
+
+
+
+/* NOTA gradient fyrir background color */
+/* nota box-shadow til að skyggja border í boxum */
+/* position fixed */
+
+
+
+/* Þetta er header síðunnar með fyrirsögn og verkefni6 dálkunum */
+.containerheader {
+    margin: 10px;
+    display: grid;
+
+    grid-template-columns: 60% auto auto;
+    grid-template-rows: 1fr;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,5);
+    border-radius: 10px;
+
+}
+.innihaldheader1 {
+    margin: 10px;
+    font-size: 6vw;
+    font-family: MyCustomFont4, sans-serif;
+    font-weight: lighter;
+
+    padding: 25px;
+}
+.innihaldheader2 {
+    margin: 10px;
+    font-size: 3vw;
+    font-family: MyCustomFont4, sans-serif;
+    font-weight: lighter;
+    align-items: center;
+    text-align: center;
+    align-items: start;
+}
+.mp3 {
+    font-size: 3.5vw;
+}
+
+
+
+
+/* Banner síðunnar */
+.containerbanner {
+    display: grid;  
+    border-radius: 10px;
+}
+.bannerefst {
+    max-width: 100%;
+    margin: 10px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+
+/* Hérna er menu síðunnar sem er efst. Container og innihald */
+.containermenuefst {    
+    margin: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,5);
+    border-radius: 10px;
+}
+.innihaldmenuefst {
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.55);
+    margin: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+
+
+
+
+/* Þetta er aðal texti síðunnar */
+.containermain {
+    display: grid;
+    margin: 10px;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    font-size: 2vw;
+    margin-top: 50px;
+    height:100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 16px 26px 16px rgba(0,0,0,5);
+    border-radius: 10px;
+}
+.containerblockquote {
+    display: grid;
+    margin: 10px;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    font-size: 2vw;
+    margin:5px;
+    font-style: MyCustomFont4;
+    font-size: 1.5vw;
+    height: 100%;
+    max-width: 95%;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 16px 26px 16px rgba(0,0,0,5);
+    margin-right: 75px;
+    margin-left: 75px;
+    border-radius: 10px;
+  }
+
+.innihaldmain {
+    max-width: 95%;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 16px 26px 16px rgba(0,0,0,5);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    margin-right:50px;
+    margin-left:50px;
+    padding:15px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    text-align: justify;
+}
+.innihaldmain2 {
+    max-width: 95%;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 16px 26px 16px rgba(0,0,0,5);
+    height: auto;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    text-align: justify;
+}
+.container2 {
+    display: grid;
+    margin: 10px;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    font-size: 2vw;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+
+
+
+/* Container avatar 1 sem geymir um mynd nr 1 og trailer af henni */
+.containeravatar1 {
+    margin-top: 75px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 1fr;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 16px 26px 16px rgba(0,0,0,5);
+    border-radius: 10px;
+    min-height: 430px;
+    overflow: hidden;
+
+}
+.innihaldavatardalkur1 {
+    text-align: center;
+    text-justify: justify;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: auto;
+}
+.innihaldavatardalkur2 {
+    text-align: center;
+    text-justify: justify;
+    padding: 30px;
+    max-width: 560px;
+    max-height: 315px;
+    overflow: auto;
+
+}
+
+
+
+/* Container og innihald af avatar 2 */
+.containeravatar2 {  
+    display: grid;
+    margin-top: 15px;
+    align-items: center;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 1fr;
+    text-justify: justify;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 16px 26px 16px rgba(0,0,0,5);
+    border-radius: 10px;
+    min-height: 430px;
+}
+.innihaldavatar2dalkur1 {
+    max-width: 560px;
+    max-height: 315px;
+    overflow: auto;
+    padding: 30px;
+}
+.innihaldavatar2dalkur2 {
+    text-align: center;
+    text-justify: justify;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: auto;
+}
+
+
+/* Container af avatar 3... innihald css nýtist úr avatar 1 innihald */
+.containeravatar3 {
+    margin-top: 75px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 1fr;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 16px 26px 16px rgba(0,0,0,5);
+    border-radius: 10px;
+    min-height: 430px;
+    overflow: hidden;
+}
+
+
+/* Container og innihald fyrir leikara og leikstjóra dálkana */
+.container4dalkar {
+    display: grid;
+    margin-top: 15px;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    font-size: 40px;
+    width: 100%;
+    align-content:center;
+    min-height: 430px;
+    justify-content: center;
+}
+.innihald4dalkar {
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 16px 26px 16px rgba(0,0,0,5);
+    text-align: center;
+    border-radius: 10px;
+}
+.myndir {
+    height:100%;
+    width:100%;
+}
+
+
+/* Allur kóði tengdur drop down menu og mappinu */
+.containermenu {
+    margin: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    align-items: start;
+
+}
+.innihaldmap {
+    margin: 10px;
+    height: 300px auto;
+    width: 400px auto;
+}
+
+
+
+
+.dropdown {
+    position: relative;
+    display: grid;
+    margin: 10px;
+    text-shadow: none;
+}
+.dropdown-btn {
+    align-items: start;
+    top: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 10px;
+    border: none;
+}
+.dropdown-content {
+    display: grid;
+    visibility: hidden;
+    width: 100%;
+    position:absolute;
+    top: 100%;
+    margin-top: -5px;
+    align-items: center;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+.dropdown-item {
+    display: grid;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+ 
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    align-items: center;
+}
+.dropdown:hover .dropdown-item {
+    display: grid;
+}
+
+
+
+  

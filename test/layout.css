@@ -1,0 +1,36 @@
+.master-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Ensure content stacks vertically */
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative; /* For absolute positioning context */
+}
+
+.navbar-overflow-container {
+    display: none; /* Hide or remove this if it's not serving the intended purpose */
+}
+
+.navbar-container {
+    position: fixed; /* Use fixed to ensure it's relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full viewport width */
+    z-index: 1000; /* High z-index to keep it above other content */
+}
+
+.content, .banner {
+    margin-top: 56px; /* Adjust based on navbar's height to prevent overlap */
+    /* Other styling remains the same */
+}
+
+.banner {
+    background-color: #343a40; /* Bootstrap dark background */
+    color: #ffffff;
+}
+
+.content {
+    background-color: #ffffff; /* Light background for content */
+    color: #000000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}

@@ -1,0 +1,35 @@
+<!--
+##########################################################
+#                                                        #
+#                      CREATE POST                       #
+#                                                        #
+#  This file allows users to create a new blog post.     #
+#  It contains a form with fields for title, content,    #
+#  and category selection.                               #
+#                                                        #
+##########################################################
+-->
+
+
+{% extends "base.html" %}
+
+{% block title %}Create Post{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Create Post</h1>
+    <form method="POST" action="{{ url_for('create_post') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.title(class="form-control", placeholder="Title") }}
+        </div>
+        <div class="form-group">
+            {{ form.content(class="form-control", placeholder="Content") }}
+        </div>
+        <div class="form-group">
+            {{ form.category(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-secondary">Post</button>
+    </form>
+</div>
+{% endblock %}

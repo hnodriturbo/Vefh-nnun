@@ -1,0 +1,427 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/h0y3OzHzG4yNvn8u3Za6ByH8lrQ.jpg",
+            "genre_ids": [
+                18,
+                10766
+            ],
+            "id": 45789,
+            "origin_country": [
+                "DE"
+            ],
+            "original_language": "de",
+            "original_name": "Sturm der Liebe",
+            "overview": "These are the stories of relationships taking place in the fictional five-star hotel F\u00fcrstenhof, located in Feldkirchen-Westerham near Rosenheim with the plot revolving around members of the family room area, the hotel owners, and employees.",
+            "popularity": 5758.396,
+            "poster_path": "/9oZjOh3Va3FsiLGouhSogFsBX9G.jpg",
+            "first_air_date": "2005-09-26",
+            "name": "Sturm der Liebe",
+            "vote_average": 5.885,
+            "vote_count": 26
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/oOce9hLMVFubjAJliau4kiSNPnW.jpg",
+            "genre_ids": [
+                80,
+                18
+            ],
+            "id": 549,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Law & Order",
+            "overview": "In cases ripped from the headlines, police investigate serious and often deadly crimes, weighing the evidence and questioning the suspects until someone is taken into custody. The district attorney's office then builds a case to convict the perpetrator by proving the person guilty beyond a reasonable doubt. Working together, these expert teams navigate all sides of the complex criminal justice system to make New York a safer place.",
+            "popularity": 5397.26,
+            "poster_path": "/m9zTQr4TYS98UFSiA1k0mMfECPe.jpg",
+            "first_air_date": "1990-09-13",
+            "name": "Law & Order",
+            "vote_average": 7.413,
+            "vote_count": 533
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/vcFW09U4834DyFOeRZpsx9x1D3S.jpg",
+            "genre_ids": [
+                10759,
+                18,
+                10765
+            ],
+            "id": 57243,
+            "origin_country": [
+                "GB"
+            ],
+            "original_language": "en",
+            "original_name": "Doctor Who",
+            "overview": "The Doctor is a Time Lord: a 900 year old alien with 2 hearts, part of a gifted civilization who mastered time travel. The Doctor saves planets for a living\u2014more of a hobby actually, and the Doctor's very, very good at it.",
+            "popularity": 4811.414,
+            "poster_path": "/4edFyasCrkH4MKs6H4mHqlrxA6b.jpg",
+            "first_air_date": "2005-03-26",
+            "name": "Doctor Who",
+            "vote_average": 7.508,
+            "vote_count": 2855
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/lhdUwhInXu31qHm65jwBAlpTp8P.jpg",
+            "genre_ids": [
+                10767
+            ],
+            "id": 82873,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "The Kelly Clarkson Show",
+            "overview": "Kelly Clarkson presents the biggest newsmakers and names in film, television and music; as well as emerging new talent and everyday people who are beacons of hope in their communities.",
+            "popularity": 4600.56,
+            "poster_path": "/9Gg1oM8Us8gCS5aJA8e0ZRuIHnf.jpg",
+            "first_air_date": "2019-09-09",
+            "name": "The Kelly Clarkson Show",
+            "vote_average": 6.2,
+            "vote_count": 41
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hib8MpBPU7GdluS38htXCF4uw0c.jpg",
+            "genre_ids": [
+                80,
+                18,
+                9648
+            ],
+            "id": 2734,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Law & Order: Special Victims Unit",
+            "overview": "In the criminal justice system, sexually-based offenses are considered especially heinous. In New York City, the dedicated detectives who investigate these vicious felonies are members of an elite squad known as the Special Victims Unit. These are their stories.",
+            "popularity": 4585.847,
+            "poster_path": "/onmSVwYsPMYtO8OjLdjS8FfRNKb.jpg",
+            "first_air_date": "1999-09-20",
+            "name": "Law & Order: Special Victims Unit",
+            "vote_average": 7.954,
+            "vote_count": 3615
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/butPVWgcbtAjL9Z7jU7Xj1KA8KD.jpg",
+            "genre_ids": [
+                10767,
+                35
+            ],
+            "id": 22980,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Watch What Happens Live with Andy Cohen",
+            "overview": "Bravo network executive Andy Cohen discusses pop culture topics with celebrities and reality show personalities.",
+            "popularity": 4584.876,
+            "poster_path": "/onSD9UXfJwrMXWhq7UY7hGF2S1h.jpg",
+            "first_air_date": "2009-07-16",
+            "name": "Watch What Happens Live with Andy Cohen",
+            "vote_average": 5.17,
+            "vote_count": 47
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2sjy8Tu8PJGFQI4Foz4682qk8Mw.jpg",
+            "genre_ids": [
+                18,
+                9648,
+                80
+            ],
+            "id": 1620,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "CSI: Miami",
+            "overview": "CSI: Miami follows Crime Scene Investigators working for the Miami-Dade Police Department as they use physical evidence, similar to their Las Vegas counterparts, to solve grisly murders. The series mixes deduction, gritty subject matter, and character-driven drama in the same vein as the original series in the CSI franchise, except that the Miami CSIs are cops first, scientists second.",
+            "popularity": 4491.27,
+            "poster_path": "/pNW64pjaHvf6purNaFhq4SHYRfl.jpg",
+            "first_air_date": "2002-09-23",
+            "name": "CSI: Miami",
+            "vote_average": 7.7,
+            "vote_count": 1526
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mpcrV6RKlXxTsOCt7K70pJzNzNI.jpg",
+            "genre_ids": [
+                10767
+            ],
+            "id": 204746,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "The Jennifer Hudson Show",
+            "overview": "Talented entertainer and newly-minted EGOT Jennifer Hudson takes on the daytime talk show landscape.",
+            "popularity": 4079.358,
+            "poster_path": "/6VBNeo8XG90sNKWYQ0yTEmVBXHJ.jpg",
+            "first_air_date": "2022-09-12",
+            "name": "The Jennifer Hudson Show",
+            "vote_average": 7.2,
+            "vote_count": 15
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ottT2Yt0OfHiHp3PHJTLNVV8JPE.jpg",
+            "genre_ids": [
+                18,
+                10766
+            ],
+            "id": 13945,
+            "origin_country": [
+                "DE"
+            ],
+            "original_language": "de",
+            "original_name": "Gute Zeiten, schlechte Zeiten",
+            "overview": "Gute Zeiten, schlechte Zeiten is a long-running German television soap opera, first broadcast on RTL in 1992. The programme concerns the lives of a fictional neighborhood in Germany's capital city Berlin. Over the years the soap opera tends to have an overhaul of young people in their late teens and early twenties; targeting a young viewership.",
+            "popularity": 4013.751,
+            "poster_path": "/fNHBzjxsydcAssxXqb5IV2obDdU.jpg",
+            "first_air_date": "1992-05-11",
+            "name": "Gute Zeiten, schlechte Zeiten",
+            "vote_average": 5.9,
+            "vote_count": 28
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/y4w232QOzDD1McRocp2htMVmF3b.jpg",
+            "genre_ids": [
+                10763,
+                35
+            ],
+            "id": 2224,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "The Daily Show",
+            "overview": "The World's Fakest News Team tackle the biggest stories in news, politics and pop culture.",
+            "popularity": 3964.81,
+            "poster_path": "/ixcfyK7it6FjRM36Te4OdblAq4X.jpg",
+            "first_air_date": "1996-07-22",
+            "name": "The Daily Show",
+            "vote_average": 6.294,
+            "vote_count": 502
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8VWgyQjExeMgeg6Qzv6agduMU1A.jpg",
+            "genre_ids": [
+                18,
+                10759,
+                10765
+            ],
+            "id": 121,
+            "origin_country": [
+                "GB"
+            ],
+            "original_language": "en",
+            "original_name": "Doctor Who",
+            "overview": "The adventures of The Doctor, a time-traveling humanoid alien known as a Time Lord. He explores the universe in his TARDIS, a sentient time-traveling spaceship. Its exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired. Along with a succession of companions, The Doctor faces a variety of foes while working to save civilizations, help ordinary people, and right many wrongs.",
+            "popularity": 3688.174,
+            "poster_path": "/xinqAmYrZ1TEwowcQhgTkZVtVE0.jpg",
+            "first_air_date": "1963-11-23",
+            "name": "Doctor Who",
+            "vote_average": 7.9,
+            "vote_count": 581
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rj3jBAZwPiOgkwAy1205MAgLahj.jpg",
+            "genre_ids": [
+                10766
+            ],
+            "id": 81329,
+            "origin_country": [
+                "FR"
+            ],
+            "original_language": "fr",
+            "original_name": "Un si grand soleil",
+            "overview": "Claire is surprised when she gets arrested for the murder of her childhood friend after she returns to Montpellier.",
+            "popularity": 3684.279,
+            "poster_path": "/t6jVlbPMtZOJoAOfeoR4yQmnjXM.jpg",
+            "first_air_date": "2018-08-27",
+            "name": "Chronicles of the Sun",
+            "vote_average": 7.151,
+            "vote_count": 73
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nmg2lY4QuyXQrAnrC2lRblK5rT6.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 1416,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "Grey's Anatomy",
+            "overview": "Follows the personal and professional lives of a group of doctors at Seattle\u2019s Grey Sloan Memorial Hospital.",
+            "popularity": 3513.907,
+            "poster_path": "/jcEl8SISNfGdlQFwLzeEtsjDvpw.jpg",
+            "first_air_date": "2005-03-27",
+            "name": "Grey's Anatomy",
+            "vote_average": 8.243,
+            "vote_count": 9911
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/eWF3oRyL4QWaidN9F4uvM7cBJUV.jpg",
+            "genre_ids": [
+                10766
+            ],
+            "id": 206559,
+            "origin_country": [
+                "ZA"
+            ],
+            "original_language": "af",
+            "original_name": "Binnelanders",
+            "overview": "A South African Afrikaans soap opera. It is set in and around the fictional private hospital, Binneland Kliniek, in Pretoria, and the storyline follows the trials, trauma and tribulations of the staff and patients of the hospital.",
+            "popularity": 3349.243,
+            "poster_path": "/v9nGSRx5lFz6KEgfmgHJMSgaARC.jpg",
+            "first_air_date": "2005-10-13",
+            "name": "Binnelanders",
+            "vote_average": 5.64,
+            "vote_count": 50
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/lN9YTWjXXJ62hJLsdGAjp5z76JU.jpg",
+            "genre_ids": [
+                10766,
+                18
+            ],
+            "id": 231418,
+            "origin_country": [
+                "ES"
+            ],
+            "original_language": "es",
+            "original_name": "Sal\u00f3n de t\u00e9 La Moderna",
+            "overview": "",
+            "popularity": 3307.343,
+            "poster_path": "/eRB6yMg6FyvjlxEZYu0ZEUdy1Nd.jpg",
+            "first_air_date": "2023-09-27",
+            "name": "Sal\u00f3n de t\u00e9 La Moderna",
+            "vote_average": 0.0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tpmMi9pQtSDploVxDFKZFP8JTq1.jpg",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "id": 101827,
+            "origin_country": [
+                "IR"
+            ],
+            "original_language": "fa",
+            "original_name": "\u0646\u0648\u0646 \u062e",
+            "overview": "",
+            "popularity": 3212.531,
+            "poster_path": "/A23hgySNvMnkUY6013C7LJVtFC6.jpg",
+            "first_air_date": "",
+            "name": "Noon Khe",
+            "vote_average": 5.667,
+            "vote_count": 3
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/lqDlYLNA0RdMXDiz70lU8Ib1nwW.jpg",
+            "genre_ids": [
+                18,
+                35,
+                80
+            ],
+            "id": 8590,
+            "origin_country": [
+                "FR"
+            ],
+            "original_language": "fr",
+            "original_name": "Plus belle la vie",
+            "overview": "The daily lives of the inhabitants of \"le Mistral\", an imaginary neighbourhood in the Mediterranean port city of Marseille, where wealthy families cross paths with the less than rich.",
+            "popularity": 3200.955,
+            "poster_path": "/jmU8HlTDn87xmRqXagcL2swDr8I.jpg",
+            "first_air_date": "2004-08-30",
+            "name": "Plus belle la vie",
+            "vote_average": 4.4,
+            "vote_count": 24
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mc3rG5M9dFVjMfaCFNfbD5gu2pK.jpg",
+            "genre_ids": [
+                16,
+                35
+            ],
+            "id": 1433,
+            "origin_country": [
+                "US"
+            ],
+            "original_language": "en",
+            "original_name": "American Dad!",
+            "overview": "The series focuses on an eccentric motley crew that is the Smith family and their three housemates: Father, husband, and breadwinner Stan Smith; his better half housewife, Francine Smith; their college-aged daughter, Hayley Smith; and their high-school-aged son, Steve Smith. Outside of the Smith family, there are three additional main characters, including Hayley's boyfriend turned husband, Jeff Fischer; the family's man-in-a-goldfish-body pet, Klaus; and most notably the family's zany alien, Roger, who is \"full of masquerades, brazenness, and shocking antics.\"",
+            "popularity": 3150.457,
+            "poster_path": "/xnFFz3etm1vftF0ns8RMHA8XdqT.jpg",
+            "first_air_date": "2005-02-06",
+            "name": "American Dad!",
+            "vote_average": 6.9,
+            "vote_count": 1997
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/yYNa1nqvNK94xZz3eKyfvZdAvPi.jpg",
+            "genre_ids": [
+                10766,
+                18
+            ],
+            "id": 112470,
+            "origin_country": [
+                "FR"
+            ],
+            "original_language": "fr",
+            "original_name": "Ici tout commence",
+            "overview": "",
+            "popularity": 3120.227,
+            "poster_path": "/yuTHx38jpogXovMhqNatvozigMJ.jpg",
+            "first_air_date": "2020-11-02",
+            "name": "Here it all begins",
+            "vote_average": 7.1,
+            "vote_count": 38
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/yWVqYVOUcS6vu22v4BPXKJW10m5.jpg",
+            "genre_ids": [
+                10764,
+                10751
+            ],
+            "id": 206679,
+            "origin_country": [
+                "CZ"
+            ],
+            "original_language": "cs",
+            "original_name": "Na lovu",
+            "overview": "Na Lovu is a Czech game-show, based on the license of the popular global format The Chase. A heart-racing quiz show where four competitors must pit their wits and face off against Lovec (the Chaser), a ruthless quiz genius determined to stop them from winning cash prizes.",
+            "popularity": 3067.05,
+            "poster_path": "/udJ1wVuOwFg1q6UBcQGwcpcdIYF.jpg",
+            "first_air_date": "2021-08-16",
+            "name": "Na lovu",
+            "vote_average": 8.0,
+            "vote_count": 2
+        }
+    ],
+    "total_pages": 8525,
+    "total_results": 170490
+}

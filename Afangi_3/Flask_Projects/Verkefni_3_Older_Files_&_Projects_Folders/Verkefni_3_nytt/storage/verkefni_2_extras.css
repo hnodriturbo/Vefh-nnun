@@ -1,0 +1,134 @@
+/* ########## Hreiðar Pétursson ########## */
+/*  ######## Vefhönnun Áfanginn ########  */
+/*   ######### Skilaverkefni 3 ########  */
+/*    ########   Apríl 2024   ########  */
+
+
+
+
+
+/* ######## Utility and Theme Styles ######## */
+
+
+
+
+/* -------------- Font Styles ------------- */
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800; /* ExtraBold */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-ExtraLight.ttf') format('truetype');
+    font-weight: 200; /* ExtraLight */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Regular.ttf') format('truetype');
+    font-weight: normal; /* Regular */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* SemiBold */
+}
+
+@font-face {
+    font-family: 'PlayPenSans';
+    src: url('/static/fonts/PlayPenSans-Thin.ttf') format('truetype');
+    font-weight: 100; /* Thin */
+}
+
+/* Continuing from the .medium-text class */
+
+.semi-bold-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: 600; /* SemiBold */
+}
+
+.bold-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: bold; /* Bold, equivalent to 700 */
+}
+
+.extra-bold-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: 800; /* ExtraBold */
+}
+
+.extra-light-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: 200; /* ExtraLight */
+}
+
+.thin-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: 100; /* Thin */
+}
+
+.regular-text {
+    font-family: 'PlayPenSans', sans-serif;
+    font-weight: normal; /* Regular, equivalent to 400 */
+}
+
+
+
+/* --------------- EXTRAS  STYLES --------------- */
+
+/* My Buttons Specific Glowing Box Shadow */
+.my-btn-box-shadow {
+    box-shadow: 0 0 4px 0 #919da7, 0 0 8px 2px #919da7;
+}
+
+/* Stop text from wrapping and hide the overflow */
+.nowrap {
+    white-space: nowrap; /* Stops the text from wrapping */
+    overflow: hidden; /* Hide instead of overflowing */
+}
+
+
+.my-border-radius {
+    border-radius: 15px;
+}
+
+
+h1 {
+    font-weight: 700;
+}
+
+/* Some greyish colors  */
+.grey500 {
+    background-color: var(--bs-gray-500);
+}
+.grey600 {
+    background-color: var(--bs-gray-600);
+}
+.grey700 {
+    background-color: var(--bs-gray-700);
+}
+.grey800 {
+    background-color: var(--bs-gray-800);
+}

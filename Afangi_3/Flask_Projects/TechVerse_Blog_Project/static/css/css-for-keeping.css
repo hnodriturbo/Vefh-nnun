@@ -1,0 +1,86 @@
+
+
+
+
+
+
+/* --------------------------------------------------- */
+  /* --------- Modal settings and styles ----------- */
+/* --------------------------------------------------- */
+
+
+/* ATH!! Modal card is making a white background with the black one as overlay!, but the white
+background is not changeable or editable i think. Fix tomorrow!!! */
+.modal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 10px; */
+    padding-top: 10px;              
+    border-radius: 15px;
+    background-color: #1e1e1e;
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* opacity: 0.5; */
+}
+
+.modal-card img {
+    display: flex;
+    width: 95%;
+    height: auto;
+    border-radius: 15px; 
+}
+
+.modal-card-body, 
+.modal-card-footer {
+    padding: 15px;
+    color: #adb5bd;
+}
+.modal-card h5 {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #e21313;
+}
+.modal-card-footer {
+    width: 100%;
+    background: #000000;
+    border-top: 1px solid #303030;
+}
+
+
+
+
+
+
+.my-modal {
+    display: none;
+    position: fixed; /* Stay put */
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    border: 1px solid #888;
+    width: 40%; /* Adjustable */
+    height: fit-content;
+    max-width: 400px;
+   
+    /* I need to use relative so i can put the close button above the card */
+    position: relative;
+    z-index: 1001; 
+
+    animation: fadeInContent 1.5s forwards; 
+}
+
+
+@keyframes fadeInContent {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

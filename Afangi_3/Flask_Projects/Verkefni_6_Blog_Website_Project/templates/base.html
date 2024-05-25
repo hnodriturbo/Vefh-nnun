@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CyberPulse Journal</title>
+
+    <!-- 1 - Bootstrap Icons-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-icons.css') }}">
+
+    <!-- 2 - Font from google, downloaded and manually made font -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-css.css') }}">
+
+    <!-- 3 - Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+
+    <!-- 4 - Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/myStyles.css') }}">
+
+    <!-- 5 - Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+
+
+
+<body>
+
+
+    <div class="container-fluid d-flex flex-row">
+
+        <div class="row flex-grow-1">
+
+            <div class="col-lg-2 d-none d-lg-block">
+
+                <div class="fixed-sidebar">
+                    {% include 'navigation/sidebar.html' %}
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="col-lg-10 p-0 m-0">
+
+                <div class="banner">
+                    <img src="{{ url_for('static', filename='img/banner.jpg') }}" alt="Banner Image">
+                </div>
+
+                {% include 'navigation/navigation.html' %}
+
+                <div class="content my-5">
+                    {% block content %}{% endblock %}
+                </div>
+
+
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Include Firebase SDK and initialization script -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+    <script type="module" src="{{ url_for('static', filename='js/firebase-init.js') }}"></script>
+
+
+    <!-- - 1 - Local Bootstrap JS bundle pack -->
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.js') }}"></script>
+
+    <!-- - 2 - JQuery to make sure all js components of bootstrap works -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- - 3 - Custom JavaScript for blogSite.js - Best loading that last in case of some overrides -->
+    <script src="{{ url_for('static', filename='js/blogSite.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,542 @@
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---////////////////////////////////// */
+/* \\\\\\\\\\\\\\\\\\      Author: Hreiðar Pétursson      //////////////// */
+/* \\\\\\\\\\\\\\\\       Course:  Vefhönnun Áfangi 3       ////////////// */
+/* \\\\\\\\\\\\\          -- Skilaverkefni 3 --              ///////////// */
+/*  \\    Description: Enhances the website with styles and effects     // */
+/*   \\  using  CSS for layout adjustments, enhancements, and custom   //  */
+/*    \\      interactivity for a seamless user experience.           //   */
+/*     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---///////////////////////////////    */
+
+
+
+
+/* ************************************************* */
+/* ----- --- Extras settings & adjustments --- ----- */
+/* ************************************************* */
+
+
+:root {
+    --font-weight: 400;
+}
+
+.dynamic-weight:hover {
+    --font-weight: 700;  /* Increases weight on hover */
+}
+
+/* Custom Classes for Italic and Bold Text using Alegreya */
+.my-font-italic {
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.my-font-bold {
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Additional body styles if needed */
+body {
+    font-weight: normal;
+}
+
+
+.border-radius-15 {
+    border-radius: 15px;
+}
+
+.btn-dark {
+    border-radius: 15px !important;
+}
+
+.btn-outline-dark {
+    border-radius: 15px !important;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(108, 117, 125, 1); /* Subtle shadow for depth */
+}
+
+/* Some greyish colors  */
+.grey500 {
+    background-color: var(--bs-gray-500);
+}
+
+.grey600 {
+    background-color: var(--bs-gray-600);
+}
+
+.grey700 {
+    background-color: var(--bs-gray-700);
+}
+
+.grey800 {
+    background-color: var(--bs-gray-800);
+}
+
+
+/* Darker Stylish Borders - 10 different styles for each side */
+
+/* Border Style 1 */
+.my-border-top-1 { border-top: 4px solid #343a40; } /* Dark Gray */
+.my-border-bottom-1 { border-bottom: 4px solid #343a40; }
+.my-border-left-1 { border-left: 4px solid #343a40; }
+.my-border-right-1 { border-right: 4px solid #343a40; }
+
+/* Border Style 2 */
+.my-border-top-2 { border-top: 3px dashed #6c757d; } /* Secondary Gray */
+.my-border-bottom-2 { border-bottom: 3px dashed #6c757d; }
+.my-border-left-2 { border-left: 3px dashed #6c757d; }
+.my-border-right-2 { border-right: 3px dashed #6c757d; }
+
+/* Border Style 3 */
+.my-border-top-3 { border-top: 5px double #495057; } /* Darker Gray */
+.my-border-bottom-3 { border-bottom: 5px double #495057; }
+.my-border-left-3 { border-left: 5px double #495057; }
+.my-border-right-3 { border-right: 5px double #495057; }
+
+/* Border Style 4 */
+.my-border-top-4 { border-top: 2px groove #adb5bd; } /* Light Gray */
+.my-border-bottom-4 { border-bottom: 2px groove #adb5bd; }
+.my-border-left-4 { border-left: 2px groove #adb5bd; }
+.my-border-right-4 { border-right: 2px groove #adb5bd; }
+
+/* Border Style 5 */
+/* Lighter Gray */
+/* 
+.my-border-top-5 { border-top: 3px ridge #ced4da; } 
+.my-border-bottom-5 { border-bottom: 3px ridge #ced4da; }
+.my-border-left-5 { border-left: 3px ridge #ced4da; }
+.my-border-right-5 { border-right: 3px ridge #ced4da; }
+ */
+/* Border Style 6 */
+.my-border-top-6 { border-top: 6px outset #dee2e6; } /* Even Lighter Gray */
+.my-border-bottom-6 { border-bottom: 6px outset #dee2e6; }
+.my-border-left-6 { border-left: 6px outset #dee2e6; }
+.my-border-right-6 { border-right: 6px outset #dee2e6; }
+
+/* Border Style 7 */
+.my-border-top-7 { border-top: 3px inset #343a40; } /* Dark Gray */
+.my-border-bottom-7 { border-bottom: 3px inset #343a40; }
+.my-border-left-7 { border-left: 3px inset #343a40; }
+.my-border-right-7 { border-right: 3px inset #343a40; }
+
+/* Border Style 8 */
+.my-border-top-8 { border-top: 5px dotted #6c757d; } /* Secondary Gray */
+.my-border-bottom-8 { border-bottom: 5px dotted #6c757d; }
+.my-border-left-8 { border-left: 5px dotted #6c757d; }
+.my-border-right-8 { border-right: 5px dotted #6c757d; }
+
+/* Border Style 9 */
+.my-border-top-9 { border-top: 4px solid #495057; } /* Darker Gray */
+.my-border-bottom-9 { border-bottom: 4px solid #495057; }
+.my-border-left-9 { border-left: 4px solid #495057; }
+.my-border-right-9 { border-right: 4px solid #495057; }
+
+/* Border Style 10 */
+.my-border-top-10 { border-top: 2px solid #adb5bd; } /* Light Gray */
+.my-border-bottom-10 { border-bottom: 2px solid #adb5bd; }
+.my-border-left-10 { border-left: 2px solid #adb5bd; }
+.my-border-right-10 { border-right: 2px solid #adb5bd; }
+
+
+
+
+
+
+/* Border Style 5 with Shadow */
+.my-border-5-navbar {
+    border-top: 3px outset rgba(206, 212, 218, 0.5);
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 1) !important;
+    border-bottom: 3px outset rgba(206, 212, 218, 0.5);
+    box-shadow: 0 -2px 2px -2px rgba(0, 0, 0, 1) !important;
+}
+
+/* Border Style 5 with Shadow */
+.my-border-5-sidebar {
+    border-left: 3px outset rgba(206, 212, 218, 0.5);
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 1) !important;
+    border-right: 3px outset rgba(206, 212, 218, 0.5);
+    box-shadow: 0 -2px 2px -2px rgba(0, 0, 0, 1) !important;
+}
+
+.my-border-bottom-5 {
+    
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+}
+.my-border-left-5 {
+    border-left: 3px ridge #ced4da; /* Lighter Gray */
+    box-shadow: -2px 0 2px -2px rgba(0, 0, 0, 0.5);
+}
+.my-border-right-5 {
+    border-right: 3px ridge #ced4da; /* Lighter Gray */
+    box-shadow: 2px 0 2px -2px rgba(0, 0, 0, 0.5);
+}
+
+/* Linear Gradient Background Colors */
+
+/* Dark to Light Gradient */
+.gradient-dark-light-1 {
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* Dark Gray to Light Gray */
+}
+.gradient-dark-light-2 {
+    background: linear-gradient(to right, #343a40, #adb5bd); /* Very Dark Gray to Light Gray */
+}
+.gradient-dark-light-3 {
+    background: linear-gradient(to right, #4e5d6c, #d1d8e0); /* Dark Blue-Gray to Very Light Gray */
+}
+.gradient-dark-light-4 {
+    background: linear-gradient(to right, #3a3d41, #c0c4c8); /* Dark Charcoal to Light Gray */
+}
+.gradient-dark-light-5 {
+    background: linear-gradient(to right, #2f3640, #a4b0be); /* Dark Charcoal Blue to Light Blue-Gray */
+}
+
+/* Light to Dark Gradient */
+.gradient-light-dark-1 {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50); /* Light Gray to Dark Gray */
+}
+.gradient-light-dark-2 {
+    background: linear-gradient(to right, #adb5bd, #343a40); /* Light Gray to Very Dark Gray */
+}
+.gradient-light-dark-3 {
+    background: linear-gradient(to right, #d1d8e0, #4e5d6c); /* Very Light Gray to Dark Blue-Gray */
+}
+.gradient-light-dark-4 {
+    background: linear-gradient(to right, #c0c4c8, #3a3d41); /* Light Gray to Dark Charcoal */
+}
+.gradient-light-dark-5 {
+    background: linear-gradient(to right, #a4b0be, #2f3640); /* Light Blue-Gray to Dark Charcoal Blue */
+}
+
+/* Vertical Gradient (Dark to Light) */
+.gradient-vertical-dark-light-1 {
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* Dark Gray to Light Gray */
+}
+.gradient-vertical-dark-light-2 {
+    background: linear-gradient(to bottom, #343a40, #adb5bd); /* Very Dark Gray to Light Gray */
+}
+.gradient-vertical-dark-light-3 {
+    background: linear-gradient(to bottom, #4e5d6c, #d1d8e0); /* Dark Blue-Gray to Very Light Gray */
+}
+.gradient-vertical-dark-light-4 {
+    background: linear-gradient(to bottom, #3a3d41, #c0c4c8); /* Dark Charcoal to Light Gray */
+}
+.gradient-vertical-dark-light-5 {
+    background: linear-gradient(to bottom, #2f3640, #a4b0be); /* Dark Charcoal Blue to Light Blue-Gray */
+}
+
+/* Vertical Gradient (Light to Dark) */
+.gradient-vertical-light-dark-1 {
+    background: linear-gradient(to bottom, #bdc3c7, #2c3e50); /* Light Gray to Dark Gray */
+}
+.gradient-vertical-light-dark-2 {
+    background: linear-gradient(to bottom, #adb5bd, #343a40); /* Light Gray to Very Dark Gray */
+}
+.gradient-vertical-light-dark-3 {
+    background: linear-gradient(to bottom, #d1d8e0, #4e5d6c); /* Very Light Gray to Dark Blue-Gray */
+}
+.gradient-vertical-light-dark-4 {
+    background: linear-gradient(to bottom, #c0c4c8, #3a3d41); /* Light Gray to Dark Charcoal */
+}
+.gradient-vertical-light-dark-5 {
+    background: linear-gradient(to bottom, #a4b0be, #2f3640); /* Light Blue-Gray to Dark Charcoal Blue */
+}
+
+/* ----- --- Extras settings & adjustments --- ----- */
+/* ************************************************* */
+
+
+/* ************************************************* */
+/* ----- ----- ----- Layout  Styles ----- ---- ----- */
+/* ************************************************* */
+
+
+/* General HTML and Body Styles */
+html, body {
+/* 
+    height: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+ */
+    background: linear-gradient(to bottom, #212529 0%, #495057 100%);
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+
+
+    font-family: 'Alegreya', serif;
+    font-weight: 400; /* Default weight */
+    font-style: normal;
+    overflow-y: auto; /* Scrollable content */
+}
+
+
+.master-container {
+    /* width: 90%; */
+    margin: 0 auto;
+    box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important;
+    border-radius: 25px !important;
+    /* background-color: var(--bs-dark); */
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area adjustments */
+.content.master-container {
+    /* width: 90%; */
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important;
+    border-radius: 15px !important;
+    transition: margin-left 0.5s ease-in-out;
+    background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+}
+
+.content.master-container.expanded {
+    margin-left: 25px;
+}
+
+
+
+
+/* ----- ----- ----- Layout  Styles ----- ---- ----- */
+/* ************************************************* */
+/* Fixed sidebar and collapsible functionality */
+
+
+.banner img {
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+
+.login-logout-buttons {
+    padding: 10px;
+}
+
+.search-form {
+    padding: 10px;
+}
+
+/* Further styling for accordion, buttons, etc., can be added here */
+/* 
+.offcanvas {
+    width: 250px !important;
+}
+ */
+
+
+/* 
+.offcanvas {
+    width: 300px !important;
+    opacity: 0.5 !important;
+}
+*/
+
+
+/* ************************************************* */
+/* ----- ----- Navbar & OnCanvas Settings ----- ---- */
+/* ************************************************* */
+
+
+/* Ensure offcanvas and sidebar are not covering the content */
+.offcanvas, .fixed-sidebar {
+    z-index: 1;
+}
+
+
+/* Ensure input fields are accessible */
+.form-control {
+    position: relative;
+    z-index: 3;
+}
+
+.offcanvas {
+    background: linear-gradient(to right, #1b1b1b, #2c3e50) !important;
+    transition: height 0.3s ease; /* Smooth height transition */
+    height: auto; /* Set height to auto to adjust dynamically */
+}
+
+
+
+#toggleSidebarBtn {
+    top: 20px; /* Adjust the vertical position */
+    left: 20px; /* Adjust the horizontal position */
+    z-index: 10; /* Ensure the button is above other elements */
+}
+
+
+
+
+
+/* Responsive positioning */
+@media (max-width: 992px) {
+    #toggleSidebarBtn {
+        top: 10px; /* Adjust the vertical position for smaller screens */
+        left: 10px; /* Adjust the horizontal position for smaller screens */
+    }
+}
+/* Fixed sidebar styles for larger screens */
+@media (min-width: 992px) {
+    .fixed-sidebar .offcanvas {
+        position: static;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%; /* Take full width of the parent col-2 */
+        transform: none; /* Ensure it stays visible */
+        visibility: visible; /* Ensure visibility */
+
+        opacity: 1; /* Ensure opacity for transition */
+        transition: opacity 0.5s ease, width 0.5s ease; /* Add transition for smooth effect */
+    }
+    .offcanvas-backdrop {
+        display: none; /* Hide the backdrop */
+    }
+    .offcanvas-body {
+        overflow-y: auto; /* Scrollable content */
+    }
+
+    #sidebarColumn {
+        transition: opacity 0.5s ease, width 0.5s ease; /* Add transition for smooth effect */
+        opacity: 1; /* Default opacity */
+    }
+    #contentColumn {
+        transition: width 0.5s ease; /* Add transition for smooth effect */
+    }
+}
+
+/* Offcanvas visibility toggle for smaller screens */
+@media (max-width: 991.98px) {
+    .offcanvas {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 250px; /* Adjust this width as needed for smaller screens */
+        visibility: hidden;
+        transition: all 0.5s ease; /* Add transition for smooth effect */
+    }
+    .offcanvas.show {
+        visibility: visible;
+    }
+}
+
+/* Transitions for smooth sidebar toggle */
+#sidebarColumn {
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+}
+
+#contentColumn {
+    transition: width 0.5s ease, margin-left 0.5s ease;
+    position: relative;
+    z-index: 2; /* Ensure content column is above the sidebar */
+}
+
+
+/* Full-width content when sidebar is hidden */
+.full-width-content #contentColumn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0;
+}
+
+.full-width-content #sidebarColumn {
+    width: 0;
+    opacity: 0;
+    height: 0;
+    display: none; /* Ensures the sidebar is hidden after transition */
+}
+
+
+/* Ensure the navbar uses flexbox and centers items vertically */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Center the navbar-brand taking into account the toggler's width */
+.navbar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the brand to use any available space */
+    position: relative; /* Positioned relative to potentially adjust for the toggler */
+}
+
+
+
+/* ------------------- My Own Styles --------------- */
+.my-nav-styles {
+    /* This margin is between the brand and the first navbar dropdown button */
+    margin-left: 30px;
+}
+
+.my-navbtn-styles {
+    border-radius: 25px;
+    min-width: 150px;
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out !important;
+
+}
+
+.my-navbtn-styles:hover {
+    box-shadow: 0 0 10px rgba(108, 117, 125, 1) !important; /* Adjust the color to match btn-secondary */
+    transform: scale(1.05); /* Enlarge text by 5% */
+}
+/* ------------------- My Own Styles --------------- */
+
+
+
+
+
+
+
+.navbar-toggler {
+    z-index: 2; /* Ensure the toggler stays clickable */
+}
+
+
+
+
+
+.my-navbar-btn-styles {
+    max-height: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(52, 58, 64, 1) !important; /* Updated to match btn-dark color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out !important;
+}
+
+.my-navbar-btn-styles:hover {
+    box-shadow: 0 0 15px rgba(52, 58, 64, 1) !important; /* Adjust the color to match btn-dark */
+    transform: scale(1.05); /* Enlarge text by 5% */
+}
+
+
+
+
+/* Target the nav-item directly inside navbar-collapse to center the buttons and make them 75% wide */
+.navbar-collapse .nav-item {
+    display: flex;  /* Use flexbox for alignment */
+    justify-content: center;  /* Center the button horizontally in the nav-item */
+    width: 100%;  /* Ensure nav-item takes the full width of its parent to allow correct percentage calculation */
+}
+
+.navbar-collapse .nav-item .my-navbtn-styles {
+    display: block;  /* Ensures the button stretches to fit the flex container */
+    text-align: center;  /* Centers the text inside the button */
+    width: 75%;  /* Button width as 75% of its parent, which is now effectively the nav-item */
+    border-radius: 15px;
+    box-sizing: border-box;  /* Includes padding and border in width calculation */
+    align-items: center;
+}
+
+
+
+/* --- ----- ----- Navbar Menu Styles ----- ---- --- */
+/* ************************************************* */
+
+

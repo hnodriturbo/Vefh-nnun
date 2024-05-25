@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Swiper Container -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {% for category in carousel_data %}
+        <div class="swiper-slide">
+            <h3>{{ category.name }}</h3>
+            <div class="row cards-container">
+				{% if category.items is iterable %}
+					{% for item in category.items %}
+						{% include 'partials/card.html' %}
+					{% endfor %}
+				{% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+{% endblock %}
+
+
+

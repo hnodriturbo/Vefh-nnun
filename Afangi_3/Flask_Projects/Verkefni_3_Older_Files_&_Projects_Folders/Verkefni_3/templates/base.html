@@ -1,0 +1,68 @@
+<!-- 
+/* ########## Hreiðar Pétursson ########## */
+/*  ######## Vefhönnun Áfanginn ########  */
+/*   ######### Skilaverkefni 3 ########  */
+/*    ########   Apríl 2024   ########  */
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Shows & Movies Database</title>
+
+
+    <!-- I include this only to be 1000% sure bootstrap's css works -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+
+    
+
+
+    <!--  I created this one only so i can use the bootstrap variables and compiled the scss to css  -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+
+
+
+    <!-- My Custom CSS Files -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/extras.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/myStyles.css') }}" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+</head>
+
+
+
+<body>
+
+    <div class="master-container">
+
+        {% include 'header.html' %}
+    
+
+
+
+        <!-- Main Content -->
+        <div class="container-fluid d-flex justify-content-center align-items-center content-container-styles flex-column">
+            {% block content %}{% endblock %}
+        </div>
+
+
+
+    </div> <!-- End of master-container -->
+
+
+
+    <!-- Include local Bootstrap JS -->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+
+
+</body>
+</html>

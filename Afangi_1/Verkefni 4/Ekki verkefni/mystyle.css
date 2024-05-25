@@ -1,0 +1,160 @@
+/* Fontið mitt */
+@font-face {
+    font-family: MyCustomFont;
+    src: url('font/mycustomfont.ttf');
+}
+
+
+
+
+/* Menu sem er neðst á síðunni */
+.boxmenu2 {
+    display: grid;       
+    color: white;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
+/* bakgrunnur og ýmislegt annað */
+body {
+    font-family: mycustomfont, sans-serif;
+    margin: 0 auto;
+    
+    
+    background-image: url('pics/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* ýmislegt */    
+a {
+    color: white
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.velkominn {
+    font-size: 46px;
+}
+
+
+
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+    .box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+    }
+  }
+
+/* boxið utan um allt */
+.box {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid black;
+    
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+    .boxmenu {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-row: 1 / 6;
+      grid-area: 1 / 1 / 7 / 1
+    }
+  }
+
+
+ /* Boxið sem er utan um allt menu */
+ .boxmenu {
+    display: grid;
+    grid-column: 1 / 6;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 10px; 
+    border: 1px solid black; 
+    
+}
+
+ /* Innihald menu */
+ .menu {       
+    border: 1px solid black;
+    margin: 10px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+
+/* Boxið utan um 3 raðir */
+.boxinnihald1 {
+    grid-column: 1 / 6;      
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: fit-content;
+}
+/* Innihald 1 */
+.innihald1 {
+    margin: 10px;
+    border: 2px solid black;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    height: fit-content;
+}
+
+
+
+
+
+/* Boxið sem er utan um innihald (3 dálkar) */
+.boxinnihald2 {
+    grid-template-columns: repeat(3, 1fr);        
+    border: 10px black;
+    display: grid;
+    height: auto; 
+    grid-column: 1 / 6;
+}
+/* Innihald 2 */
+.innihald2 {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* boxið utan um banner á síðunni */
+.boxbannernidri{
+    grid-template-columns: 1fr;
+    grid-column: 1 / 6;
+    margin: 10px;
+    
+}
+
+.bannernidri {
+    grid-template-columns: 1fr;
+    height: 300px;
+    text-align: center
+}
