@@ -1,0 +1,406 @@
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---////////////////////////////////// */
+/* \\\\\\\\\\\\\\\\\\      Author: Hreiðar Pétursson      //////////////// */
+/* \\\\\\\\\\\\\\\\       Course:  Vefhönnun Áfangi 3       ////////////// */
+/* \\\\\\\\\\\\\          -- Skilaverkefni 3 --              ///////////// */
+/*  \\    Description: Enhances the website with styles and effects     // */
+/*   \\  using  CSS for layout adjustments, enhancements, and custom   //  */
+/*    \\      interactivity for a seamless user experience.           //   */
+/*     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\---///////////////////////////////    */
+
+
+
+
+/* ************************************************* */
+/* ----- --- Extras settings & adjustments --- ----- */
+/* ************************************************* */
+
+
+:root {
+    --font-weight: 400;
+    /* --transition-speed: 2s; */
+    /* --scroll-behavior: smooth; */
+
+}
+
+/* Apply reduced motion preferences */
+
+/* @media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-speed: 3s;
+        --scroll-behavior: auto;
+    }
+}
+ */
+.dynamic-weight:hover {
+    --font-weight: 700;  /* Increases weight on hover */
+}
+
+
+/* Additional body styles if needed */
+body {
+    font-weight: normal;
+}
+
+
+
+/* ----- --- Extras settings & adjustments --- ----- */
+/* ************************************************* */
+
+
+/* ************************************************* */
+/* ----- ----- ----- Layout  Styles ----- ---- ----- */
+/* ************************************************* */
+
+/* General HTML and Body Styles */
+html, body {
+    background: linear-gradient(to bottom, #212529 0%, #495057 100%) fixed;
+    background-attachment: fixed;
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+    /* overflow-y: auto; */
+}
+
+/* Master Container */
+.master-container {
+    /* margin: 0 auto; */
+    /* box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important; */
+    /* border-radius: 25px !important; */
+    display: flex;
+    flex-direction: column;
+    /* background: linear-gradient(to bottom, #171d24, #444b50) fixed; */
+}
+
+
+/* Adjust the main content to account for the fixed sidebar */
+.main-container {
+    /* margin-left: 250px; */ /* Match the sidebar width */
+    margin-top: 56px; /* Ensure content is pushed down by the height of the fixed top navbar */
+}
+
+
+/* Banner Image */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    background-color: rgb(42, 127, 202);
+}
+
+
+/* Ensure the sidebar takes full height and remains fixed */
+.sidebar {
+    background-color: #343a40;
+    height: 100vh; /* Full height sidebar */
+    position: fixed; /* Fix the position */
+    top: 0;
+    left: 0;
+    width: 250px; /* Set the width for the sidebar */
+    /* padding-top: 56px; */ /* Account for the fixed top navbar */
+}
+
+
+/* Main content area adjustments */
+.content {
+    box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important;
+    padding: 20px;
+    /* box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important; */
+    border-radius: 15px !important;
+    /* transition: margin-left 0.5s ease-in-out; */
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-logout-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.search-form {
+    padding: 10px;
+    margin-top: auto; /* Move the search form to the bottom */
+}
+
+.search-form .form-control {
+    width: 100%;
+    max-width: 250px;
+}
+
+
+.fixed-size {
+    width: 100%;
+    max-width: 220px;
+    white-space: nowrap; /* Prevent text from going into next line */
+    overflow: hidden; /* Hide any overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+}
+
+
+
+
+/* 
+
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+
+
+ */
+
+
+
+
+
+
+
+
+/* Custom Navbar Button Styles */
+.my-navbtn-styles, .my-navbar-btn-styles {
+    min-width: 150px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out !important;
+}
+
+.my-navbtn-styles:hover, .my-navbar-btn-styles:hover {
+    box-shadow: 0 0 10px rgba(108, 117, 125, 1) !important;
+    transform: scale(1.05);
+}
+
+/* Navbar Item Styles */
+.navbar-collapse .nav-item {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+}
+
+.navbar-collapse .nav-item .my-navbtn-styles {
+    display: block;
+    text-align: center;
+    width: 75%;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* 
+    Description:
+            Here below are my storage codes for this project
+*/
+
+
+/* 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 56px;
+    position: fixed;
+    top: 0;
+    width: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+ */
+
+
+/* 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 56px;
+    position: fixed;
+    top: 0;
+    width: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+ */
+/* 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+.accordion-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+ */
+
+
+
+
+
+/* 
+.accordion-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto; 
+}
+ */
+
+
+/* Sidebar and Offcanvas */
+/* .offcanvas { */
+    /* background: linear-gradient(to right, #1b1b1b, #2c3e50) !important; */
+    /* transition: height 0.3s ease; */
+    /* height: auto; */
+/* } */
+/* 
+.fixed-sidebar {
+    z-index: 1;
+}
+ */
+/* Responsive positioning for sidebar toggle button */
+/* 
+@media (max-width: 992px) {
+    #toggleSidebarBtn {
+        top: 10px;
+        left: 10px;
+    }
+}
+ */
+
+
+/* Fixed sidebar styles for larger screens */
+/* 
+@media (min-width: 992px) {
+    .fixed-sidebar .offcanvas {
+        position: static;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.5s ease, width 0.5s ease;
+    }
+    .offcanvas-backdrop {
+        display: none;
+    }
+    .offcanvas-body {
+        overflow-y: auto;
+    }
+
+    #sidebarColumn {
+        transition: opacity 0.5s ease, width 0.5s ease;
+        opacity: 1;
+    }
+    #contentColumn {
+        transition: width 0.5s ease;
+    }
+    
+}
+ */
+/* Offcanvas visibility toggle for smaller screens */
+/* 
+@media (max-width: 991.98px) {
+    .offcanvas {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 250px;
+        visibility: hidden;
+        transition: all 0.5s ease;
+    }
+    .offcanvas.show {
+        visibility: visible;
+    }
+}
+ */
+/* Transitions for smooth sidebar toggle */
+/* 
+#sidebarColumn {
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+}
+
+#contentColumn {
+    transition: width 0.5s ease, margin-left 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+ */
+/* Full-width content when sidebar is hidden */
+/* 
+.full-width-content #contentColumn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0;
+}
+
+.full-width-content #sidebarColumn {
+    width: 0;
+    opacity: 0;
+    height: 0;
+    display: none;
+}
+ */
+
+

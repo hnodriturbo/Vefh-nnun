@@ -1,0 +1,152 @@
+
+
+html, body {
+    background: linear-gradient(to bottom, #afb7c0 0%, #040d16 100%) fixed;
+    background-attachment: fixed;
+    font-family: 'Alegreya', serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--bs-light)
+    /* overflow-y: auto; */
+}
+
+  /* Master Container */
+.master-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important; */
+    /* border-radius: 25px !important; */
+    display: flex;
+    flex-direction: column;
+    /* background: linear-gradient(to bottom, #171d24, #444b50) fixed; */
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: 56px;
+    opacity: 0.5;
+  }
+
+
+
+
+
+/* Custom Navbar Brand Styles */
+.my-navbar-brand-styles {
+    margin-right: 20px;
+    border-radius: 18px;
+    transition: transform 0.3s ease !important;
+}
+.my-navbar-brand-styles:hover {
+    transform: scale(1.05);
+}
+
+/* Custom Navbar Button Styles */
+.my-navbtn-styles, .my-navbar-btn-styles {
+    margin-right: 20px;
+    min-width: 150px;
+    border-radius: 18px;
+    box-shadow: 0 0 5px rgba(108, 117, 125, 1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out !important;
+}
+.my-navbtn-styles:hover, .my-navbar-btn-styles:hover {
+    box-shadow: 0 0 10px rgba(108, 117, 125, 1) !important;
+    transform: scale(1.05);
+}
+
+/* Ensure Navbar Items Expand Below Brand and Toggler */
+.navbar-collapse .nav-item {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-collapse .nav-item .my-navbar-btn-styles {
+    display: block;
+    text-align: center;
+    width: 75%;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.navbar-collapse {
+    flex-direction: column;
+}
+
+
+/* Adjust Margins for Navbar Items */
+.navbar-nav .nav-item {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-nav .nav-pill .my-navbar-btn-styles {
+        margin-bottom: 20px;
+        width: 75% !important;
+
+    }
+    .navbar-brand {
+        margin-left: auto !important; /* This replaces ms-auto class in Bootstrap */
+        text-align: end;
+        align-items: end;
+        justify-content: end;
+    }
+}
+
+.my-card-styles {
+    background-color: inherit !important;
+}
+
+.card {
+    border: 0px !important;
+    color: var(--bs-light) !important;
+    border-radius: 25px !important;
+    background: linear-gradient(to bottom, #232527 0%, #636f7a 100%) fixed !important;
+}
+.list-group .list-group-item {
+    background-color: inherit !important;
+    color: var(--bs-light)
+}
+
+.card-header {
+    border-top-left-radius: 25px !important;
+    border-top-right-radius: 25px !important;
+}
+
+.card-footer {
+    justify-content: space-between !important;
+    background-color: var(--bs-gray-300) !important;
+    border-bottom-left-radius: 25px !important;
+    border-bottom-right-radius: 25px !important;
+    background-color: inherit !important;
+}
+
+.no-border-radius-bottom {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+/*   
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--bs-light);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--bs-white);
+}
+
+.btn-outline-light {
+    border-color: var(--bs-light);
+    color: var(--bs-light);
+}
+
+.btn-outline-light:hover {
+    border-color: var(--bs-white);
+    color: var(--bs-white);
+}
+
+.btn-outline-light:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+   */

@@ -7,10 +7,9 @@ __pycache__/
 *.so
 
 # My Own Added .gitignore files
-firebase_admin_service_key.json
-Afangi_3/Flask_Projects/TechVerse_Blog_Project/storage/admin_sdk_service_key.json
-Afangi_3/Flask_Projects/TechVerse_Blog_Project/firebase-admin-sdk.json
-
+**/firebase_admin_service_key.json
+**/admin_sdk_service_key.json
+**/firebase-admin-sdk.json
 # Node modules
 node_modules/
 
